@@ -1,0 +1,127 @@
+.gallery-header {
+  background: linear-gradient(180deg, #f6f8ff 0%, #ffffff 100%);
+  border-bottom: 1px solid #e8ecf4;
+  padding: 28px 0 20px;
+}
+
+.gallery-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.gallery-title-row h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #1f2a44;
+}
+
+.gallery-back-link {
+  color: #3861fb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.gallery-back-link:hover {
+  text-decoration: underline;
+}
+
+.gallery-desc {
+  margin: 10px 0 0;
+  color: #4d5b78;
+  font-size: 14px;
+}
+
+.gallery-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.gallery-controls input {
+  flex: 1;
+  min-width: 180px;
+  border: 1px solid #d2d9e6;
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 14px;
+}
+
+.gallery-controls button {
+  border: none;
+  border-radius: 8px;
+  background: #3861fb;
+  color: #fff;
+  padding: 9px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.gallery-controls button:hover {
+  background: #2c52e6;
+}
+
+.gallery-meta {
+  margin-top: 10px;
+  color: #63708c;
+  font-size: 13px;
+}
+
+.gallery-main {
+  padding: 22px 0 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.gallery-card {
+  border: 1px solid #e3e8f2;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.gallery-thumb-wrap {
+  height: 170px;
+  background: #f7f9fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-thumb {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.gallery-info {
+  padding: 10px 12px 12px;
+}
+
+.gallery-name {
+  margin: 0;
+  font-size: 13px;
+  color: #1f2a44;
+  word-break: break-all;
+}
+
+.gallery-path {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #5f6b84;
+  word-break: break-all;
+}
+
+.gallery-empty {
+  margin-top: 24px;
+  padding: 16px;
+  border: 1px dashed #c9d3e8;
+  border-radius: 10px;
+  color: #5f6b84;
+  text-align: center;
+}
