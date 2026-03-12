@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>石墨文档企业服务 - 首页</title>
+  <style>
+    :root {
+      --primary: #2f5ef5;
+      --text: #1f2329;
+      --text-light: #646a73;
+      --line: #e6e8eb;
+      --bg: #f7f9fc;
+      --white: #ffffff;
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      width: min(1200px, 92%);
+      margin: 0 auto;
+    }
+
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .top-nav-inner {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-left,
+    .nav-mid,
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .logo-main {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .logo-sub {
+      font-size: 12px;
+      color: var(--text-light);
+    }
+
+    .nav-mid {
+      gap: 24px;
+    }
+
+    .nav-item {
+      position: relative;
+      font-size: 14px;
+      color: var(--text);
+      text-decoration: none;
+      cursor: pointer;
+      padding: 6px 0;
+    }
+
+    .nav-item:hover {
+      color: var(--primary);
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 36px;
+      left: 0;
+      min-width: 240px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+      display: none;
+      padding: 8px;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 8px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .dropdown a:hover {
+      background: #f2f4f8;
+      color: var(--primary);
+    }
+
+    .nav-item.has-dropdown:hover .dropdown {
+      display: block;
+    }
+
+    .nav-right {
+      gap: 10px;
+    }
+
+    .btn {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 14px;
+      text-decoration: none;
+      color: var(--text);
+      background: var(--white);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      transition: 0.2s ease;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .lang-switch button {
+      border: none;
+      background: var(--white);
+      padding: 8px 10px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .lang-switch button.active {
+      background: #eef2ff;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 84px 0 56px;
+      background: linear-gradient(180deg, #f7faff 0%, #ffffff 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      color: var(--text-light);
+      font-size: 18px;
+    }
+
+    .landing-placeholder {
+      padding: 56px 0 78px;
+      background: var(--bg);
+    }
+
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .section-desc {
+      color: var(--text-light);
+      margin-bottom: 28px;
+    }
+
+    .placeholder-box {
+      border: 2px dashed #c5ccdb;
+      border-radius: var(--radius);
+      padding: 34px 24px;
+      background: var(--white);
+      color: #76839c;
+      font-size: 16px;
+    }
+
+    .placeholder-box h3 {
+      font-size: 18px;
+      color: #42526e;
+      margin-bottom: 8px;
+    }
+
+    .placeholder-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .placeholder-card {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px;
+      background: #fcfdff;
+      color: #5b667f;
+      font-size: 14px;
+    }
+
+    .anchor-section {
+      padding: 44px 0;
+      border-bottom: 1px solid #e9edf6;
+      background: #ffffff;
+    }
+
+    .anchor-section:last-child {
+      border-bottom: none;
+    }
+
+    .anchor-section h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .anchor-section p {
+      color: var(--text-light);
+      margin-bottom: 14px;
+    }
+
+    footer {
+      background: #151820;
+      color: #d3d7de;
+      padding-top: 52px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr 1fr;
+      gap: 26px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .footer-col h3 {
+      color: var(--white);
+      margin-bottom: 14px;
+      font-size: 18px;
+    }
+
+    .footer-col h4 {
+      color: var(--white);
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    .footer-col p {
+      margin-bottom: 8px;
+      color: #b2b9c8;
+      font-size: 14px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #b2b9c8;
+      font-size: 14px;
+      text-decoration: none;
+      margin-bottom: 8px;
+    }
+
+    .footer-col a:hover {
+      color: var(--white);
+    }
+
+    .wechat-box {
+      margin-top: 12px;
+      width: 140px;
+      height: 140px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.07);
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      color: #cdd2df;
+      border: 1px dashed rgba(255, 255, 255, 0.25);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 0 26px;
+      font-size: 13px;
+      color: #9da7bb;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #9da7bb;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    .float-contact {
+      position: fixed;
+      right: 0;
+      bottom: 24px;
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+    }
+
+    .float-main {
+      width: 74px;
+      height: 74px;
+      border: none;
+      background: #06c755;
+      color: #ffffff;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(6, 199, 85, 0.4);
+      display: grid;
+      place-items: center;
+      touch-action: none;
+      user-select: none;
+    }
+
+    .float-main-symbol {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+    }
+
+    .float-main-symbol svg {
+      width: 30px;
+      height: 30px;
+      stroke: #ffffff;
+      fill: none;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .float-menu {
+      width: 162px;
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(12px);
+      border-radius: 8px 0 0 8px;
+      border-left: 1px solid rgba(193, 201, 214, 0.7);
+      border-top: 1px solid rgba(193, 201, 214, 0.5);
+      border-bottom: 1px solid rgba(193, 201, 214, 0.5);
+      box-shadow: 0 8px 26px rgba(22, 29, 45, 0.12);
+      padding: 12px 10px 14px;
+      transform: translateX(110%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.28s ease, opacity 0.2s ease;
+    }
+
+    .float-contact.open .float-menu {
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .float-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      margin-bottom: 8px;
+      padding: 2px 2px 2px 6px;
+      border-radius: 8px;
+    }
+
+    .float-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .float-item-label {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-light);
+    }
+
+    .float-item-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: grid;
+      place-items: center;
+      color: #4e5564;
+      flex-shrink: 0;
+    }
+
+    .float-item:hover .float-item-label {
+      color: var(--text);
+    }
+
+    .float-item:hover .float-item-icon {
+      background: #f3f5f9;
+    }
+
+    .float-item-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @media (max-width: 980px) {
+      .top-nav-inner {
+        height: auto;
+        padding: 14px 0;
+        flex-wrap: wrap;
+      }
+
+      .nav-mid {
+        width: 100%;
+        order: 3;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .placeholder-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="top-nav">
+    <div class="container top-nav-inner">
+      <div class="nav-left">
+        <a class="logo" href="#top">
+          <span class="logo-main">石墨文档</span>
+          <span class="logo-sub">企业服务</span>
+        </a>
+      </div>
+
+      <nav class="nav-mid" aria-label="主导航">
+        <div class="nav-item has-dropdown">
+          产品
+          <div class="dropdown">
+            <a href="#product-team">面向团队 石墨办公套件</a>
+            <a href="#product-enterprise">面向企业 石墨办公套件</a>
+            <a href="#product-integration">面向集成 石墨文档中台</a>
+          </div>
+        </div>
+        <a class="nav-item" href="#pricing">定价</a>
+        <a class="nav-item" href="#cases">案例</a>
+        <a class="nav-item" href="#support">支持中心</a>
+        <a class="nav-item" href="#sdk">SDK开发者</a>
+      </nav>
+
+      <div class="nav-right">
+        <a class="btn" href="#demo">申请试用</a>
+        <a class="btn btn-primary" href="#demo">预约演示</a>
+        <div class="lang-switch" aria-label="语言切换">
+          <button class="active" type="button">中文</button>
+          <button type="button">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container">
+        <h1>AI 时代的文档知识底座</h1>
+        <p>文档协作、知识沉淀、开放集成、AI 助力，帮助团队和企业构建统一高效的内容生产与管理平台。</p>
+      </div>
+    </section>
+
+    <section class="landing-placeholder">
+      <div class="container">
+        <h2 class="section-title">落地页内容区（留空可扩展）</h2>
+        <p class="section-desc">已预置导航锚点，后续可按产品、定价、案例、支持中心、SDK开发者逐步填充。</p>
+        <div class="placeholder-box">
+          <h3>内容占位区</h3>
+          <p>可替换为 Banner、能力介绍、客户案例、常见问题、转化表单等正式内容。</p>
+          <div class="placeholder-grid">
+            <div class="placeholder-card">模块占位：产品矩阵</div>
+            <div class="placeholder-card">模块占位：价格方案</div>
+            <div class="placeholder-card">模块占位：行业案例</div>
+            <div class="placeholder-card">模块占位：服务支持与开发者文档</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="product-team" class="anchor-section">
+      <div class="container">
+        <h3>面向团队 石墨办公套件</h3>
+        <p>落地页展示区域（当前按规划留空）。</p>
+      </div>
+    </section>
+
+    <section id="product-enterprise" class="anchor-section">
+      <div class="container">
+        <h3>面向企业 石墨办公套件</h3>
+        <p>落地页展示区域（当前按规划留空）。</p>
+      </div>
+    </section>
+
+    <section id="product-integration" class="anchor-section">
+      <div class="container">
+        <h3>面向集成 石墨文档中台</h3>
+        <p>落地页展示区域（当前按规划留空）。</p>
+      </div>
+    </section>
+
+    <section id="pricing" class="anchor-section">
+      <div class="container">
+        <h3>定价</h3>
+        <p>落地页展示区域（当前按规划留空）。</p>
+      </div>
+    </section>
+
+    <section id="cases" class="anchor-section">
+      <div class="container">
+        <h3>案例</h3>
+        <p>落地页展示区域（当前按规划留空）。</p>
+      </div>
+    </section>
+
+    <section id="support" class="anchor-section">
+      <div class="container">
+        <h3>支持中心</h3>
+        <p>落地页展示区域（当前按规划留空）。</p>
+      </div>
+    </section>
+
+    <section id="sdk" class="anchor-section">
+      <div class="container">
+        <h3>SDK开发者</h3>
+        <p>落地页展示区域（当前按规划留空）。</p>
+      </div>
+    </section>
+
+    <section id="about" class="anchor-section">
+      <div class="container">
+        <h3>关于我们</h3>
+        <p>落地页展示区域（当前按规划留空）。</p>
+      </div>
+    </section>
+
+    <section id="after-sales" class="anchor-section">
+      <div class="container">
+        <h3>售后咨询</h3>
+        <p>落地页展示区域（当前按规划留空）。</p>
+      </div>
+    </section>
+
+    <section id="demo" class="anchor-section">
+      <div class="container">
+        <h3>预约演示</h3>
+        <p>落地页展示区域（当前按规划留空）。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <h3>石墨文档</h3>
+          <p>AI 时代的文档知识底座</p>
+          <p>文档协作 · 知识沉淀 · 开放集成 · AI 助力</p>
+          <div class="wechat-box">微信公众号图片<br>微信扫码关注我们</div>
+        </div>
+
+        <div class="footer-col">
+          <h4>产品相关</h4>
+          <a href="https://shimo.im/welcome" target="_blank" rel="noopener noreferrer">面向个人</a>
+          <a href="#product-team">面向团队</a>
+          <a href="#product-enterprise">面向企业</a>
+          <a href="#product-integration">面向集成</a>
+          <a href="#product-team">下载客户端</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>服务支持</h4>
+          <a href="#support">支持中心</a>
+          <a href="#cases">案例资源</a>
+          <a href="#sdk">SDK开发者</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>联系我们</h4>
+          <a href="#about">关于我们</a>
+          <a href="#demo">预约演示</a>
+          <a href="#after-sales">售后咨询</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2014-2026 武汉初心科技有限公司 版权所有</div>
+        <div class="footer-links">
+          <a href="#">隐私政策</a>
+          <a href="#">服务条款</a>
+          <a href="#">行为规范</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="float-contact" aria-label="悬浮联系入口">
+    <div class="float-menu">
+      <a class="float-item" href="#support">
+        <span class="float-item-label">在线客服</span>
+        <span class="float-item-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M20 11.5c0 4.2-3.6 7.5-8 7.5-1.1 0-2.1-.2-3.1-.6l-3.9 1 1.1-3.4C5.4 15 4 13.4 4 11.5 4 7.3 7.6 4 12 4s8 3.3 8 7.5z"></path>
+            <path d="M9.4 11.5h5.2"></path>
+            <path d="M11.2 14h1.6"></path>
+          </svg>
+        </span>
+      </a>
+      <a class="float-item" href="#support">
+        <span class="float-item-label">电话咨询</span>
+        <span class="float-item-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M7.8 4.8l2 2.9c.4.6.3 1.3-.2 1.8l-1.3 1.2a13.1 13.1 0 0 0 5 5l1.2-1.3c.5-.5 1.2-.6 1.8-.2l2.9 2c.7.5.9 1.4.4 2.1l-1 1.3c-.8 1-2.2 1.5-3.5 1.2-4.4-1-8.2-4.8-9.2-9.2-.3-1.3.2-2.7 1.2-3.5l1.3-1c.7-.5 1.6-.3 2.1.4z"></path>
+          </svg>
+        </span>
+      </a>
+      <a class="float-item" href="#support">
+        <span class="float-item-label">企业微信</span>
+        <span class="float-item-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M10.5 5C6.9 5 4 7.4 4 10.3c0 1.8 1.1 3.4 2.8 4.4l-.8 2.3 2.5-1.3c.6.1 1.2.2 2 .2 3.6 0 6.5-2.4 6.5-5.3S14.1 5 10.5 5z"></path>
+            <path d="M16.6 11.3c2 0 3.4 1.3 3.4 3 0 1.1-.6 2-1.6 2.6l.5 1.6-1.8-.9h-.5c-2 0-3.6-1.3-3.6-3s1.6-3.3 3.6-3.3z"></path>
+          </svg>
+        </span>
+      </a>
+      <a class="float-item" href="#support">
+        <span class="float-item-label">邮件联系</span>
+        <span class="float-item-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 7h16v10H4z"></path>
+            <path d="M4 8l8 6 8-6"></path>
+          </svg>
+        </span>
+      </a>
+      <a class="float-item" href="#demo">
+        <span class="float-item-label">预约演示</span>
+        <span class="float-item-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M7 4v3"></path>
+            <path d="M17 4v3"></path>
+            <path d="M4 9h16"></path>
+            <path d="M5 6h14v14H5z"></path>
+          </svg>
+        </span>
+      </a>
+    </div>
+    <button class="float-main" id="floatContactToggle" type="button" aria-expanded="false" aria-label="打开联系面板">
+      <span class="float-main-symbol" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M20 11.5c0 4.2-3.6 7.5-8 7.5-1.1 0-2.1-.2-3.1-.6l-3.9 1 1.1-3.4C5.4 15 4 13.4 4 11.5 4 7.3 7.6 4 12 4s8 3.3 8 7.5z"></path>
+          <path d="M9.2 11.5h.01"></path>
+          <path d="M12 11.5h.01"></path>
+          <path d="M14.8 11.5h.01"></path>
+        </svg>
+      </span>
+    </button>
+  </div>
+
+  <script>
+    (function () {
+      const wrap = document.querySelector(".float-contact");
+      const btn = document.getElementById("floatContactToggle");
+      if (!wrap || !btn) return;
+      const links = wrap.querySelectorAll(".float-item");
+      let activePointerId = null;
+      let startX = 0;
+      let startY = 0;
+      let startLeft = 0;
+      let startTop = 0;
+      let dragging = false;
+      const dragThreshold = 6;
+
+      function setExpanded(open) {
+        wrap.classList.toggle("open", open);
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      }
+
+      function clampAndSetPosition(left, top) {
+        const rect = wrap.getBoundingClientRect();
+        const maxLeft = Math.max(0, window.innerWidth - rect.width);
+        const maxTop = Math.max(0, window.innerHeight - rect.height);
+        const nextLeft = Math.min(Math.max(0, left), maxLeft);
+        const nextTop = Math.min(Math.max(0, top), maxTop);
+        wrap.style.left = nextLeft + "px";
+        wrap.style.top = nextTop + "px";
+        wrap.style.right = "auto";
+        wrap.style.bottom = "auto";
+      }
+
+      btn.addEventListener("pointerdown", function (e) {
+        activePointerId = e.pointerId;
+        dragging = false;
+        startX = e.clientX;
+        startY = e.clientY;
+        const rect = wrap.getBoundingClientRect();
+        startLeft = rect.left;
+        startTop = rect.top;
+        btn.setPointerCapture(e.pointerId);
+      });
+
+      btn.addEventListener("pointermove", function (e) {
+        if (activePointerId !== e.pointerId) return;
+        const dx = e.clientX - startX;
+        const dy = e.clientY - startY;
+        if (!dragging && (Math.abs(dx) > dragThreshold || Math.abs(dy) > dragThreshold)) {
+          dragging = true;
+        }
+        if (!dragging) return;
+        e.preventDefault();
+        clampAndSetPosition(startLeft + dx, startTop + dy);
+      });
+
+      btn.addEventListener("pointerup", function (e) {
+        if (activePointerId !== e.pointerId) return;
+        if (!dragging) {
+          setExpanded(!wrap.classList.contains("open"));
+        }
+        activePointerId = null;
+        dragging = false;
+      });
+
+      btn.addEventListener("pointercancel", function (e) {
+        if (activePointerId !== e.pointerId) return;
+        activePointerId = null;
+        dragging = false;
+      });
+
+      wrap.addEventListener("click", function (e) {
+        e.stopPropagation();
+      });
+
+      links.forEach(function (link) {
+        link.addEventListener("click", function () {
+          setExpanded(false);
+        });
+      });
+
+      document.addEventListener("click", function () {
+        setExpanded(false);
+      });
+
+      window.addEventListener("resize", function () {
+        if (wrap.style.left || wrap.style.top) {
+          const rect = wrap.getBoundingClientRect();
+          clampAndSetPosition(rect.left, rect.top);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
