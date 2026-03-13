@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>石墨文档企业服务 - 首页整合展示</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+  <iframe class="home-flow-frame" src="./banner.html" title="首页 Banner 展示"></iframe>
+  <iframe class="home-flow-frame" src="./collaboration.html" title="文档协作展示"></iframe>
+  <iframe class="home-flow-frame" src="./knowledge.html" title="知识沉淀展示"></iframe>
+  <iframe class="home-flow-frame" src="./integration.html" title="开放集成展示"></iframe>
+  <iframe class="home-flow-frame" src="./ai.html" title="AI 助力展示"></iframe>
+
+  <script>
+    (function () {
+      var frames = document.querySelectorAll(".home-flow-frame");
+
+      function getDocHeight(doc) {
+        var body = doc.body;
+        var html = doc.documentElement;
+        return Math.max(
+          body ? body.scrollHeight : 0,
+          body ? body.offsetHeight : 0,
+          html ? html.clientHeight : 0,
+          html ? html.scrollHeight : 0,
+          html ? html.offsetHeight : 0
+        );
+      }
+
+      function resizeFrame(frame) {
+        var doc = frame.contentDocument;
+        if (!doc) return;
+        frame.style.height = "0px";
+        frame.style.height = getDocHeight(doc) + "px";
+      }
+
+      frames.forEach(function (frame) {
+        frame.addEventListener("load", function () {
+          resizeFrame(frame);
+
+          var doc = frame.contentDocument;
+          if (!doc) return;
+
+          if (window.ResizeObserver) {
+            var observer = new ResizeObserver(function () {
+              resizeFrame(frame);
+            });
+            if (doc.body) observer.observe(doc.body);
+            if (doc.documentElement) observer.observe(doc.documentElement);
+          }
+
+          setTimeout(function () {
+            resizeFrame(frame);
+          }, 100);
+        });
+      });
+
+      window.addEventListener("resize", function () {
+        frames.forEach(resizeFrame);
+      });
+    })();
+  </script>
+</body>
+</html>

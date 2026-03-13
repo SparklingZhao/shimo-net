@@ -1,14 +1,14 @@
 (function () {
-  function initKnowledgeTabs() {
-    var tabContainer = document.querySelector(".know-tabs");
-    if (!tabContainer || tabContainer.dataset.bound === "true") return;
+  function initEnterpriseTabs() {
+    var tabNav = document.querySelector(".ent-tabs");
+    if (!tabNav || tabNav.dataset.bound === "true") return;
 
-    tabContainer.dataset.bound = "true";
-    var tabs = tabContainer.querySelectorAll(".know-tab");
-    var panels = document.querySelectorAll(".know-panel");
+    tabNav.dataset.bound = "true";
+    var tabs = tabNav.querySelectorAll(".ent-tab");
+    var panels = document.querySelectorAll(".ent-panel");
 
-    tabContainer.addEventListener("click", function (e) {
-      var tab = e.target.closest(".know-tab");
+    tabNav.addEventListener("click", function (e) {
+      var tab = e.target.closest(".ent-tab");
       if (!tab || tab.classList.contains("is-active")) return;
 
       tabs.forEach(function (t) {
@@ -32,14 +32,14 @@
       }
     });
 
-    tabContainer.addEventListener("keydown", function (e) {
-      if (e.key !== "ArrowUp" && e.key !== "ArrowDown") return;
+    tabNav.addEventListener("keydown", function (e) {
+      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
 
       var currentIndex = Array.prototype.indexOf.call(tabs, document.activeElement);
       if (currentIndex < 0) return;
 
       var nextIndex;
-      if (e.key === "ArrowDown") {
+      if (e.key === "ArrowRight") {
         nextIndex = (currentIndex + 1) % tabs.length;
       } else {
         nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
@@ -51,6 +51,6 @@
     });
   }
 
-  window.initKnowledgeTabs = initKnowledgeTabs;
-  initKnowledgeTabs();
+  window.initEnterpriseTabs = initEnterpriseTabs;
+  initEnterpriseTabs();
 })();

@@ -1,0 +1,152 @@
+/* ===== 私有部署页 - Hero ===== */
+
+.pd-page {
+  min-height: 100vh;
+  background: var(--white);
+}
+
+.pd-hero {
+  padding: 72px 0 52px;
+  background: linear-gradient(180deg, #edf2ff 0%, #ffffff 100%);
+  text-align: center;
+}
+
+.pd-title {
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+  margin-bottom: 18px;
+}
+
+.pd-desc {
+  max-width: 560px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+/* ===== 三大能力区域 ===== */
+
+.pd-pillars-section {
+  padding: 56px 0 88px;
+  background: var(--white);
+}
+
+.pd-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+/* ===== 卡片通用 ===== */
+
+.pd-pillar {
+  background: #f7f9ff;
+  border: 1px solid #e5eaf5;
+  border-radius: 12px;
+  padding: 36px 32px 32px;
+  display: flex;
+  align-items: center;
+  box-shadow: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+.pd-pillar:hover {
+  transform: none;
+  border-color: #c0ccf0;
+  box-shadow: 0 2px 10px rgba(80, 100, 200, 0.07);
+}
+
+/* ===== 图标 ===== */
+
+.pd-pillar-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.pd-pillar-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.pd-pillar-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.pd-pillar-icon--data {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.pd-pillar-icon--deploy {
+  background: #dbe4ff;
+  color: #2f5ef5;
+}
+
+.pd-pillar-icon--support {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+
+/* ===== 文字 ===== */
+
+.pd-pillar-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.pd-pillar-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+/* ===== 响应式 ===== */
+
+@media (max-width: 1024px) {
+  .pd-pillars-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .pd-hero {
+    padding: 52px 0 40px;
+  }
+
+  .pd-desc {
+    font-size: 15px;
+  }
+
+  .pd-pillars-section {
+    padding: 48px 0 64px;
+  }
+
+  .pd-pillar {
+    padding: 28px 24px 24px;
+  }
+
+  .pd-pillar-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .pd-pillar-title {
+    font-size: 20px;
+  }
+}

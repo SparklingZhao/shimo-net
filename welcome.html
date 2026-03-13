@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>石墨文档企业服务 - 首页</title>
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/landing.css">
+  <link rel="stylesheet" href="./css/collaboration.css">
+  <link rel="stylesheet" href="./css/knowledge.css">
+  <link rel="stylesheet" href="./css/integration.css">
+  <link rel="stylesheet" href="./css/ai.css">
 </head>
-<body>
+<body class="site-shell">
   <header class="top-nav">
     <div class="container top-nav-inner">
       <div class="nav-left">
-        <a class="logo" href="#top">
+        <a class="logo" href="#landing-home">
           <span class="logo-main">石墨文档</span>
           <span class="logo-sub">企业服务</span>
         </a>
@@ -35,100 +40,8 @@
     </div>
   </header>
 
-  <main>
-    <section class="hero" id="top">
-      <div class="container">
-        <h1>AI 时代的文档知识底座</h1>
-        <p>文档协作、知识沉淀、开放集成、AI 助力，帮助团队和企业构建统一高效的内容生产与管理平台。</p>
-      </div>
-    </section>
-
-    <section class="landing-placeholder">
-      <div class="container">
-        <h2 class="section-title">落地页内容区（留空可扩展）</h2>
-        <p class="section-desc">已预置导航锚点，后续可按产品、定价、案例、支持中心、SDK开发者逐步填充。</p>
-        <div class="placeholder-box">
-          <h3>内容占位区</h3>
-          <p>可替换为 Banner、能力介绍、客户案例、常见问题、转化表单等正式内容。</p>
-          <div class="placeholder-grid">
-            <div class="placeholder-card">模块占位：产品矩阵</div>
-            <div class="placeholder-card">模块占位：价格方案</div>
-            <div class="placeholder-card">模块占位：行业案例</div>
-            <div class="placeholder-card">模块占位：服务支持与开发者文档</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="product-team" class="anchor-section">
-      <div class="container">
-        <h3>面向团队 石墨办公套件</h3>
-        <p>落地页展示区域（当前按规划留空）。</p>
-      </div>
-    </section>
-
-    <section id="product-enterprise" class="anchor-section">
-      <div class="container">
-        <h3>面向企业 石墨办公套件</h3>
-        <p>落地页展示区域（当前按规划留空）。</p>
-      </div>
-    </section>
-
-    <section id="product-integration" class="anchor-section">
-      <div class="container">
-        <h3>面向集成 石墨文档中台</h3>
-        <p>落地页展示区域（当前按规划留空）。</p>
-      </div>
-    </section>
-
-    <section id="pricing" class="anchor-section">
-      <div class="container">
-        <h3>定价</h3>
-        <p>落地页展示区域（当前按规划留空）。</p>
-      </div>
-    </section>
-
-    <section id="cases" class="anchor-section">
-      <div class="container">
-        <h3>案例</h3>
-        <p>落地页展示区域（当前按规划留空）。</p>
-      </div>
-    </section>
-
-    <section id="support" class="anchor-section">
-      <div class="container">
-        <h3>支持中心</h3>
-        <p>落地页展示区域（当前按规划留空）。</p>
-      </div>
-    </section>
-
-    <section id="sdk" class="anchor-section">
-      <div class="container">
-        <h3>SDK开发者</h3>
-        <p>落地页展示区域（当前按规划留空）。</p>
-      </div>
-    </section>
-
-    <section id="about" class="anchor-section">
-      <div class="container">
-        <h3>关于我们</h3>
-        <p>落地页展示区域（当前按规划留空）。</p>
-      </div>
-    </section>
-
-    <section id="after-sales" class="anchor-section">
-      <div class="container">
-        <h3>售后咨询</h3>
-        <p>落地页展示区域（当前按规划留空）。</p>
-      </div>
-    </section>
-
-    <section id="demo" class="anchor-section">
-      <div class="container">
-        <h3>预约演示</h3>
-        <p>落地页展示区域（当前按规划留空）。</p>
-      </div>
-    </section>
+  <main id="appMain" class="site-main" aria-live="polite">
+    <div class="container content-loading" id="contentLoading">正在加载首页内容...</div>
   </main>
 
   <footer>
@@ -138,7 +51,10 @@
           <h3>石墨文档</h3>
           <p>AI 时代的文档知识底座</p>
           <p>文档协作 · 知识沉淀 · 开放集成 · AI 助力</p>
-          <div class="wechat-box">微信公众号图片<br>微信扫码关注我们</div>
+          <div class="wechat-box">
+            <img src="./assets/images/wechat-accout.png" alt="石墨文档微信公众号二维码">
+            <span>微信扫码<br>关注我们</span>
+          </div>
         </div>
 
         <div class="footer-col">
@@ -240,7 +156,10 @@
 
   <script src="./js/utils.js"></script>
   <script src="./js/api.js"></script>
+  <script src="./js/components/doc-tabs.js"></script>
+  <script src="./js/components/knowledge-tabs.js"></script>
   <script src="./js/components/floating-contact.js"></script>
   <script src="./js/main.js"></script>
+  <script src="./js/components/home-content-loader.js"></script>
 </body>
 </html>
