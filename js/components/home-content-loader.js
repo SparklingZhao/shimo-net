@@ -21,6 +21,10 @@
     if (typeof window.initEnterpriseTabs === "function") {
       window.initEnterpriseTabs();
     }
+
+    if (typeof window.initSecurityHubTabs === "function") {
+      window.initSecurityHubTabs();
+    }
   }
 
   function loadMergeSlot(slot) {
