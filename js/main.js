@@ -4,6 +4,10 @@
       window.initFloatingContact();
     }
 
+    if (typeof window.initNavDropdowns === "function") {
+      window.initNavDropdowns();
+    }
+
     initTopNavState();
   }
 
@@ -14,11 +18,7 @@
     }
 
     var navItems = Array.prototype.slice.call(nav.querySelectorAll(".nav-item"));
-    var productTrigger = nav.querySelector(".nav-trigger");
-    var dropdownWrapper = nav.querySelector(".has-dropdown");
-    var dropdownLinks = dropdownWrapper
-      ? Array.prototype.slice.call(dropdownWrapper.querySelectorAll(".dropdown a"))
-      : [];
+    var dropdownLinks = Array.prototype.slice.call(nav.querySelectorAll(".dropdown a"));
 
     function setActive(target) {
       navItems.forEach(function (item) {
@@ -36,27 +36,16 @@
       });
     });
 
-    if (productTrigger && dropdownWrapper) {
-      productTrigger.addEventListener("click", function () {
-        var isOpen = dropdownWrapper.classList.toggle("open");
-        productTrigger.setAttribute("aria-expanded", String(isOpen));
-      });
+    dropdownLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        var wrapper = link.closest(".has-dropdown");
+        var trigger = wrapper ? wrapper.querySelector(".nav-trigger") : null;
 
-      dropdownLinks.forEach(function (link) {
-        link.addEventListener("click", function () {
-          setActive(productTrigger);
-          dropdownWrapper.classList.remove("open");
-          productTrigger.setAttribute("aria-expanded", "false");
-        });
-      });
-
-      document.addEventListener("click", function (event) {
-        if (!dropdownWrapper.contains(event.target)) {
-          dropdownWrapper.classList.remove("open");
-          productTrigger.setAttribute("aria-expanded", "false");
+        if (trigger) {
+          setActive(trigger);
         }
       });
-    }
+    });
   }
 
   if (document.readyState === "loading") {
