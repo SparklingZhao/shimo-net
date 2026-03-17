@@ -116,6 +116,8 @@
 
 .product-panel {
   width: min(920px, calc(100vw - 24px));
+  --product-top-card-height: 158px;
+  --product-bottom-card-height: 116px;
 }
 
 .dropdown-align-right {
@@ -176,6 +178,10 @@
   grid-auto-rows: 1fr;
 }
 
+.developer-panel .mega-info-grid > .dropdown-list-item {
+  background: transparent;
+}
+
 .support-panel {
   width: min(920px, calc(100vw - 24px));
 }
@@ -219,9 +225,21 @@
 
 .product-capability-grid {
   grid-template-columns: minmax(260px, 1.45fr) repeat(2, minmax(150px, 1fr));
-  gap: 14px;
+  column-gap: 14px;
+  row-gap: 10px;
   align-items: stretch;
-  grid-auto-rows: 1fr;
+}
+
+.product-capability-grid > .dropdown-list-item {
+  background: transparent;
+}
+
+.product-dropdown-layout > .dropdown-col:first-child > .dropdown-card:first-of-type {
+  min-height: var(--product-top-card-height);
+}
+
+.product-dropdown-layout > .dropdown-col:first-child > .dropdown-card:last-of-type {
+  min-height: var(--product-bottom-card-height);
 }
 
 .product-capability-grid > .dropdown-list-item:first-child .dropdown-tags-row {
@@ -232,8 +250,16 @@
   grid-row: span 2;
 }
 
+.product-capability-grid > .dropdown-list-item:nth-child(2),
+.product-capability-grid > .dropdown-list-item:nth-child(3) {
+  min-height: var(--product-top-card-height);
+}
+
 .product-ai-access-item {
   grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  align-self: stretch;
+  min-height: var(--product-bottom-card-height);
 }
 
 .product-ai-access-links {
@@ -328,6 +354,10 @@
 
 .dropdown-grid .dropdown-card + .dropdown-card {
   margin-top: 0;
+}
+
+.product-dropdown-layout .dropdown-col > .dropdown-card + .dropdown-card {
+  margin-top: 10px;
 }
 
 .dropdown-card-head {
@@ -754,9 +784,25 @@
 
   .product-ai-access-item {
     grid-column: auto;
+    grid-row: auto;
   }
 
   .product-ai-access-links {
     grid-template-columns: 1fr;
+  }
+
+  .product-capability-grid {
+    gap: 14px;
+  }
+
+  .product-dropdown-layout > .dropdown-col:first-child > .dropdown-card:first-of-type,
+  .product-dropdown-layout > .dropdown-col:first-child > .dropdown-card:last-of-type {
+    min-height: auto;
+  }
+
+  .product-capability-grid > .dropdown-list-item:nth-child(2),
+  .product-capability-grid > .dropdown-list-item:nth-child(3),
+  .product-ai-access-item {
+    min-height: auto;
   }
 }
