@@ -1,0 +1,36 @@
+---
+description: 项目编码与 Git 提交信息使用 UTF-8，避免乱码
+alwaysApply: true
+---
+
+# 编码要求
+
+## Git 提交信息必须使用 UTF-8
+
+- 在 Windows 等非 UTF-8 默认环境下，提交信息若按系统编码（如 GBK）写入，在 GitHub 上会显示为乱码。
+- 本仓库已配置 Git 使用 UTF-8：
+  - `i18n.commitEncoding = utf-8`
+  - `i18n.logOutputEncoding = utf-8`
+- 执行 Git 相关操作（提交、amend、rebase 等）时：
+  - 提交信息（commit message）一律使用 **UTF-8** 书写。
+  - 若通过脚本或临时文件传入提交信息，确保该文件以 **UTF-8** 保存（无 BOM 或 UTF-8 BOM 均可）。
+
+## 新建仓库或克隆后建议
+
+若在其他机器或新克隆的仓库中工作，建议设置编码后再提交：
+
+```bash
+git config i18n.commitEncoding utf-8
+git config i18n.logOutputEncoding utf-8
+```
+
+或全局设置：
+
+```bash
+git config --global i18n.commitEncoding utf-8
+git config --global i18n.logOutputEncoding utf-8
+```
+
+## 源文件与资源
+
+- 源代码、配置、文档等文本文件优先使用 **UTF-8** 编码保存，以便跨平台与 GitHub 上正确显示。

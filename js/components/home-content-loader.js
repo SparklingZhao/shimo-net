@@ -29,6 +29,30 @@
       mode: "page",
       title: "石墨文档中台 - 石墨文档企业服务",
       mainClass: DEFAULT_MAIN_CLASS + " dp-page"
+    },
+    about: {
+      source: "./about.html",
+      mode: "page",
+      title: "石墨文档企业服务 - 关于我们",
+      mainClass: DEFAULT_MAIN_CLASS + " about-page"
+    },
+    privacy: {
+      source: "./privacy.html",
+      mode: "page",
+      title: "石墨文档隐私保护政策",
+      mainClass: DEFAULT_MAIN_CLASS + " privacy-page"
+    },
+    service: {
+      source: "./service.html",
+      mode: "page",
+      title: "石墨文档服务条款",
+      mainClass: DEFAULT_MAIN_CLASS + " privacy-page"
+    },
+    behavior: {
+      source: "./behavior.html",
+      mode: "page",
+      title: "石墨文档用户行为规范",
+      mainClass: DEFAULT_MAIN_CLASS + " behavior-page"
     }
   };
 

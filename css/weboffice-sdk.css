@@ -341,12 +341,23 @@
 }
 
 .dp-cta-card .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 148px;
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 999px;
   border-color: rgba(255, 255, 255, 0.28);
   color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 12px 28px rgba(19, 12, 74, 0.24);
 }
 
 .dp-cta-card .btn:hover {
   background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 32px rgba(19, 12, 74, 0.3);
 }
 
 .dp-cta-card .btn.btn-primary {
