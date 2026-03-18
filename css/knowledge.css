@@ -112,8 +112,8 @@
 }
 
 .know-tab-name {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: normal;
   color: var(--text-light);
   transition: color 0.2s;
 }
@@ -294,7 +294,7 @@
   }
 
   .know-tab-name {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .know-tab-quote {

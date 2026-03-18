@@ -2,11 +2,51 @@
   var main = document.getElementById("appMain");
   if (!main) return;
 
+  var DEFAULT_TITLE = "石墨文档企业服务 - 首页";
+  var DEFAULT_MAIN_CLASS = "site-main";
+  var HASH_SCROLL_OFFSET = 80;
+  var VIEW_CONFIG = {
+    home: {
+      source: "./home-content.html",
+      mode: "fragment",
+      title: DEFAULT_TITLE,
+      mainClass: DEFAULT_MAIN_CLASS
+    },
+    "office-suite-saas": {
+      source: "./office-suite-saas.html",
+      mode: "page",
+      title: "石墨办公套件公有云服务 - 石墨文档企业服务",
+      mainClass: DEFAULT_MAIN_CLASS + " pc-page"
+    },
+    "office-suite-private": {
+      source: "./office-suite-private.html",
+      mode: "page",
+      title: "石墨办公套件私有化服务 - 石墨文档企业服务",
+      mainClass: DEFAULT_MAIN_CLASS + " pc-page"
+    },
+    "weboffice-sdk": {
+      source: "./weboffice-sdk.html",
+      mode: "page",
+      title: "石墨文档中台 - 石墨文档企业服务",
+      mainClass: DEFAULT_MAIN_CLASS + " dp-page"
+    }
+  };
+
   function extractMainHtml(pageHtml) {
     var parser = new DOMParser();
     var doc = parser.parseFromString(pageHtml, "text/html");
     var mainNode = doc.querySelector("main");
     return mainNode ? mainNode.innerHTML : "";
+  }
+
+  function getCurrentView() {
+    var params = new URLSearchParams(window.location.search);
+    var view = params.get("page");
+    return VIEW_CONFIG[view] ? view : "home";
+  }
+
+  function getCurrentConfig() {
+    return VIEW_CONFIG[getCurrentView()];
   }
 
   function initDynamicModules() {
@@ -24,6 +64,10 @@
 
     if (typeof window.initSecurityHubTabs === "function") {
       window.initSecurityHubTabs();
+    }
+
+    if (typeof window.initOfficeSuiteSaasCarousel === "function") {
+      window.initOfficeSuiteSaasCarousel(main);
     }
   }
 
@@ -48,17 +92,41 @@
       });
   }
 
-  function loadHomeContent() {
-    fetch("./home-content.html")
+  function restoreHashScroll() {
+    var hash = window.location.hash;
+    if (!hash) return;
+
+    var id = decodeURIComponent(hash.slice(1));
+    if (!id) return;
+
+    window.requestAnimationFrame(function () {
+      var target = document.getElementById(id);
+      if (!target) return;
+
+      var top = target.getBoundingClientRect().top + window.pageYOffset - HASH_SCROLL_OFFSET;
+      window.scrollTo({ top: top, behavior: "smooth" });
+    });
+  }
+
+  function setMainState(config) {
+    main.className = config.mainClass || DEFAULT_MAIN_CLASS;
+    document.title = config.title || DEFAULT_TITLE;
+  }
+
+  function loadCurrentContent() {
+    var config = getCurrentConfig();
+    setMainState(config);
+
+    fetch(config.source)
       .then(function (response) {
         if (!response.ok) {
-          throw new Error("加载失败: home-content.html");
+          throw new Error("加载失败: " + config.source);
         }
 
         return response.text();
       })
-      .then(function (fragmentHtml) {
-        main.innerHTML = fragmentHtml;
+      .then(function (htmlText) {
+        main.innerHTML = config.mode === "page" ? extractMainHtml(htmlText) : htmlText;
         var slots = Array.prototype.slice.call(
           main.querySelectorAll("[data-merge-source]")
         );
@@ -66,16 +134,17 @@
       })
       .then(function () {
         initDynamicModules();
+        restoreHashScroll();
       })
       .catch(function () {
         main.innerHTML =
-          '<div class="container content-error">首页内容加载失败，请刷新页面重试。</div>';
+          '<div class="container content-error">页面内容加载失败，请刷新页面重试。</div>';
       });
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", loadHomeContent);
+    document.addEventListener("DOMContentLoaded", loadCurrentContent);
   } else {
-    loadHomeContent();
+    loadCurrentContent();
   }
 })();

@@ -119,8 +119,8 @@
 }
 
 .collab-tab-name {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: normal;
   color: var(--text-light);
   transition: color 0.2s;
 }
@@ -318,7 +318,7 @@
   }
 
   .collab-tab-name {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .panel-title {

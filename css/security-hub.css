@@ -86,8 +86,8 @@
   justify-content: center;
   gap: 9px;
   padding: 12px 28px;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: normal;
   color: var(--text-light);
   background: none;
   border: none;
@@ -249,7 +249,7 @@
   }
 
   .sh-tab-btn {
-    font-size: 13px;
+    font-size: 12px;
     padding: 11px 16px;
   }
 

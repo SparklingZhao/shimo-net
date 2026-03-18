@@ -806,3 +806,30 @@
     min-height: auto;
   }
 }
+
+/* ── 导航二级菜单：激活态样式 ─────────────────────────────────────────────── */
+
+/*
+ * 当 nav-scroll.js 激活某条二级链接时，会为其添加 .nav-link--active 类。
+ * 同时通过 aria-current="true" 提供无障碍语义，
+ * 可在此选择器中统一覆盖无障碍高对比度需求。
+ */
+.dropdown a.nav-link--active {
+  color: var(--primary);
+  background: rgba(47, 94, 245, 0.06);
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+/* 聚焦轮廓：键盘导航可见性增强 */
+.dropdown a[data-nav-scroll]:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* 确保激活态在 hover 时保持高亮（避免 hover 色覆盖） */
+.dropdown a.nav-link--active:hover {
+  background: rgba(47, 94, 245, 0.1);
+  color: var(--primary);
+}

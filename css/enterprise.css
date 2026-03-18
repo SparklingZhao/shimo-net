@@ -196,8 +196,8 @@
   background: transparent;
   cursor: pointer;
   color: var(--text-light);
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: normal;
   transition: background 0.18s, color 0.18s, box-shadow 0.18s;
   white-space: nowrap;
 }
@@ -210,7 +210,7 @@
 .ent-tab.is-active {
   background: #fff;
   color: var(--primary);
-  font-weight: 600;
+  font-weight: normal;
   box-shadow: 0 2px 8px rgba(80, 100, 200, 0.12);
 }
 
@@ -260,7 +260,7 @@
 
   .ent-tab {
     padding: 10px 16px;
-    font-size: 14px;
+    font-size: 13px;
     gap: 6px;
   }
 
