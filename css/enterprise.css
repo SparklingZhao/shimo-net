@@ -273,3 +273,14 @@
     min-height: 260px;
   }
 }
+
+.ent-panel-cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 28px;
+  min-height: 44px;
+  padding: 0 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}

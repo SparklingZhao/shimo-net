@@ -11,12 +11,12 @@
   <link rel="stylesheet" href="./css/ai.css">
   <link rel="stylesheet" href="./css/enterprise.css">
   <link rel="stylesheet" href="./css/security.css">
-  <link rel="stylesheet" href="./css/private-deploy.css">
-  <link rel="stylesheet" href="./css/xinchuang.css">
   <link rel="stylesheet" href="./css/security-hub.css">
 </head>
 <body>
   <main class="pc-page">
+
+    <!-- Hero -->
     <section class="pc-hero">
       <div class="container pc-hero-inner">
 
@@ -24,20 +24,73 @@
           <p class="pc-eyebrow">AI 时代的文档基座</p>
           <h1 class="pc-title">石墨办公套件 面向企业</h1>
           <p class="pc-desc">独立自主的企业级私有化在线 Office，安全可控，协同高效，信创合规。</p>
+          <ul class="pc-hero-tags" aria-label="核心优势">
+            <li>私有化服务</li>
+            <li>数据自主</li>
+            <li>信创合规</li>
+            <li>功能强大</li>
+            <li>AI 接入</li>
+          </ul>
           <div class="pc-actions">
             <a class="btn btn-primary" href="./welcome.html#demo">免费试用</a>
             <a class="btn" href="./welcome.html#demo">预约演示</a>
           </div>
         </div>
-        <div class="pc-hero-visual">
-          <span>banner配图位置</span>
+
+        <div class="pc-hero-panel">
+  
+          <div class="pc-hero-workspace" aria-hidden="true">
+            <div class="pc-hero-workspace-head">
+              <span class="pc-hero-chip">数据自主</span>
+              <span class="pc-hero-chip">信创合规</span>
+              <span class="pc-hero-chip">灵活部署</span>
+            </div>
+            <div class="pc-hero-workspace-body">
+              <article class="pc-hero-sheet">
+                <p class="pc-hero-sheet-title">企业私有环境</p>
+                <div class="pc-hero-lines">
+                  <span class="pc-hero-line pc-hero-line--lg"></span>
+                  <span class="pc-hero-line"></span>
+                  <span class="pc-hero-line pc-hero-line--sm"></span>
+                </div>
+                <div class="pc-hero-members">
+                  <span>私有云</span>
+                  <span>本地部署</span>
+                  <span>混合云</span>
+                </div>
+              </article>
+              <div class="pc-hero-stack">
+                <article class="pc-hero-mini-card">
+                  <p class="pc-hero-mini-title">安全管控</p>
+                  <ul class="pc-hero-mini-list">
+                    <li>数据加密</li>
+                    <li>权限管理</li>
+                    <li>操作审计</li>
+                  </ul>
+                </article>
+                <article class="pc-hero-mini-card">
+                  <p class="pc-hero-mini-title">信创适配</p>
+                  <div class="pc-hero-mini-bars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
 
+    <!-- 核心优势卡片 -->
     <section class="pc-scene-section">
       <div class="container">
-     
+        <div class="pc-scene-head">
+          <h2 class="pc-scene-title">为什么高要求企业选择</h2>
+          <p class="pc-scene-desc">石墨办公套件私有化服务</p>
+        </div>
 
         <div class="pc-scene-grid">
           <article class="pc-scene-card">
@@ -88,6 +141,43 @@
       </div>
     </section>
 
+    <!-- 适用受众 -->
+    <section class="pc-audience-section">
+      <div class="container">
+        <div class="pc-scene-head">
+          <h2 class="pc-scene-title">这些企业更适合选择私有化部署</h2>
+        </div>
+        <div class="pc-audience-grid">
+          <article class="pc-audience-card">
+            <p class="pc-audience-label">政府 / 事业单位</p>
+            <h3 class="pc-audience-title">满足等保与数据不出域要求</h3>
+            <p class="pc-audience-text">数据全程在内网流转，满足等保合规与数据本地化要求，支持操作留痕与安全审计。</p>
+          </article>
+          <article class="pc-audience-card">
+            <p class="pc-audience-label">金融 / 医疗等监管行业</p>
+            <h3 class="pc-audience-title">符合行业数据安全规范</h3>
+            <p class="pc-audience-text">自有服务器部署，满足行业监管审计要求，敏感文件不经过公有云，合规有据可查。</p>
+          </article>
+          <article class="pc-audience-card">
+            <p class="pc-audience-label">大型集团企业</p>
+            <h3 class="pc-audience-title">深度集成，打通内部系统</h3>
+            <p class="pc-audience-text">支持 SSO 单点登录、AD/LDAP 对接与现有 OA / ERP 集成，融入企业 IT 体系而非另立孤岛。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 能力引导 -->
+    <section class="pc-capability-section">
+      <div class="container">
+        <div class="pc-scene-head">
+          <h2 class="pc-scene-title">协作、沉淀、智能与安全，一套私有化平台全覆盖</h2>
+          <p class="pc-scene-desc">石墨私有化部署提供与公有云一致的完整能力，数据自主隔离，效率一分不少。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 能力详情（动态加载） -->
     <section class="pc-flow-section">
       <section id="pc-collaboration" class="pc-flow-slot" data-merge-source="./collaboration.html"></section>
       <section id="pc-knowledge" class="pc-flow-slot" data-merge-source="./knowledge.html"></section>
@@ -96,20 +186,45 @@
       <section id="pc-security-hub" class="pc-flow-slot" data-merge-source="./security-hub.html"></section>
     </section>
 
+    <!-- 公有云 vs 私有化 -->
+    <section class="pc-diff-section">
+      <div class="container">
+        <div class="pc-scene-head">
+          <h2 class="pc-scene-title">什么时候适合私有化，什么时候考虑公有云</h2>
+          <p class="pc-scene-desc">根据企业数据策略、合规要求与 IT 架构，选择更合适的服务方式。</p>
+        </div>
+        <div class="pc-diff-grid">
+          <article class="pc-diff-card pc-diff-card--active">
+            <p class="pc-diff-badge">更适合当前页面</p>
+            <h3 class="pc-diff-title">面向企业的私有化服务</h3>
+            <p class="pc-diff-text">适合对数据主权、合规要求、IT 自主可控有明确需求，或需要与内部系统深度集成的企业。</p>
+          </article>
+          <article class="pc-diff-card">
+            <p class="pc-diff-badge">也可以考虑</p>
+            <h3 class="pc-diff-title">面向团队的公有云服务</h3>
+            <p class="pc-diff-text">适合希望快速上线、降低运维成本、尽快建立统一协作平台的团队。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
     <section class="pc-cta-section">
       <div class="container">
         <div class="pc-cta-card">
           <div>
             <p class="pc-cta-eyebrow">方案咨询</p>
-            <h2>想了解更适合你企业的在线 Office 方案？</h2>
-            <p>告诉我们你的行业要求、部署环境和安全合规诉求，石墨团队将协助评估合适的接入路径与建设方案。</p>
+            <h2>了解最适合你企业的私有化方案</h2>
+            <p>告诉我们你的行业要求、数据安全策略和 IT 架构，石墨团队将为你评估合适的部署路径与建设方案。</p>
           </div>
           <div class="pc-cta-actions">
             <a class="btn btn-primary" href="./welcome.html#demo">预约演示</a>
+            <a class="btn" href="./welcome.html#demo">联系专属顾问</a>
           </div>
         </div>
       </div>
     </section>
+
   </main>
   <script src="./js/components/doc-tabs.js"></script>
   <script src="./js/components/knowledge-tabs.js"></script>

@@ -314,6 +314,17 @@
   }
 }
 
+.know-panel-cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 28px;
+  min-height: 44px;
+  padding: 0 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
 @media (max-width: 420px) {
   .know-tab {
     flex: 1 1 100%;
