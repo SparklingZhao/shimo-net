@@ -229,11 +229,29 @@
   opacity: 0.7;
 }
 
+.panel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
 .panel-btn {
   display: inline-block;
   padding: 12px 32px;
   font-size: 15px;
   border-radius: 8px;
+  text-decoration: none;
+}
+
+.panel-btn-more {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--text);
+}
+
+.panel-btn-more:hover {
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .panel-visual {

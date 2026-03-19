@@ -4,13 +4,30 @@
 }
 
 .pc-hero {
+  position: relative;
+  overflow: hidden;
   padding: 140px 0 120px;
   background:
     linear-gradient(180deg, rgba(239, 244, 255, 0.96) 0%, rgba(255, 255, 255, 0.98) 100%),
     url("../assets/images/homepage_title_banner_background.43282104.png") center / cover no-repeat;
 }
 
+.pc-hero::after {
+  content: "";
+  position: absolute;
+  top: 88px;
+  right: max(3vw, 24px);
+  width: min(42vw, 520px);
+  height: min(42vw, 520px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(121, 189, 255, 0.22) 0%, rgba(121, 189, 255, 0.1) 32%, rgba(121, 189, 255, 0.04) 58%, rgba(121, 189, 255, 0) 74%);
+  filter: blur(18px);
+  pointer-events: none;
+}
+
 .pc-hero-inner {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 1fr);
   gap: 48px;
@@ -101,6 +118,23 @@
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(240, 245, 255, 0.98) 100%);
   box-shadow: 0 18px 42px rgba(41, 73, 157, 0.12);
   text-align: left;
+}
+
+.pc-hero-panel--bare {
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.pc-hero-banner {
+  display: block;
+  width: 118%;
+  max-width: none;
+  height: auto;
+  border-radius: 0;
+  transform: translate(-7%, 14px);
+  filter: drop-shadow(0 12px 24px rgba(47, 99, 214, 0.06));
 }
 
 .pc-hero-panel-eyebrow {
@@ -820,6 +854,11 @@
     text-align: left;
   }
 
+  .pc-hero-banner {
+    width: 100%;
+    transform: none;
+  }
+
   .pc-hero-workspace-body {
     grid-template-columns: 1fr;
   }
@@ -858,6 +897,14 @@
     padding: 100px 0 80px;
   }
 
+  .pc-hero::after {
+    top: 120px;
+    right: 50%;
+    width: 360px;
+    height: 360px;
+    transform: translateX(50%);
+  }
+
   .pc-desc {
     font-size: 15px;
   }
@@ -881,12 +928,20 @@
     padding: 22px;
   }
 
+  .pc-hero-panel--bare {
+    padding: 0;
+  }
+
   .pc-hero-panel-title {
     font-size: 22px;
   }
 
   .pc-hero-workspace {
     padding: 14px;
+  }
+
+  .pc-hero-banner {
+    filter: drop-shadow(0 10px 18px rgba(47, 99, 214, 0.05));
   }
 
   .pc-hero-sheet,

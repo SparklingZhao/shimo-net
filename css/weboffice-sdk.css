@@ -34,6 +34,26 @@
   color: #161827;
 }
 
+.dp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.dp-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid rgba(108, 63, 245, 0.15);
+  font-size: 14px;
+  font-weight: 500;
+  color: #2f2652;
+  box-shadow: 0 2px 8px rgba(108, 63, 245, 0.04);
+}
+
 .dp-subtitle {
   margin: 18px 0 0;
   font-size: clamp(18px, 2.4vw, 24px);
@@ -63,6 +83,22 @@
   border-radius: 24px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 241, 255, 0.98) 100%);
   box-shadow: 0 24px 80px rgba(76, 53, 162, 0.12);
+}
+
+.dp-hero-panel--bare {
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.dp-hero-banner {
+  display: block;
+  width: 118%;
+  max-width: none;
+  height: auto;
+  transform: translate(-7%, 14px);
+  filter: drop-shadow(0 12px 24px rgba(108, 63, 245, 0.08));
 }
 
 .dp-panel-grid {
@@ -176,7 +212,8 @@
 }
 
 .dp-capability-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .dp-scene-grid {
@@ -211,12 +248,52 @@
 }
 
 .dp-value-card,
-.dp-capability-card,
 .dp-scene-card,
 .dp-flow-card,
 .dp-resource-card,
 .dp-diff-card {
   padding: 28px;
+}
+
+.dp-capability-card {
+  padding: 20px;
+}
+
+.dp-capability-card h3 {
+  font-size: 18px;
+}
+
+.dp-capability-card p {
+  font-size: 13px;
+  margin: 0;
+}
+
+.dp-capability-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.dp-capability-header .dp-icon {
+  width: auto;
+  height: auto;
+  margin-bottom: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.dp-capability-header .dp-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.dp-capability-feature {
+  margin-top: 12px !important;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(30, 41, 59, 0.08);
+  font-size: 13px !important;
+  color: #6c3ff5 !important;
 }
 
 .dp-value-card h3,
@@ -494,6 +571,11 @@
   .dp-cta-card .dp-actions {
     margin-top: 24px;
   }
+
+  .dp-hero-banner {
+    width: 100%;
+    transform: none;
+  }
 }
 
 @media (max-width: 640px) {
@@ -521,6 +603,14 @@
   .dp-diff-card,
   .dp-cta-card {
     padding: 22px;
+  }
+
+  .dp-hero-panel--bare {
+    padding: 0;
+  }
+
+  .dp-hero-banner {
+    filter: drop-shadow(0 10px 18px rgba(108, 63, 245, 0.06));
   }
 
   .dp-panel-grid {

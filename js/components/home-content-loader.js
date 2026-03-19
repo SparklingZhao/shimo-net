@@ -54,6 +54,42 @@
       title: "文档协作 - 石墨文档企业服务",
       mainClass: DEFAULT_MAIN_CLASS
     },
+    document: {
+      source: "/pages/features/document.html",
+      mode: "page",
+      title: "文档 - 石墨文档企业服务",
+      mainClass: DEFAULT_MAIN_CLASS
+    },
+    writer: {
+      source: "/pages/features/writer.html",
+      mode: "page",
+      title: "文稿 - 石墨文档企业服务",
+      mainClass: DEFAULT_MAIN_CLASS
+    },
+    sheet: {
+      source: "/pages/features/sheet.html",
+      mode: "page",
+      title: "表格 - 石墨文档企业服务",
+      mainClass: DEFAULT_MAIN_CLASS
+    },
+    slide: {
+      source: "/pages/features/slide.html",
+      mode: "page",
+      title: "幻灯片 - 石墨文档企业服务",
+      mainClass: DEFAULT_MAIN_CLASS
+    },
+    table: {
+      source: "/pages/features/table.html",
+      mode: "page",
+      title: "应用表格 - 石墨文档企业服务",
+      mainClass: DEFAULT_MAIN_CLASS
+    },
+    form: {
+      source: "/pages/features/form.html",
+      mode: "page",
+      title: "表单 - 石墨文档企业服务",
+      mainClass: DEFAULT_MAIN_CLASS
+    },
     knowledge: {
       source: "/pages/features/knowledge.html",
       mode: "page",
@@ -123,6 +159,11 @@
     return mainNode ? mainNode.innerHTML : "";
   }
 
+  function extractEmbeddableHtml(htmlText) {
+    var mainHtml = extractMainHtml(htmlText);
+    return mainHtml || htmlText;
+  }
+
   function resolveSourceUrl(source) {
     if (!source) return source;
     if (/^(?:[a-z]+:)?\/\//i.test(source)) return source;
@@ -137,6 +178,11 @@
         if (markerIndex !== -1) {
           return pathname.slice(0, markerIndex + marker.length);
         }
+      }
+
+      var pagesIndex = pathname.indexOf("/pages/");
+      if (pagesIndex !== -1) {
+        return pathname.slice(0, pagesIndex + 1);
       }
 
       return pathname.replace(/[^/]*$/, "");
@@ -227,6 +273,10 @@
       window.initDocTabs();
     }
 
+    if (typeof window.initDocumentTabs === "function") {
+      window.initDocumentTabs();
+    }
+
     if (typeof window.initKnowledgeTabs === "function") {
       window.initKnowledgeTabs();
     }
@@ -258,7 +308,7 @@
         return response.text();
       })
       .then(function (htmlText) {
-        slot.innerHTML = extractMainHtml(htmlText);
+        slot.innerHTML = extractEmbeddableHtml(htmlText);
         rewriteRootRelativeUrls(slot);
       })
       .catch(function () {

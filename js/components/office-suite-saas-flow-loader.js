@@ -6,6 +6,11 @@
     return mainNode ? mainNode.innerHTML : "";
   }
 
+  function extractEmbeddableHtml(htmlText) {
+    var mainHtml = extractMainHtml(htmlText);
+    return mainHtml || htmlText;
+  }
+
   function resolveSourceUrl(source) {
     if (!source) return source;
     if (/^(?:[a-z]+:)?\/\//i.test(source)) return source;
@@ -20,6 +25,11 @@
         if (markerIndex !== -1) {
           return pathname.slice(0, markerIndex + marker.length);
         }
+      }
+
+      var pagesIndex = pathname.indexOf("/pages/");
+      if (pagesIndex !== -1) {
+        return pathname.slice(0, pagesIndex + 1);
       }
 
       return pathname.replace(/[^/]*$/, "");
@@ -128,7 +138,7 @@
         return response.text();
       })
       .then(function (htmlText) {
-        slot.innerHTML = extractMainHtml(htmlText);
+        slot.innerHTML = extractEmbeddableHtml(htmlText);
         rewriteRootRelativeUrls(slot);
       })
       .catch(function () {

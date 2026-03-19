@@ -15,6 +15,13 @@ alwaysApply: true
   - 提交信息（commit message）一律使用 **UTF-8** 书写。
   - 若通过脚本或临时文件传入提交信息，确保该文件以 **UTF-8** 保存（无 BOM 或 UTF-8 BOM 均可）。
 
+## 推送/提交时（Agent 与终端）
+
+- **在 Windows PowerShell 下执行 `git commit` 时**：避免直接用 `-m "中文"`，因控制台可能以 GBK 传参导致 GitHub 上乱码。应二者择一：
+  1. **推荐**：先把提交信息写入临时 UTF-8 文件，再用 `git commit -F <文件>` 提交。
+  2. 或在执行前设置控制台为 UTF-8：`chcp 65001`，再执行 `git commit -m "..."`（仍可能受终端实现影响）。
+- **推送前自检**：若本次会话内刚执行过 `git commit`，且提交信息含中文，在 **push 之前** 用 `git log -1 --format=%B` 检查最后一条提交信息是否乱码；若乱码，用 `git commit --amend -F <UTF-8 文件>` 修正后再推送。
+
 ## 新建仓库或克隆后建议
 
 若在其他机器或新克隆的仓库中工作，建议设置编码后再提交：
