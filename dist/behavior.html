@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>石墨文档用户行为规范</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/landing.css">
+  <link rel="stylesheet" href="./css/office-suite-saas.css">
+  <link rel="stylesheet" href="./css/collaboration.css">
+  <link rel="stylesheet" href="./css/knowledge.css">
+  <link rel="stylesheet" href="./css/integration.css">
+  <link rel="stylesheet" href="./css/ai.css">
+  <link rel="stylesheet" href="./css/weboffice-sdk.css">
+  <link rel="stylesheet" href="./css/enterprise.css">
+  <link rel="stylesheet" href="./css/security.css">
+  <link rel="stylesheet" href="./css/private-deploy.css">
+  <link rel="stylesheet" href="./css/xinchuang.css">
+  <link rel="stylesheet" href="./css/security-hub.css">
+  <link rel="stylesheet" href="./css/customer-wall.css">
+  <link rel="stylesheet" href="./css/about.css">
+  <link rel="stylesheet" href="./css/privacy.css">
+  <link rel="stylesheet" href="./css/behavior.css">
+  <style>
+    @media (min-width: 981px) {
+      .top-nav .has-dropdown > .dropdown.dropdown-panel-wide:not(.dropdown-align-viewport) {
+        left: 50%;
+        right: auto;
+        width: 100vw;
+        min-width: 0;
+        max-width: 100vw;
+        border-radius: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        transform: translate(-50%, 4px);
+        transition: opacity 0.14s ease, transform 0.16s ease, visibility 0s linear 0.16s;
+      }
+
+      .top-nav .has-dropdown.open > .dropdown.dropdown-panel-wide:not(.dropdown-align-viewport) {
+        transform: translate(-50%, 0);
+        transition-delay: 0s;
+      }
+
+      .top-nav .has-dropdown > .dropdown.dropdown-panel-wide:not(.dropdown-align-viewport) .dropdown-grid {
+        width: min(1200px, 92%);
+        margin: 0 auto;
+      }
+
+      .top-nav .has-dropdown > .support-panel .support-link-grid-5 {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+
+      .top-nav .has-dropdown > .support-panel .support-link-grid-5 .support-link-card {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+<body class="site-shell">
+  <header class="top-nav">
+    <div class="container top-nav-inner">
+      <div class="nav-left">
+        <a class="logo" href="./welcome.html">
+          <span class="logo-main">石墨文档</span>
+          <span class="logo-sub">企业服务</span>
+        </a>
+      </div>
+
+      <nav class="nav-mid" aria-label="主导航">
+        <div class="has-dropdown">
+          <a class="nav-item nav-trigger" href="#">产品</a>
+          <div class="dropdown dropdown-panel dropdown-panel-wide product-panel" role="menu" aria-label="产品二级导航">
+            <div class="dropdown-grid dropdown-grid-2 product-dropdown-layout">
+              <section class="dropdown-col" aria-label="产品矩阵">
+                <p class="dropdown-eyebrow">产品矩阵</p>
+                <div class="dropdown-card">
+                  <div class="dropdown-card-head">
+                    <strong>石墨办公套件</strong>
+                    <p>面向团队协作与企业办公，提供开箱即用的文档协作服务。</p>
+                  </div>
+                  <div class="dropdown-tags-row">
+                    <span class="dropdown-inline-badge">面向团队（公有云）</span>
+                    <a href="#">免费试用</a>
+                    <a href="/office-suite-saas.html">了解更多</a>
+                  </div>
+                  <div class="dropdown-tags-row">
+                    <span class="dropdown-inline-badge">面向企业（私有化）</span>
+                    <a href="#">预约演示</a>
+                    <a href="/office-suite-private.html">了解更多</a>
+                  </div>
+                </div>
+                <div class="dropdown-card">
+                  <div class="dropdown-card-head">
+                    <strong>石墨文档中台</strong>
+                    <p>面向企业集成与系统建设，提供灵活可控的文档能力开放服务。</p>
+                  </div>
+                  <div class="dropdown-tags-row">
+                    <span class="dropdown-inline-badge">面向集成（私有化）</span>
+                    <a href="#">预约演示</a>
+                    <a href="/weboffice-sdk.html">了解更多</a>
+                  </div>
+                </div>
+              </section>
+              <section class="dropdown-col" aria-label="核心能力">
+                <p class="dropdown-eyebrow">核心能力</p>
+                <div class="dropdown-grid dropdown-grid-3 product-capability-grid">
+                  <div class="dropdown-list-item">
+                    <strong>文档协作</strong>
+                    <div class="product-suite-group">
+                      <span class="dropdown-inline-badge">基础套件</span>
+                      <div class="product-suite-links product-suite-links-1">
+                        <a href="/collaboration.html?tab=doc" role="menuitem">文档</a>
+                      </div>
+                    </div>
+                    <div class="product-suite-group">
+                      <span class="dropdown-inline-badge">Office套件</span>
+                      <div class="product-suite-links product-suite-links-3">
+                        <a href="/collaboration.html?tab=docx" role="menuitem">文稿</a>
+                        <a href="/collaboration.html?tab=sheet" role="menuitem">表格</a>
+                        <a href="/collaboration.html?tab=slide" role="menuitem">幻灯片</a>
+                      </div>
+                    </div>
+                    <div class="product-suite-group">
+                      <span class="dropdown-inline-badge">数据应用</span>
+                      <div class="product-suite-links product-suite-links-2">
+                        <a href="/collaboration.html?tab=form" role="menuitem">表单</a>
+                        <a href="/collaboration.html?tab=table" role="menuitem">应用表格</a>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="dropdown-list-item">
+                    <strong>知识沉淀</strong>
+                    <div class="dropdown-tags-row">
+                      <a href="/knowledge.html?tab=workbench" role="menuitem">工作台</a>
+                      <a href="/knowledge.html?tab=space" role="menuitem">协作空间</a>
+                      <a href="/knowledge.html?tab=wiki" role="menuitem">知识库</a>
+                    </div>
+                  </div>
+                  <div class="dropdown-list-item">
+                    <strong>安全保障</strong>
+                    <div class="dropdown-tags-row">
+                      <a href="/security-hub.html?tab=security" role="menuitem">数据安全</a>
+                      <a href="/security-hub.html?tab=deploy" role="menuitem">私有部署</a>
+                      <a href="/security-hub.html?tab=xinchuang" role="menuitem">信创合规</a>
+                    </div>
+                  </div>
+                  <div class="dropdown-list-item product-ai-access-item">
+                    <strong>AI 接入</strong>
+                    <div class="dropdown-tags-row product-ai-access-links">
+                      <a href="/ai.html#ai-assistant" role="menuitem">AI 助手「石小墨」</a>
+                      <a href="/ai.html#ai-base" role="menuitem">AI 文档基座</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <a class="nav-item" href="#">Demo 示例</a>
+
+        <div class="has-dropdown">
+          <a class="nav-item nav-trigger" href="#">开发者</a>
+          <div class="dropdown dropdown-panel dropdown-panel-wide developer-panel" role="menu" aria-label="开发者二级导航">
+            <div class="dropdown-grid dropdown-grid-2 mega-dropdown-layout">
+              <section class="dropdown-col" aria-label="开发者概览">
+           
+                <div class="mega-highlight-stack">
+                  <div class="dropdown-card">
+                    <div class="dropdown-card-head"> 
+                      <strong>石墨文档中台<span class="dropdown-inline-badge">私有化服务</span></strong>
+                      <p>面向企业集成与系统建设，提供灵活可控的文档能力开放服务。</p>
+                    </div>
+                    <div class="dropdown-tags-row">
+                     
+                      <a href="#">预约演示</a>
+                      <a href="/weboffice-sdk.html">了解更多</a>
+                    </div>
+                  </div>
+  
+                </div>
+              </section>
+              <section class="dropdown-col" aria-label="开发者能力">
+               
+                <div class="dropdown-grid dropdown-grid-3 mega-info-grid">
+                  <div class="dropdown-list-item">
+                    <strong>核心能力</strong>
+                    <div class="dropdown-tags-row">
+                      <a href="/weboffice-sdk.html#dp-capability-preview" role="menuitem">文件预览</a>
+                      <a href="/weboffice-sdk.html#dp-capability-edit" role="menuitem">协作编辑</a>
+                      <a href="/weboffice-sdk.html#dp-capability-format" role="menuitem">格式处理</a>
+                      <a href="/weboffice-sdk.html#dp-capability-storage" role="menuitem">文档存储</a>
+                      <a href="/weboffice-sdk.html#dp-capability-security" role="menuitem">文档安全</a>
+                    </div>
+                  </div>
+                  <div class="dropdown-list-item">
+                    <strong>集成案例</strong>
+                    <div class="dropdown-tags-row">
+                      <a href="/weboffice-sdk.html#dp-scene-im" role="menuitem">IM 即时聊天</a>
+                      <a href="/weboffice-sdk.html#dp-scene-drive" role="menuitem">云盘文件管理</a>
+                      <a href="/weboffice-sdk.html#dp-scene-oa" role="menuitem">OA 协同办公</a>
+                      <a href="/weboffice-sdk.html#dp-scene-contract" role="menuitem">合同管理</a>
+                      <a href="/weboffice-sdk.html#dp-scene-meeting" role="menuitem">在线会议</a>
+                    </div>
+                  </div>
+                  <div class="dropdown-list-item">
+                    <strong>开发资源</strong>
+                    <div class="dropdown-tags-row">
+                      <a href="/weboffice-sdk.html#dp-resources" role="menuitem">开发文档</a>
+                      <a href="/weboffice-sdk.html#dp-resources" role="menuitem">快速入门</a>
+                       <a href="/pages/features/format-support.html" role="menuitem">格式支持</a>
+                       <a href="/weboffice-sdk.html#dp-resources" role="menuitem">示例代码</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            
+          </div>
+        </div>
+
+        <a class="nav-item" href="#">解决方案</a>
+
+        <div class="has-dropdown">
+          <a class="nav-item nav-trigger" href="#">支持中心</a>
+          <div class="dropdown dropdown-panel dropdown-panel-wide support-panel" role="menu" aria-label="支持中心二级导航">
+           
+            <div class="dropdown-grid dropdown-grid-4 support-link-grid support-link-grid-5">
+              <a class="dropdown-list-item support-link-card" href="#" role="menuitem">
+                <strong>使用帮助</strong>
+                <p>查看产品使用说明、常见问题与操作指引，快速完成上手与问题排查。</p>
+              </a>
+              <a class="dropdown-list-item support-link-card" href="#" role="menuitem">
+                <strong>售后咨询</strong>
+                <p>针对交付、服务与使用过程中的问题提供支持，帮助企业稳定落地。</p>
+              </a>
+              <a class="dropdown-list-item support-link-card" href="#" role="menuitem">
+                <strong>联系我们</strong>
+                <p>获取销售、方案与服务团队的沟通入口，便于进一步咨询和对接。</p>
+              </a>
+              <a class="dropdown-list-item support-link-card " href="/about.html" role="menuitem">
+                <strong>关于我们</strong>
+                <p>了解石墨团队、发展历程与服务理念，帮助您快速建立整体品牌认知。</p>
+              </a>
+              <a class="dropdown-list-item support-link-card" href="#" role="menuitem">
+                <strong>渠道合作</strong>
+                <p>了解合作模式、伙伴政策与联合拓展方式，建立持续协作关系。</p>
+              </a>
+            </div>
+         
+          </div>
+        </div>
+
+        <a class="nav-item" href="#">定价</a>
+      </nav>
+
+      <div class="nav-right">
+        <a class="btn" href="#">登录 / 注册</a>
+        <a class="btn btn-primary" href="#">预约演示</a>
+        <div class="lang-switch" aria-label="语言切换">
+          <button class="active" type="button">中文</button>
+          <button type="button">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="appMain" class="site-main behavior-page" aria-live="polite">
+<section class="behavior-hero">
+      <div class="container">
+        <div class="behavior-hero-card">
+          <span class="behavior-eyebrow">行为规范</span>
+          <h1 class="behavior-title">石墨文档用户行为规范</h1>
+          <div class="behavior-meta" aria-label="规范生效信息">
+            <span>生效日期：2020年9月25日</span>
+          </div>
+          <p class="behavior-summary">为维护石墨平台绿色网络环境，更好地保障用户合法权益及良好的用户体验，初心科技依据现行法律法规及《服务条款》等相关规定，制定本《石墨文档用户行为规范》。</p>
+          <p class="behavior-summary">石墨用户在使用石墨公开链接过程中，应自觉遵守宪法法律、法规，遵守公共秩序，尊重社会公德、社会主义制度、国家利益、公民合法权益、道德风尚和信息真实性等要求，不得违反现行法律法规。</p>
+          <p class="behavior-summary">您点击确认本规范，或继续登录石墨和/或使用初心科技提供的服务，即表示您同意接受本规范。若您对本规范的理解和执行有任何疑惑或异议，可告知我们，我们将根据有关规则予以解释或处理。</p>
+
+          <div class="behavior-toc-card">
+            <h2>本规范主要包含以下内容</h2>
+            <ol class="behavior-toc-list">
+              <li><a href="#section-1">1. 原则</a></li>
+              <li><a href="#section-2">2. 相关条款</a></li>
+              <li><a href="#section-3">3. 使用规范</a></li>
+              <li><a href="#section-4">4. 处理规则</a></li>
+              <li><a href="#section-5">5. 举报、投诉、申诉机制</a></li>
+              <li><a href="#section-6">6. 遵守当地法律监管</a></li>
+              <li><a href="#section-7">7. 免责声明</a></li>
+              <li><a href="#section-8">8. 完善和修改</a></li>
+              <li><a href="#section-9">9. 联系我们</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="behavior-content" id="behavior-content">
+      <div class="container behavior-layout">
+        <aside class="behavior-aside" aria-label="正文目录">
+          <div class="behavior-aside-card">
+            <h2>正文目录</h2>
+            <ol class="behavior-aside-list">
+              <li><a href="#section-1">1. 原则</a></li>
+              <li><a href="#section-2">2. 相关条款</a></li>
+              <li><a href="#section-3">3. 使用规范</a></li>
+              <li><a href="#section-4">4. 处理规则</a></li>
+              <li><a href="#section-5">5. 举报、投诉、申诉</a></li>
+              <li><a href="#section-6">6. 当地法律监管</a></li>
+              <li><a href="#section-7">7. 免责声明</a></li>
+              <li><a href="#section-8">8. 完善和修改</a></li>
+              <li><a href="#section-9">9. 联系我们</a></li>
+            </ol>
+          </div>
+        </aside>
+
+        <article class="behavior-article">
+          <section id="section-1">
+            <h2>一、原则</h2>
+            <ol>
+              <li>为维护石墨平台绿色网络环境，更好地保障用户合法权益及良好的用户体验，初心科技根据现行法律法规及石墨《服务条款》等相关规定，制定《石墨公开链接使用规范》（以下简称“本规范”）。</li>
+              <li>石墨用户在使用石墨公开链接过程中应自觉遵守宪法法律、法规、遵守公共秩序，尊重社会公德、社会主义制度、国家利益、公民合法权益、道德风尚和信息真实性等要求，不得违反现行法律法规。初心科技安全中心将按照相关法律法规、《服务条款》等用户协议、本规范及平台规则，对违规行为进行处理，并配合有权机关的调查、处理等活动，维护石墨文档用户及其他主体的合法权益。</li>
+              <li>您点击确认本规范或继续登录石墨和/或使用初心科技提供的服务，即表示您同意接受本规范。若您对本规范的理解和执行有任何疑惑或异议，可告知我们，我们将根据有关规则予以解释或处理。</li>
+            </ol>
+          </section>
+
+          <section id="section-2">
+            <h2>二、相关条款</h2>
+            <p>使用石墨公开链接的服务，石墨用户必须阅读并遵守石墨《服务条款》，以及初心科技为此制定的专项规则等。本规范是在上述协议及规则基础上进行解释和说明，相关内容和举例旨在帮助石墨用户更加清晰地理解和遵守相关协议和规则。</p>
+          </section>
+
+          <section id="section-3">
+            <h2>三、使用规范</h2>
+            <p>石墨用户需遵守石墨《服务条款》及相关法律法规的规定，在使用石墨公开链接过程中上传、存储、发布、传播的内容如违反相关规定，初心科技将根据违规程度对违规内容及账号采取相应的处理措施。</p>
+
+            <h3>（一）遵守基本准则</h3>
+            <p>石墨用户不得上传、存储、发布、传播（以下统称“发布”）下列法律法规禁止的信息内容：</p>
+            <ol>
+              <li>反对宪法所确定的基本原则的。</li>
+              <li>危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的。</li>
+              <li>损害国家荣誉和利益的。</li>
+              <li>宣扬恐怖主义、极端主义或者煽动实施恐怖活动、极端主义活动的。</li>
+              <li>煽动民族仇恨、民族歧视，破坏民族团结的。</li>
+              <li>破坏国家宗教政策，宣扬邪教和封建迷信的。</li>
+              <li>散布谣言，扰乱经济秩序和社会秩序的。</li>
+              <li>散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的。</li>
+              <li>侮辱或者诽谤他人，侵害他人名誉、隐私和其他合法权益的。</li>
+              <li>策划、组织、煽动非法集会、结社、游行、示威、聚众扰乱社会秩序的。</li>
+              <li>歪曲、丑化、亵渎、否定英雄烈士事迹和精神，以侮辱、诽谤或者其他方式侵害英雄烈士的姓名、肖像、名誉、荣誉的。</li>
+              <li>法律法规禁止的其他信息内容。</li>
+            </ol>
+
+            <h3>（二）抵制不良信息</h3>
+            <ol>
+              <li>
+                禁止发布涉及违禁物品或违禁活动的内容。
+                <ol>
+                  <li>涉及违禁物品，包括但不限于：毒品、违禁药物、违法工具等，如大麻、鸦片、假币、枪支、爆炸物、翻墙软件、外挂程序等其他内容。</li>
+                  <li>涉及违禁活动，包括但不限于：有关传销、胎儿性别鉴定、代孕、售卖假货等其他内容。</li>
+                </ol>
+              </li>
+              <li>
+                禁止发布赌博或欺诈信息。
+                <ol>
+                  <li>赌博交易平台信息或赌博性质类，如赌博平台链接、软件等。</li>
+                  <li>胁迫或诱使他人参与赌博、介绍传授赌博技巧方法、出售赌博器具等宣扬赌博内容。</li>
+                  <li>以骗取钱财为目的欺诈信息，虚假购物网站、网赚、中奖类信息、付费清粉等。</li>
+                  <li>传销形式的欺诈信息，通过发展人员层级，直接或间接地按照人员数量作为计酬或返利依据等。</li>
+                </ol>
+              </li>
+              <li>禁止发布非正常办理信用卡、信用卡套现、公积金套现、医保卡套现、手机复制卡等违规内容。</li>
+              <li>禁止发布可能对石墨文档等平台的正常运行造成损害或中断的病毒、文件、计算机代码或程序。</li>
+              <li>禁止发布其他违反国家法律、行政法规、部门规章、地方性法规、政策规定等规范性文件的内容。如未取得法定许可证件或牌照，未获得在先行政许可，未符合监管部门的要求，违规发布相关内容的，包括但不限于违规发布药品或医疗器械推广内容、违规发布证券或期货等投资类有偿咨询内容以及违规发布烟草宣传内容等。</li>
+              <li>禁止传播“薅羊毛”内容，包括但不限于：现金、红包、话费卡等利益。</li>
+              <li>
+                禁止发布诱导用户分享、关注、下载内容。
+                <ol>
+                  <li>引导用户分享转发文档，方式包括但不限于：利益诱惑，或用夸张、诅咒性质言语胁迫。</li>
+                  <li>以跳转、弹框等任何形式传播引导用户下载或跳转至软件，同时明示或暗示通过此软件内容可获得金钱奖励、实物奖品、虚拟奖品等利益。</li>
+                </ol>
+              </li>
+            </ol>
+
+            <h3>（三）禁止低俗内容</h3>
+            <p>禁止发布含有低俗内容的信息包括但不限于：</p>
+            <ol>
+              <li>直接暴露和描写人体性部位的内容。</li>
+              <li>表现或隐晦表现性行为、具有挑逗性或者侮辱性的内容。</li>
+              <li>以带有性暗示、性挑逗的语言描述性行为、性过程、性方式的内容。</li>
+              <li>全身或者隐私部位未着衣物，仅用肢体掩盖隐私部位的内容。</li>
+              <li>带有侵犯个人隐私性质的走光、偷拍、漏点等内容。</li>
+              <li>以庸俗和挑逗性标题吸引点击的内容。</li>
+              <li>相关部门禁止传播的色情和有伤社会风化的文字、音视频内容，包括一些电影的删节片段。</li>
+              <li>一夜情、Pua、换妻、性虐待等的有害信息。</li>
+              <li>情色动漫、小说。</li>
+              <li>非法的性药品广告和性病治疗广告等相关内容。</li>
+              <li>推介淫秽色情网站和低俗信息软件的链接、图片、文字等内容。</li>
+            </ol>
+
+            <h3>（四）不侵犯第三方权益</h3>
+            <p>石墨用户不得实施任何可能侵犯第三方合法权益的行为，包括但不限于以下行为：</p>
+            <ol>
+              <li>不得擅自使用他人已经登记注册的企业名称或商标，侵犯他人企业名称权或商标专用权。</li>
+              <li>不得擅自使用他人姓名、肖像，侵害他人姓名权、肖像权等合法权益。</li>
+              <li>不得冒用身份，使用他人特征性信息，足以误导其他石墨文档用户。例如：石墨文档账号昵称为某公司著名游戏产品名称，且在文档中暗示或明示其为该游戏产品的销售人员。</li>
+              <li>不得发布、传播侵犯他人知识产权的内容，如发送或传播侵犯他人著作权、商标权、专利权等内容。</li>
+              <li>不得未经授权发布他人身份证号码、联系方式、家庭住址、微信号、照片等个人隐私资料，侵犯他人肖像权、隐私权等合法权益。</li>
+              <li>不得捏造事实公然丑化他人人格，或者通过侮辱、诽谤等方式损害他人名誉、荣誉，侵犯他人名誉权、荣誉权等合法权益。</li>
+              <li>不得未经授权发布企业商业秘密，侵犯企业合法权益。</li>
+              <li>石墨用户如非商标所有权人或未经授权不得使用他人商标。发布含有他人商标、版权等涉及他人知识产权内容的，初心科技有权要求发布者如实说明，并根据要求提供相关权利证书或授权证明，不按照要求予以说明并提供相关权利证明的，该内容将视为前述的违规内容。</li>
+              <li>非初心科技官方账号，禁止在账号名称、输出内容中出现与初心科技已有知识产权内容相同（如“初心科技”“石墨文档”“shimo.im”等）、相似（例如，初新科技、石磨文档、shimi.im 等）的字样，或者容易与目前已有初心科技名称、商标、商业标识、产品设计主题、外观等相混淆的内容。</li>
+              <li>任何非初心科技运营的石墨账号不得进行任何误导或暗示初心科技是该石墨账号使用人的行为，或者误导和暗示初心科技以任何形式表示认可其质量、服务或与其存在合作关系。</li>
+            </ol>
+          </section>
+
+          <section id="section-4">
+            <h2>四、处理规则</h2>
+            <ol>
+              <li>初心科技有权对用户行为或发布内容是否构成上述违规行为或违规内容进行独立判断。初心科技仅以一般、非专业、普通人知识水准进行审查及判断，无论初心科技的判断是否与后续行政、司法等程序对行为或内容的性质及是否构成违法违规的认定或判断一致，初心科技均不就此承担任何责任，包括任何赔偿或补偿责任。</li>
+              <li>对于违反本规范的石墨个人账号，初心科技将根据情节进行禁止分享或封禁账号直至永久封号的处理，并有权公告处理结果。</li>
+              <li>企业或其人员实施违法违规行为的，初心科技将根据情节对该企业及该企业的建立者、管理者和违规行为的实施者进行禁止分享或封禁账号直至永久封号的处理，并有权公告处理结果。</li>
+            </ol>
+          </section>
+
+          <section id="section-5">
+            <h2>五、举报、投诉、申诉机制</h2>
+
+            <h3>1. 非侵权类违规举报</h3>
+            <p>非侵权类的违法、违规行为或内容，您可以通过打开公开链接的界面进行举报。</p>
+
+            <h3>2. 侵权投诉机制</h3>
+            <h4>投诉内容</h4>
+            <p>侵权类违规内容或行为，如：侵犯他人肖像权、名誉权、姓名权、隐私权、商标权、著作权、专利权、企业名称权等合法权益的内容。</p>
+            <h4>投诉方式</h4>
+            <p>如果石墨用户侵犯了您的合法权益，您可以通过以下方式进行投诉：</p>
+            <ol>
+              <li>发邮件至 <a href="mailto:shensu@shimo.im">shensu@shimo.im</a> 进行侵权投诉。</li>
+              <li>打开公开链接的界面进行举报。</li>
+            </ol>
+
+            <h3>3. 申诉机制</h3>
+            <h4>申诉原因</h4>
+            <p>石墨用户因违反本规范而被采取相关处理措施的，如对处理结果有异议，可以向初心科技提交符合法律法规及初心科技要求的证明材料向初心科技申诉。</p>
+            <h4>申诉方式</h4>
+            <ol>
+              <li>除因侵犯他人商标权、著作权、专利权而被处理以外，因其他违规行为或内容而被处理的，如对处理结果有异议，您可以通过以下方式进行申诉：</li>
+            </ol>
+            <ul>
+              <li>官网客服：访问 <a href="https://shimo.im" target="_blank" rel="noopener noreferrer">shimo.im</a>，通过页面右下角气泡联系在线客服。</li>
+              <li>申诉邮件：<a href="mailto:shensu@shimo.im">shensu@shimo.im</a>。</li>
+            </ul>
+            <ol start="2">
+              <li>因侵犯他人商标权、著作权、专利权而被处理的，如对处理结果有异议，您可以通过发邮件至 <a href="mailto:contact@shimo.im">contact@shimo.im</a> 进行申诉。</li>
+            </ol>
+          </section>
+
+          <section id="section-6">
+            <h2>六、遵守当地法律监管</h2>
+            <p>您在使用石墨服务的过程中应当遵守当地相关的法律法规，并尊重当地的道德和风俗习惯。如果您的行为违反了当地法律法规或道德风俗，您应当为此独立承担责任。</p>
+            <p>石墨用户应避免因使用本服务而使初心科技卷入政治和公共事件，否则初心科技有权暂停或终止对您的服务。</p>
+          </section>
+
+          <section id="section-7">
+            <h2>七、免责声明</h2>
+            <p>本规范是在遵守国家法律法规、维护公序良俗，以及保护他人合法权益的基础上，为打造绿色、健康、优质平台的更高目标而制定的。初心科技将在能力范围内尽最大的努力依照法律法规及客观常识做出判断，初心科技仅以一般、非专业、普通人知识水准进行审查及判断，并不保证其判断完全与司法机构、行政机关的判断一致。无论初心科技的判断是否与司法机构、行政机关的判断一致，初心科技均不就此承担任何责任，包括任何赔偿或补偿责任，因此产生的后果石墨用户已经理解并同意自行承担。</p>
+          </section>
+
+          <section id="section-8">
+            <h2>八、完善和修改</h2>
+            <p>初心科技有权根据互联网的发展和中华人民共和国有关法律、法规的变化，不时地完善和修改本规范。初心科技保留随时修改本规范的权利，用户在使用初心科技的服务时，有必要对最新的石墨公开链接使用规范进行仔细阅读和重新确认，当发生相关争议时，以最新的服务条款为准。</p>
+          </section>
+
+          <section id="section-9">
+            <h2>九、联系我们</h2>
+            <p>欢迎您对我们的本规范提出意见。如有任何问题、意见或疑虑，请发邮件至 <a href="mailto:contact@shimo.im">contact@shimo.im</a>。此电子邮件地址作为本规范的组成部分可能会不时进行更新。</p>
+
+            <div class="behavior-note">
+              <p>© 武汉初心科技有限公司保留一切权利。</p>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <h3>石墨文档</h3>
+          <p>AI 时代的文档基座</p>
+          <p>文档协作 · 知识沉淀 · 开放集成 · AI 接入</p>
+          <div class="wechat-box">
+            <img src="./assets/images/wechat-accout.png" alt="石墨文档微信公众号二维码">
+            <span>微信扫码<br>关注我们</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>产品与方案</h4>
+          <a href="#">产品矩阵</a>
+          <a href="#">文档协作</a>
+          <a href="#">知识沉淀</a>
+          <a href="#">AI 能力</a>
+          <a href="#">解决方案</a>
+          <a href="#">定价</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>开发者</h4>
+          <a href="/weboffice-sdk.html">石墨文档中台</a>
+          <a href="/weboffice-sdk.html#dp-capability-preview">核心能力</a>
+          <a href="/weboffice-sdk.html#dp-scene-im">集成案例</a>
+          <a href="/weboffice-sdk.html#dp-resources">开发文档</a>
+          <a href="/weboffice-sdk.html#dp-resources">快速入门</a>
+          <a href="/weboffice-sdk.html#dp-resources">示例代码</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>支持与公司</h4>
+          <a href="#">支持中心</a>
+          <a href="#">使用帮助</a>
+          <a href="#">售后咨询</a>
+          <a href="#">联系我们</a>
+          <a href="#">渠道合作</a>
+          <a href="/about.html">关于我们</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2014-2026 武汉初心科技有限公司 版权所有</div>
+        <div class="footer-links">
+          <a href="/privacy.html">隐私政策</a>
+          <a href="/service.html">服务条款</a>
+          <a href="/behavior.html">行为规范</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="float-contact" aria-label="悬浮联系入口">
+    <div class="float-menu">
+      <a class="float-item" href="#">
+        <span class="float-item-label">在线客服</span>
+        <span class="float-item-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M20 11.5c0 4.2-3.6 7.5-8 7.5-1.1 0-2.1-.2-3.1-.6l-3.9 1 1.1-3.4C5.4 15 4 13.4 4 11.5 4 7.3 7.6 4 12 4s8 3.3 8 7.5z"></path>
+            <path d="M9.4 11.5h5.2"></path>
+            <path d="M11.2 14h1.6"></path>
+          </svg>
+        </span>
+      </a>
+      <a class="float-item" href="#">
+        <span class="float-item-label">电话咨询</span>
+        <span class="float-item-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M7.8 4.8l2 2.9c.4.6.3 1.3-.2 1.8l-1.3 1.2a13.1 13.1 0 0 0 5 5l1.2-1.3c.5-.5 1.2-.6 1.8-.2l2.9 2c.7.5.9 1.4.4 2.1l-1 1.3c-.8 1-2.2 1.5-3.5 1.2-4.4-1-8.2-4.8-9.2-9.2-.3-1.3.2-2.7 1.2-3.5l1.3-1c.7-.5 1.6-.3 2.1.4z"></path>
+          </svg>
+        </span>
+      </a>
+      <a class="float-item" href="#">
+        <span class="float-item-label">企业微信</span>
+        <span class="float-item-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M10.5 5C6.9 5 4 7.4 4 10.3c0 1.8 1.1 3.4 2.8 4.4l-.8 2.3 2.5-1.3c.6.1 1.2.2 2 .2 3.6 0 6.5-2.4 6.5-5.3S14.1 5 10.5 5z"></path>
+            <path d="M16.6 11.3c2 0 3.4 1.3 3.4 3 0 1.1-.6 2-1.6 2.6l.5 1.6-1.8-.9h-.5c-2 0-3.6-1.3-3.6-3s1.6-3.3 3.6-3.3z"></path>
+          </svg>
+        </span>
+      </a>
+      <a class="float-item" href="#">
+        <span class="float-item-label">邮件联系</span>
+        <span class="float-item-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 7h16v10H4z"></path>
+            <path d="M4 8l8 6 8-6"></path>
+          </svg>
+        </span>
+      </a>
+      <a class="float-item" href="#">
+        <span class="float-item-label">预约演示</span>
+        <span class="float-item-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M7 4v3"></path>
+            <path d="M17 4v3"></path>
+            <path d="M4 9h16"></path>
+            <path d="M5 6h14v14H5z"></path>
+          </svg>
+        </span>
+      </a>
+    </div>
+    <button class="float-main" id="floatContactToggle" type="button" aria-expanded="false" aria-label="打开联系面板">
+      <span class="float-main-symbol" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M20 11.5c0 4.2-3.6 7.5-8 7.5-1.1 0-2.1-.2-3.1-.6l-3.9 1 1.1-3.4C5.4 15 4 13.4 4 11.5 4 7.3 7.6 4 12 4s8 3.3 8 7.5z"></path>
+          <path d="M9.2 11.5h.01"></path>
+          <path d="M12 11.5h.01"></path>
+          <path d="M14.8 11.5h.01"></path>
+        </svg>
+      </span>
+    </button>
+  </div>
+
+  <script src="./js/utils.js"></script>
+  <script src="./js/api.js"></script>
+  <script src="./js/components/doc-tabs.js"></script>
+  <script src="./js/components/knowledge-tabs.js"></script>
+  <script src="./js/components/floating-contact.js"></script>
+  <script src="./js/components/nav-dropdown.js"></script>
+  <script src="./js/components/nav-scroll.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/components/office-suite-saas-carousel.js"></script>
+  <script src="./js/components/enterprise-tabs.js"></script>
+  <script src="./js/components/security-hub-tabs.js"></script>
+</body>
+</html>

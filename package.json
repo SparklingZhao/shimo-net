@@ -1,0 +1,14 @@
+{
+  "name": "shimo-net-static-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Shimo static site build scripts",
+  "scripts": {
+    "build": "node build.js",
+    "build:root": "node build.js",
+    "build:shimo": "node build.js --base=/shimo/",
+    "preview": "node scripts/preview.js",
+    "preview:root": "node scripts/preview.js",
+    "preview:shimo": "node scripts/preview.js --base=/shimo/"
+  }
+}

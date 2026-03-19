@@ -1,0 +1,290 @@
+/* ===== 数据安全页 - Hero ===== */
+
+.sec-page {
+  min-height: 100vh;
+  background: var(--white);
+}
+
+.sec-hero {
+  padding: 72px 0 52px;
+  background: linear-gradient(180deg, #edf2ff 0%, #ffffff 100%);
+  text-align: center;
+}
+
+.sec-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(180, 200, 255, 0.9);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 0.3px;
+}
+
+.sec-title {
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+  margin-bottom: 18px;
+}
+
+.sec-desc {
+  max-width: 520px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+
+/* ===== 三大支柱区域 ===== */
+
+.sec-pillars-section {
+  padding: 56px 0 88px;
+  background: var(--white);
+}
+
+.sec-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+
+/* ===== 支柱卡片通用 ===== */
+
+.sec-pillar {
+  background: #f7f9ff;
+  border: 1px solid #e5eaf5;
+  border-radius: 12px;
+  padding: 36px 32px 32px;
+  display: flex;
+  align-items: center;
+  box-shadow: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+.sec-pillar:hover {
+  transform: none;
+  border-color: #c0ccf0;
+  box-shadow: 0 2px 10px rgba(80, 100, 200, 0.07);
+}
+
+/* ===== 图标 ===== */
+
+.sec-pillar-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.sec-pillar-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.sec-pillar-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.sec-pillar-icon--transfer {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.sec-pillar-icon--app {
+  background: #dbe4ff;
+  color: #2f5ef5;
+}
+
+.sec-pillar-icon--storage {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+
+
+/* ===== 支柱文字 ===== */
+
+.sec-pillar-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.sec-pillar-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+
+/* ===== 传输安全 - 列表 ===== */
+
+.sec-pillar-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sec-pillar-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #3c4257;
+}
+
+.sec-check-icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #e8f5e9;
+  color: #2e7d32;
+  margin-top: 1px;
+}
+
+
+/* ===== 应用安全 - 子项 ===== */
+
+.sec-sub-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sec-sub-item {
+  padding: 14px 16px;
+  background: #f7f9ff;
+  border: 1px solid #e5eaf5;
+  border-radius: 12px;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+.sec-sub-item:hover {
+  border-color: #c0ccf0;
+  box-shadow: 0 2px 10px rgba(80, 100, 200, 0.07);
+}
+
+.sec-sub-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #2f5ef5;
+  background: rgba(47, 94, 245, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.sec-sub-item p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: #3c4257;
+}
+
+
+/* ===== 存储安全 - 卡片 ===== */
+
+.sec-storage-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sec-storage-card {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e5eaf5;
+  background: #f7f9ff;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+.sec-storage-card:hover {
+  border-color: #c0ccf0;
+  box-shadow: 0 2px 10px rgba(80, 100, 200, 0.07);
+}
+
+.sec-storage-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.sec-storage-tag--saas {
+  background: #dbe4ff;
+  color: #2f5ef5;
+}
+
+.sec-storage-tag--private {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.sec-storage-card p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: #3c4257;
+}
+
+
+/* ===== 响应式 ===== */
+
+@media (max-width: 1024px) {
+  .sec-pillars-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .sec-hero {
+    padding: 52px 0 40px;
+  }
+
+  .sec-desc {
+    font-size: 15px;
+  }
+
+  .sec-pillars-section {
+    padding: 48px 0 64px;
+  }
+
+  .sec-pillar {
+    padding: 28px 24px 24px;
+  }
+
+  .sec-pillar-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .sec-pillar-title {
+    font-size: 20px;
+  }
+}

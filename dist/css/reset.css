@@ -1,0 +1,29 @@
+:root {
+  --primary: #2f5ef5;
+  --text: #1f2329;
+  --text-light: #646a73;
+  --line: #e6e8eb;
+  --bg: #f7f9fc;
+  --white: #ffffff;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}

@@ -641,7 +641,7 @@
 
 .pc-diff-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -651,6 +651,20 @@
   border: 1px solid #e2e8f5;
   background: #ffffff;
   box-shadow: 0 8px 22px rgba(19, 31, 60, 0.04);
+}
+
+.pc-diff-card--link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.pc-diff-card--link:hover,
+.pc-diff-card--link:focus-visible {
+  transform: translateY(-2px);
+  border-color: #cbd9ff;
+  box-shadow: 0 14px 30px rgba(19, 31, 60, 0.08);
 }
 
 .pc-diff-card--active {
@@ -678,6 +692,21 @@
   font-size: 15px;
   line-height: 1.8;
   color: var(--text-light);
+}
+
+.pc-diff-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 16px;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pc-diff-card--link:hover .pc-diff-link,
+.pc-diff-card--link:focus-visible .pc-diff-link {
+  text-decoration: underline;
 }
 
 .pc-flow-section--trust {

@@ -1,0 +1,208 @@
+/* ===== AI 助力页 - Hero ===== */
+
+.ai-hero {
+  padding: 72px 0 40px;
+  background: linear-gradient(180deg, #f0f0ff 0%, #ffffff 100%);
+  text-align: center;
+}
+
+.ai-title {
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.ai-desc {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+
+/* ===== 平铺展示区域 ===== */
+
+.ai-showcase-section {
+  padding: 48px 0 80px;
+  background: var(--white);
+}
+
+/* ===== 面板 ===== */
+
+.ai-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.ai-panel {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  background: linear-gradient(180deg, #ffffff 0%, #fafbff 100%);
+}
+
+.ai-panel-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.ai-panel-content {
+  padding: 0;
+}
+
+.ai-module-head {
+  margin-bottom: 14px;
+}
+
+.ai-module-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: #eef1fb;
+  color: var(--primary);
+}
+
+
+/* ===== 面板标题与副标题 ===== */
+
+.ai-panel-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.ai-panel-subtitle {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-light);
+  margin-bottom: 32px;
+}
+
+
+/* ===== 特性列表 ===== */
+
+.ai-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ai-feature-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.ai-feature-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #eef1fb 0%, #e8e4ff 100%);
+  display: grid;
+  place-items: center;
+  color: var(--primary);
+}
+
+.ai-feature-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.ai-feature-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #3c4257;
+}
+
+
+/* ===== CTA 按钮 ===== */
+
+.ai-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 32px;
+}
+
+
+/* ===== 图片占位 ===== */
+
+.ai-panel-visual {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.ai-img-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 400px;
+  background: linear-gradient(135deg, #f5f5ff 0%, #eef1fb 100%);
+  border: 2px dashed #c5ccdb;
+  border-radius: var(--radius);
+  color: #9da7bb;
+  font-size: 14px;
+}
+
+.ai-img-placeholder svg {
+  opacity: 0.5;
+}
+
+
+/* ===== 响应式 ===== */
+
+@media (max-width: 980px) {
+  .ai-panel-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ai-hero {
+    padding: 48px 0 28px;
+  }
+
+  .ai-desc {
+    font-size: 15px;
+  }
+
+  .ai-panel {
+    padding: 20px;
+  }
+
+  .ai-panel-title {
+    font-size: 22px;
+  }
+
+  .ai-feature-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .ai-feature-name {
+    font-size: 14px;
+  }
+
+  .ai-feature-text {
+    font-size: 13px;
+  }
+
+  .ai-img-placeholder {
+    min-height: 260px;
+  }
+}
