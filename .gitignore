@@ -1,0 +1,5 @@
+# 构建产物
+dist/
+
+# 依赖（若使用 npm install）
+node_modules/

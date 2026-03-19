@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
@@ -21,7 +21,7 @@
         <div class="know-layout">
           <!-- 竖向 Tab 导航 -->
           <nav class="know-tabs" role="tablist" aria-label="知识沉淀体系切换" aria-orientation="vertical">
-            <button class="know-tab is-active" role="tab" aria-selected="true" aria-controls="panel-workbench" data-tab="workbench">
+            <button class="know-tab is-active" role="tab" aria-selected="true" aria-controls="panel-portal" data-tab="portal">
               <span class="know-tab-icon">
                 <!-- TODO: 替换为工作台图标 -->
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -53,7 +53,7 @@
               </span>
             </button>
 
-            <button class="know-tab" role="tab" aria-selected="false" aria-controls="panel-wiki" data-tab="wiki">
+            <button class="know-tab" role="tab" aria-selected="false" aria-controls="panel-knowledge-base" data-tab="knowledge-base">
               <span class="know-tab-icon">
                 <!-- TODO: 替换为知识库图标 -->
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -73,7 +73,7 @@
           <!-- 内容面板 -->
           <div class="know-panels">
             <!-- 工作台 -->
-            <div class="know-panel is-active" id="panel-workbench" role="tabpanel">
+            <div class="know-panel is-active" id="panel-portal" role="tabpanel">
               <div class="know-panel-inner">
                 <div class="know-panel-content">
                   <h2 class="know-panel-title">工作台</h2>
@@ -125,7 +125,7 @@
             </div>
 
             <!-- 知识库 -->
-            <div class="know-panel" id="panel-wiki" role="tabpanel" hidden>
+            <div class="know-panel" id="panel-knowledge-base" role="tabpanel" hidden>
               <div class="know-panel-inner">
                 <div class="know-panel-content">
                   <h2 class="know-panel-title">知识库</h2>

@@ -22,24 +22,52 @@ const ROUTES = [
     mode: "fragment"
   },
   {
+    output: "suite-business.html",
+    title: "石墨办公套件 面向团队 - 石墨文档企业服务",
+    mainClass: "site-main pc-page",
+    source: "/pages/suite/business.html",
+    mode: "page"
+  },
+  {
+    output: "suite-enterprise.html",
+    title: "石墨办公套件 面向企业 - 石墨文档企业服务",
+    mainClass: "site-main pc-page",
+    source: "/pages/suite/enterprise.html",
+    mode: "page"
+  },
+  {
+    output: "sdk-integration.html",
+    title: "石墨文档中台 面向集成 - 石墨文档企业服务",
+    mainClass: "site-main dp-page",
+    source: "/pages/sdk/integration.html",
+    mode: "page"
+  },
+  {
     output: "office-suite-saas.html",
     title: "石墨办公套件公有云服务 - 石墨文档企业服务",
     mainClass: "site-main pc-page",
-    source: "/pages/products/office-suite-saas.html",
+    source: "/pages/suite/business.html",
     mode: "page"
   },
   {
     output: "office-suite-private.html",
     title: "石墨办公套件私有化服务 - 石墨文档企业服务",
     mainClass: "site-main pc-page",
-    source: "/pages/products/office-suite-private.html",
+    source: "/pages/suite/enterprise.html",
     mode: "page"
   },
   {
     output: "weboffice-sdk.html",
     title: "石墨文档中台 - 石墨文档企业服务",
     mainClass: "site-main dp-page",
-    source: "/pages/products/weboffice-sdk.html",
+    source: "/pages/sdk/integration.html",
+    mode: "page"
+  },
+  {
+    output: "management-panel.html",
+    title: "企业管理 - 石墨文档企业服务",
+    mainClass: "site-main",
+    source: "/pages/features/management-panel.html",
     mode: "page"
   },
   {
@@ -75,6 +103,13 @@ const ROUTES = [
     title: "石墨文档企业服务 - 关于我们",
     mainClass: "site-main about-page",
     source: "/pages/about/about.html",
+    mode: "page"
+  },
+  {
+    output: "partner.html",
+    title: "渠道合作 - 石墨文档企业服务",
+    mainClass: "site-main partner-page",
+    source: "/pages/partner/partner.html",
     mode: "page"
   },
   {
@@ -306,6 +341,7 @@ const SHELL_LINK_RULES = [
   { page: "security-hub", output: "/security-hub.html" },
   { page: "ai", output: "/ai.html" },
   { page: "about", output: "/about.html" },
+  { page: "partner", output: "/partner.html" },
   { page: "privacy", output: "/privacy.html" },
   { page: "service", output: "/service.html" },
   { page: "behavior", output: "/behavior.html" }

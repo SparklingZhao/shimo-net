@@ -12,20 +12,38 @@
       title: DEFAULT_TITLE,
       mainClass: DEFAULT_MAIN_CLASS
     },
+    "suite-business": {
+      source: "/pages/suite/business.html",
+      mode: "page",
+      title: "石墨办公套件 面向团队 - 石墨文档企业服务",
+      mainClass: DEFAULT_MAIN_CLASS + " pc-page"
+    },
+    "suite-enterprise": {
+      source: "/pages/suite/enterprise.html",
+      mode: "page",
+      title: "石墨办公套件 面向企业 - 石墨文档企业服务",
+      mainClass: DEFAULT_MAIN_CLASS + " pc-page"
+    },
+    "sdk-integration": {
+      source: "/pages/sdk/integration.html",
+      mode: "page",
+      title: "石墨文档中台 面向集成 - 石墨文档企业服务",
+      mainClass: DEFAULT_MAIN_CLASS + " dp-page"
+    },
     "office-suite-saas": {
-      source: "/pages/products/office-suite-saas.html",
+      source: "/pages/suite/business.html",
       mode: "page",
       title: "石墨办公套件公有云服务 - 石墨文档企业服务",
       mainClass: DEFAULT_MAIN_CLASS + " pc-page"
     },
     "office-suite-private": {
-      source: "/pages/products/office-suite-private.html",
+      source: "/pages/suite/enterprise.html",
       mode: "page",
       title: "石墨办公套件私有化服务 - 石墨文档企业服务",
       mainClass: DEFAULT_MAIN_CLASS + " pc-page"
     },
     "weboffice-sdk": {
-      source: "/pages/products/weboffice-sdk.html",
+      source: "/pages/sdk/integration.html",
       mode: "page",
       title: "石墨文档中台 - 石墨文档企业服务",
       mainClass: DEFAULT_MAIN_CLASS + " dp-page"
@@ -60,6 +78,12 @@
       title: "石墨文档企业服务 - 关于我们",
       mainClass: DEFAULT_MAIN_CLASS + " about-page"
     },
+    partner: {
+      source: "/pages/partner/partner.html",
+      mode: "page",
+      title: "渠道合作 - 石墨文档企业服务",
+      mainClass: DEFAULT_MAIN_CLASS + " partner-page"
+    },
     privacy: {
       source: "/pages/legal/privacy.html",
       mode: "page",
@@ -77,6 +101,18 @@
       mode: "page",
       title: "石墨文档用户行为规范",
       mainClass: DEFAULT_MAIN_CLASS + " behavior-page"
+    },
+    "management-panel": {
+      source: "/pages/features/management-panel.html",
+      mode: "page",
+      title: "企业管理 - 石墨文档企业服务",
+      mainClass: DEFAULT_MAIN_CLASS
+    },
+    enterprise: {
+      source: "/pages/features/management-panel.html",
+      mode: "page",
+      title: "企业管理 - 石墨文档企业服务",
+      mainClass: DEFAULT_MAIN_CLASS
     }
   };
 
