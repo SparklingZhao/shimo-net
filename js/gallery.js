@@ -1,6 +1,33 @@
 (function () {
-  var IMAGE_DIR_URL = "/assets/images/";
-  var MANIFEST_URL = "/docs/images-manifest.json";
+  function resolveSourceUrl(source) {
+    if (!source) return source;
+    if (/^(?:[a-z]+:)?\/\//i.test(source)) return source;
+
+    function getProjectRootPath() {
+      var pathname = window.location.pathname || "/";
+      var markers = ["/dev/", "/main/"];
+
+      for (var i = 0; i < markers.length; i += 1) {
+        var marker = markers[i];
+        var markerIndex = pathname.indexOf(marker);
+        if (markerIndex !== -1) {
+          return pathname.slice(0, markerIndex + marker.length);
+        }
+      }
+
+      return pathname.replace(/[^/]*$/, "");
+    }
+
+    var path = source;
+    if (source.charAt(0) === "/") {
+      path = getProjectRootPath() + source.slice(1);
+    }
+
+    return new URL(path, window.location.href).toString();
+  }
+
+  var IMAGE_DIR_URL = resolveSourceUrl("/assets/images/");
+  var MANIFEST_URL = resolveSourceUrl("/docs/images-manifest.json");
 
   var state = {
     allImages: [],
