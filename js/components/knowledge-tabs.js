@@ -48,7 +48,11 @@
       }
     }
 
-    var TAB_ALIAS = { workbench: "portal", wiki: "knowledge-base" };
+    var TAB_ALIAS = {
+      workbench: "portal",
+      wiki: "knowledge-base",
+      management: "management-panel"
+    };
     function getRequestedTab() {
       var params = new URLSearchParams(window.location.search);
       var queryTab = params.get("tab");

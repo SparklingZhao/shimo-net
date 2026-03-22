@@ -167,8 +167,30 @@
 
 .home-merge-cta-card h2 {
   margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
   font-size: clamp(28px, 3vw, 36px);
   line-height: 1.35;
+}
+
+.home-merge-cta-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-merge-cta-phone-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.05em;
+  height: 1.05em;
+  font-size: 0.8em;
+  line-height: 1;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
 }
 
 .home-merge-cta-card p {
@@ -298,6 +320,10 @@ footer {
 
   .home-merge-cta-card {
     padding: 22px;
+  }
+
+  .home-merge-cta-card h2 {
+    gap: 10px;
   }
 
   .home-merge-cta-actions {

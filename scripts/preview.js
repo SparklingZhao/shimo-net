@@ -2,6 +2,11 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
+if (hasFlag("--help") || hasFlag("-h")) {
+  printPreviewHelp();
+  process.exit(0);
+}
+
 const ROOT_DIR = path.resolve(__dirname, "..");
 const DIST_DIR = path.join(ROOT_DIR, "dist");
 const BASE_PATH = getBasePath();
@@ -38,6 +43,31 @@ function getArgValue(flagName) {
   }
 
   return "";
+}
+
+function hasFlag(flagName) {
+  return process.argv.slice(2).includes(flagName);
+}
+
+function printPreviewHelp() {
+  var helpText = [
+    "用法: node scripts/preview.js [--base=<path>] [--port=<port>]",
+    "",
+    "常用示例:",
+    "  node scripts/preview.js",
+    "    在根路径预览 dist 目录。",
+    "  node scripts/preview.js --base=/shimo/",
+    "    在 /shimo/ 子路径预览 dist 目录。",
+    "  node scripts/preview.js --port=5500",
+    "    指定预览端口。",
+    "",
+    "npm 脚本:",
+    "  npm run preview",
+    "  npm run preview:root",
+    "  npm run preview:shimo"
+  ].join("\n");
+
+  console.log(helpText);
 }
 
 function normalizeBasePath(basePath) {
@@ -79,6 +109,53 @@ function send(res, statusCode, contentType, body) {
 
 function notFound(res, message) {
   send(res, 404, "text/plain; charset=utf-8", message || "Not Found");
+}
+
+function getPreviewOrigin() {
+  return `http://127.0.0.1:${PORT}`;
+}
+
+function getPreviewUrl(pathname) {
+  var normalizedPath = pathname || "/";
+
+  if (!normalizedPath.startsWith("/")) {
+    normalizedPath = "/" + normalizedPath;
+  }
+
+  if (BASE_PATH === "/") {
+    return getPreviewOrigin() + normalizedPath;
+  }
+
+  if (normalizedPath === "/") {
+    return getPreviewOrigin() + BASE_PATH;
+  }
+
+  return getPreviewOrigin() + BASE_PATH + normalizedPath.replace(/^\/+/, "");
+}
+
+function buildBasePathMismatchMessage(req) {
+  var requestUrl = new URL(req.url, "http://127.0.0.1");
+  var requestedPath = decodeURIComponent(requestUrl.pathname || "/");
+  var hintPath = requestedPath === "/" ? "/" : requestedPath;
+
+  return [
+    "Base path mismatch.",
+    `当前预览基路径: ${BASE_PATH}`,
+    `你访问的是: ${requestedPath}`,
+    `请改用: ${getPreviewUrl(hintPath)}`
+  ].join("\n");
+}
+
+function buildFileNotFoundMessage(req) {
+  var requestUrl = new URL(req.url, "http://127.0.0.1");
+  var requestedPath = decodeURIComponent(requestUrl.pathname || "/");
+
+  return [
+    `Cannot GET ${requestedPath}`,
+    "当前预览服务只会读取 dist 目录中的文件。",
+    `首页地址: ${getPreviewUrl("/")}`,
+    "如果刚改过页面，请先运行 `npm run build`。"
+  ].join("\n");
 }
 
 function getRequestPath(req) {
@@ -148,22 +225,35 @@ function main() {
   const server = http.createServer(function (req, res) {
     const requestPath = getRequestPath(req);
     if (requestPath === null) {
-      notFound(res, "Base path mismatch");
+      notFound(res, buildBasePathMismatchMessage(req));
       return;
     }
 
     const filePath = resolveFilePath(requestPath);
     if (!filePath) {
-      notFound(res, "Invalid path");
+      notFound(res, buildFileNotFoundMessage(req));
       return;
     }
 
-    serveFile(res, filePath);
+    fs.readFile(filePath, function (error, content) {
+      if (error) {
+        if (error.code === "ENOENT") {
+          notFound(res, buildFileNotFoundMessage(req));
+          return;
+        }
+
+        send(res, 500, "text/plain; charset=utf-8", "Internal Server Error");
+        return;
+      }
+
+      const ext = path.extname(filePath).toLowerCase();
+      const contentType = MIME_TYPES[ext] || "application/octet-stream";
+      send(res, 200, contentType, content);
+    });
   });
 
   server.listen(PORT, function () {
-    const origin = `http://127.0.0.1:${PORT}`;
-    const previewUrl = BASE_PATH === "/" ? `${origin}/` : `${origin}${BASE_PATH}`;
+    const previewUrl = getPreviewUrl("/");
 
     console.log(`preview server running at ${previewUrl}`);
     console.log(`serving files from ${DIST_DIR}`);

@@ -48,12 +48,18 @@
       }
     }
 
+    var TAB_ALIAS = {
+      workbench: "portal",
+      wiki: "knowledge-base",
+      management: "management-panel"
+    };
     function getRequestedTab() {
       var params = new URLSearchParams(window.location.search);
       var queryTab = params.get("tab");
-      if (queryTab) return queryTab;
+      if (queryTab) return TAB_ALIAS[queryTab] || queryTab;
 
-      return (window.location.hash || "").replace(/^#/, "");
+      var hash = (window.location.hash || "").replace(/^#/, "");
+      return hash ? (TAB_ALIAS[hash] || hash) : hash;
     }
 
     tabContainer.addEventListener("click", function (e) {

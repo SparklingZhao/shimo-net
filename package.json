@@ -4,8 +4,9 @@
   "version": "1.0.0",
   "description": "Shimo static site build scripts",
   "scripts": {
-    "build": "node build.js",
+    "build": "node build.js --base=relative",
     "build:root": "node build.js",
+    "build:relative": "node build.js --base=relative",
     "build:shimo": "node build.js --base=/shimo/",
     "preview": "node scripts/preview.js",
     "preview:root": "node scripts/preview.js",

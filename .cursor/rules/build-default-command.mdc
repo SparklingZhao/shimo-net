@@ -1,0 +1,13 @@
+---
+description: 默认使用 npm run build 进行相对路径构建
+alwaysApply: true
+---
+
+# 默认构建命令
+
+- 本项目执行“构建”时，默认使用 `npm run build`。
+- `npm run build` 当前对应 `node build.js --base=relative`，属于相对路径构建模式。
+- 未经用户明确要求，不要默认改用 `npm run build:root` 或 `npm run build:shimo`。
+- 若需要根路径部署，使用 `npm run build:root`。
+- 若需要固定子路径部署，使用 `npm run build:shimo`。
+- 在说明构建结果时，明确当前使用的是哪一种构建模式，避免把相对路径产物和根路径产物混淆。

@@ -49,8 +49,9 @@
 .know-tab {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
   padding: 20px 24px 20px 20px;
+  font-size: 15px;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -89,14 +90,21 @@
 
 .know-tab-icon {
   flex-shrink: 0;
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
+  width: 1em;
+  height: 1em;
+  min-width: 1em;
+  border-radius: 4px;
   background: #eef1fb;
   display: grid;
   place-items: center;
   color: var(--text-light);
   transition: background 0.2s, color 0.2s;
+}
+
+.know-tab-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .know-tab.is-active .know-tab-icon {
@@ -112,7 +120,7 @@
 }
 
 .know-tab-name {
-  font-size: 15px;
+  font-size: 1em;
   font-weight: normal;
   color: var(--text-light);
   transition: color 0.2s;
@@ -124,10 +132,10 @@
 
 .know-tab-quote {
   font-size: 12px;
+  line-height: 1.45;
   color: #a0a7b5;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   transition: color 0.2s;
 }
 
@@ -286,14 +294,6 @@
   .know-tab {
     flex: 1 1 calc(50% - 8px);
     padding: 12px 10px;
-  }
-
-  .know-tab-icon {
-    width: 36px;
-    height: 36px;
-  }
-
-  .know-tab-name {
     font-size: 13px;
   }
 
@@ -314,6 +314,18 @@
   }
 }
 
+.know-panel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+  align-items: center;
+}
+
+.know-panel-actions .know-panel-cta {
+  margin-top: 0;
+}
+
 .know-panel-cta {
   display: inline-flex;
   align-items: center;
@@ -323,6 +335,25 @@
   border-radius: 8px;
   font-size: 15px;
   font-weight: 600;
+}
+
+.know-panel-more {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.know-panel-more:hover {
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 @media (max-width: 420px) {

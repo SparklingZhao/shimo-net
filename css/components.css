@@ -178,12 +178,15 @@
   grid-auto-rows: 1fr;
 }
 
-.developer-panel .mega-info-grid > .dropdown-list-item {
+.developer-panel .mega-info-grid > .dropdown-list-item,
+.product-panel .mega-info-grid > .dropdown-list-item {
   background: transparent;
 }
 
 .support-panel {
   width: min(920px, calc(100vw - 24px));
+  --min-width: 0;
+  --max-width: calc(100vw - 24px);
 }
 
 .support-link-grid {

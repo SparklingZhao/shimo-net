@@ -1,395 +1,269 @@
 {
-    "generatedAt":  "2026-03-12T16:31:28+08:00",
-    "sourcePage":  "https://shimo.im/welcome",
-    "imageBasePath":  "assets/images",
-    "total":  53,
-    "categories":  {
-                       "report":  [
-                                      "enterprise_report.b1bd728b.png",
-                                      "report.e602387f.png",
-                                      "violence_report.3557d62c.png"
-                                  ],
-                       "icon":  [
-                                    "docx_icon.2b3372a8.png",
-                                    "form_icon.684f8f7b.png",
-                                    "mindmap_icon.e0a33edc.png",
-                                    "national_emblem_icon.0d3d31f3.png",
-                                    "table_new_icon.daefbbf7.png",
-                                    "team_icon.a5c9d773.png",
-                                    "whitebord_icon.f7aaf0f4.png"
-                                ],
-                       "background":  [
-                                          "ding_bg_2x.b0182c47.png",
-                                          "doc_card_background.dab1607e.png",
-                                          "doc_product_desc_back.4f15795f.png",
-                                          "enterprise_cloud_1_back.71a5e2b0.png",
-                                          "enterprise_cloud_2_back.a3075718.png",
-                                          "enterprise_cloud_3_back.1b6c4273.png",
-                                          "mindmap_back.07b2aeb3.png",
-                                          "sheet_card_background.5f4fa511.png",
-                                          "sheet_product_desc_back.1791d6f4.png",
-                                          "slide_card_background.922d5755.png",
-                                          "slide_product_desc_back.78851b71.png",
-                                          "table_back.4655d070.png",
-                                          "team_back.0c3db52b.png",
-                                          "traditional_back.ccfcc942.png",
-                                          "web_bg@2x.a8d79c78.png",
-                                          "whitebord_back.d5289644.png"
-                                      ],
-                       "banner":  [
-                                      "banner_background.9a1e55cd.png",
-                                      "homepage_banner_mobile.4f34d020.png",
-                                      "homepage_banner_pc.2c5122dc.png",
-                                      "homepage_title_banner_background.43282104.png",
-                                      "homepage_title_banner_bg_2021_12_mobile.f1a9fb27.png",
-                                      "homepage_title_banner_bg_2022_live_mobile.d34a96c5.png",
-                                      "homepage_title_banner_bg_2022_memory_mobile.e0a963e1.png",
-                                      "private_deploy_title_banner_mobile_background.c46733bb.png",
-                                      "product_customize_banner_background.6ed8b3c9.png"
-                                  ],
-                       "product":  [
-                                       "doc.d12d293d.png",
-                                       "form.d91584ab.png",
-                                       "presentation.fbeeebed.png",
-                                       "sheet.c78ad43b.png"
-                                   ],
-                       "illustration":  [
-                                            "2020-ncov-text.25ded49d.png",
-                                            "2020-ncov-text-mobile.2779be66.png",
-                                            "decoration_board.50ebef97.png",
-                                            "ding_hands_2x.24cdbf89.png",
-                                            "ding_text_2x.dbdbab7b.png",
-                                            "footer_safety.92ab8557.png",
-                                            "home_help.cfc7ec13.png",
-                                            "support-default-light.371a39fd.png",
-                                            "web_phone@2x.90738d27.png",
-                                            "web_text@2x.1ce4d89c.png"
-                                        ],
-                       "logo":  [
-                                    "bonayingye_logo.18fec89c.png",
-                                    "service_solutions_logos.d931f545.png",
-                                    "service_solutions_mobile_logos.e2d1faf8.png",
-                                    "suixinyu_logo.15a5a54b.png"
-                                ]
-                   },
-    "items":  [
-                  {
-                      "name":  "2020-ncov-text.25ded49d.png",
-                      "category":  "illustration",
-                      "relativePath":  "assets/images/2020-ncov-text.25ded49d.png",
-                      "urlPath":  "/assets/images/2020-ncov-text.25ded49d.png"
-                  },
-                  {
-                      "name":  "2020-ncov-text-mobile.2779be66.png",
-                      "category":  "illustration",
-                      "relativePath":  "assets/images/2020-ncov-text-mobile.2779be66.png",
-                      "urlPath":  "/assets/images/2020-ncov-text-mobile.2779be66.png"
-                  },
-                  {
-                      "name":  "banner_background.9a1e55cd.png",
-                      "category":  "banner",
-                      "relativePath":  "assets/images/banner_background.9a1e55cd.png",
-                      "urlPath":  "/assets/images/banner_background.9a1e55cd.png"
-                  },
-                  {
-                      "name":  "bonayingye_logo.18fec89c.png",
-                      "category":  "logo",
-                      "relativePath":  "assets/images/bonayingye_logo.18fec89c.png",
-                      "urlPath":  "/assets/images/bonayingye_logo.18fec89c.png"
-                  },
-                  {
-                      "name":  "decoration_board.50ebef97.png",
-                      "category":  "illustration",
-                      "relativePath":  "assets/images/decoration_board.50ebef97.png",
-                      "urlPath":  "/assets/images/decoration_board.50ebef97.png"
-                  },
-                  {
-                      "name":  "ding_bg_2x.b0182c47.png",
-                      "category":  "background",
-                      "relativePath":  "assets/images/ding_bg_2x.b0182c47.png",
-                      "urlPath":  "/assets/images/ding_bg_2x.b0182c47.png"
-                  },
-                  {
-                      "name":  "ding_hands_2x.24cdbf89.png",
-                      "category":  "illustration",
-                      "relativePath":  "assets/images/ding_hands_2x.24cdbf89.png",
-                      "urlPath":  "/assets/images/ding_hands_2x.24cdbf89.png"
-                  },
-                  {
-                      "name":  "ding_text_2x.dbdbab7b.png",
-                      "category":  "illustration",
-                      "relativePath":  "assets/images/ding_text_2x.dbdbab7b.png",
-                      "urlPath":  "/assets/images/ding_text_2x.dbdbab7b.png"
-                  },
-                  {
-                      "name":  "doc.d12d293d.png",
-                      "category":  "product",
-                      "relativePath":  "assets/images/doc.d12d293d.png",
-                      "urlPath":  "/assets/images/doc.d12d293d.png"
-                  },
-                  {
-                      "name":  "doc_card_background.dab1607e.png",
-                      "category":  "background",
-                      "relativePath":  "assets/images/doc_card_background.dab1607e.png",
-                      "urlPath":  "/assets/images/doc_card_background.dab1607e.png"
-                  },
-                  {
-                      "name":  "doc_product_desc_back.4f15795f.png",
-                      "category":  "background",
-                      "relativePath":  "assets/images/doc_product_desc_back.4f15795f.png",
-                      "urlPath":  "/assets/images/doc_product_desc_back.4f15795f.png"
-                  },
-                  {
-                      "name":  "docx_icon.2b3372a8.png",
-                      "category":  "icon",
-                      "relativePath":  "assets/images/docx_icon.2b3372a8.png",
-                      "urlPath":  "/assets/images/docx_icon.2b3372a8.png"
-                  },
-                  {
-                      "name":  "enterprise_cloud_1_back.71a5e2b0.png",
-                      "category":  "background",
-                      "relativePath":  "assets/images/enterprise_cloud_1_back.71a5e2b0.png",
-                      "urlPath":  "/assets/images/enterprise_cloud_1_back.71a5e2b0.png"
-                  },
-                  {
-                      "name":  "enterprise_cloud_2_back.a3075718.png",
-                      "category":  "background",
-                      "relativePath":  "assets/images/enterprise_cloud_2_back.a3075718.png",
-                      "urlPath":  "/assets/images/enterprise_cloud_2_back.a3075718.png"
-                  },
-                  {
-                      "name":  "enterprise_cloud_3_back.1b6c4273.png",
-                      "category":  "background",
-                      "relativePath":  "assets/images/enterprise_cloud_3_back.1b6c4273.png",
-                      "urlPath":  "/assets/images/enterprise_cloud_3_back.1b6c4273.png"
-                  },
-                  {
-                      "name":  "enterprise_report.b1bd728b.png",
-                      "category":  "report",
-                      "relativePath":  "assets/images/enterprise_report.b1bd728b.png",
-                      "urlPath":  "/assets/images/enterprise_report.b1bd728b.png"
-                  },
-                  {
-                      "name":  "footer_safety.92ab8557.png",
-                      "category":  "illustration",
-                      "relativePath":  "assets/images/footer_safety.92ab8557.png",
-                      "urlPath":  "/assets/images/footer_safety.92ab8557.png"
-                  },
-                  {
-                      "name":  "form.d91584ab.png",
-                      "category":  "product",
-                      "relativePath":  "assets/images/form.d91584ab.png",
-                      "urlPath":  "/assets/images/form.d91584ab.png"
-                  },
-                  {
-                      "name":  "form_icon.684f8f7b.png",
-                      "category":  "icon",
-                      "relativePath":  "assets/images/form_icon.684f8f7b.png",
-                      "urlPath":  "/assets/images/form_icon.684f8f7b.png"
-                  },
-                  {
-                      "name":  "home_help.cfc7ec13.png",
-                      "category":  "illustration",
-                      "relativePath":  "assets/images/home_help.cfc7ec13.png",
-                      "urlPath":  "/assets/images/home_help.cfc7ec13.png"
-                  },
-                  {
-                      "name":  "homepage_banner_mobile.4f34d020.png",
-                      "category":  "banner",
-                      "relativePath":  "assets/images/homepage_banner_mobile.4f34d020.png",
-                      "urlPath":  "/assets/images/homepage_banner_mobile.4f34d020.png"
-                  },
-                  {
-                      "name":  "homepage_banner_pc.2c5122dc.png",
-                      "category":  "banner",
-                      "relativePath":  "assets/images/homepage_banner_pc.2c5122dc.png",
-                      "urlPath":  "/assets/images/homepage_banner_pc.2c5122dc.png"
-                  },
-                  {
-                      "name":  "homepage_title_banner_background.43282104.png",
-                      "category":  "banner",
-                      "relativePath":  "assets/images/homepage_title_banner_background.43282104.png",
-                      "urlPath":  "/assets/images/homepage_title_banner_background.43282104.png"
-                  },
-                  {
-                      "name":  "homepage_title_banner_bg_2021_12_mobile.f1a9fb27.png",
-                      "category":  "banner",
-                      "relativePath":  "assets/images/homepage_title_banner_bg_2021_12_mobile.f1a9fb27.png",
-                      "urlPath":  "/assets/images/homepage_title_banner_bg_2021_12_mobile.f1a9fb27.png"
-                  },
-                  {
-                      "name":  "homepage_title_banner_bg_2022_live_mobile.d34a96c5.png",
-                      "category":  "banner",
-                      "relativePath":  "assets/images/homepage_title_banner_bg_2022_live_mobile.d34a96c5.png",
-                      "urlPath":  "/assets/images/homepage_title_banner_bg_2022_live_mobile.d34a96c5.png"
-                  },
-                  {
-                      "name":  "homepage_title_banner_bg_2022_memory_mobile.e0a963e1.png",
-                      "category":  "banner",
-                      "relativePath":  "assets/images/homepage_title_banner_bg_2022_memory_mobile.e0a963e1.png",
-                      "urlPath":  "/assets/images/homepage_title_banner_bg_2022_memory_mobile.e0a963e1.png"
-                  },
-                  {
-                      "name":  "mindmap_back.07b2aeb3.png",
-                      "category":  "background",
-                      "relativePath":  "assets/images/mindmap_back.07b2aeb3.png",
-                      "urlPath":  "/assets/images/mindmap_back.07b2aeb3.png"
-                  },
-                  {
-                      "name":  "mindmap_icon.e0a33edc.png",
-                      "category":  "icon",
-                      "relativePath":  "assets/images/mindmap_icon.e0a33edc.png",
-                      "urlPath":  "/assets/images/mindmap_icon.e0a33edc.png"
-                  },
-                  {
-                      "name":  "national_emblem_icon.0d3d31f3.png",
-                      "category":  "icon",
-                      "relativePath":  "assets/images/national_emblem_icon.0d3d31f3.png",
-                      "urlPath":  "/assets/images/national_emblem_icon.0d3d31f3.png"
-                  },
-                  {
-                      "name":  "presentation.fbeeebed.png",
-                      "category":  "product",
-                      "relativePath":  "assets/images/presentation.fbeeebed.png",
-                      "urlPath":  "/assets/images/presentation.fbeeebed.png"
-                  },
-                  {
-                      "name":  "private_deploy_title_banner_mobile_background.c46733bb.png",
-                      "category":  "banner",
-                      "relativePath":  "assets/images/private_deploy_title_banner_mobile_background.c46733bb.png",
-                      "urlPath":  "/assets/images/private_deploy_title_banner_mobile_background.c46733bb.png"
-                  },
-                  {
-                      "name":  "product_customize_banner_background.6ed8b3c9.png",
-                      "category":  "banner",
-                      "relativePath":  "assets/images/product_customize_banner_background.6ed8b3c9.png",
-                      "urlPath":  "/assets/images/product_customize_banner_background.6ed8b3c9.png"
-                  },
-                  {
-                      "name":  "report.e602387f.png",
-                      "category":  "report",
-                      "relativePath":  "assets/images/report.e602387f.png",
-                      "urlPath":  "/assets/images/report.e602387f.png"
-                  },
-                  {
-                      "name":  "service_solutions_logos.d931f545.png",
-                      "category":  "logo",
-                      "relativePath":  "assets/images/service_solutions_logos.d931f545.png",
-                      "urlPath":  "/assets/images/service_solutions_logos.d931f545.png"
-                  },
-                  {
-                      "name":  "service_solutions_mobile_logos.e2d1faf8.png",
-                      "category":  "logo",
-                      "relativePath":  "assets/images/service_solutions_mobile_logos.e2d1faf8.png",
-                      "urlPath":  "/assets/images/service_solutions_mobile_logos.e2d1faf8.png"
-                  },
-                  {
-                      "name":  "sheet.c78ad43b.png",
-                      "category":  "product",
-                      "relativePath":  "assets/images/sheet.c78ad43b.png",
-                      "urlPath":  "/assets/images/sheet.c78ad43b.png"
-                  },
-                  {
-                      "name":  "sheet_card_background.5f4fa511.png",
-                      "category":  "background",
-                      "relativePath":  "assets/images/sheet_card_background.5f4fa511.png",
-                      "urlPath":  "/assets/images/sheet_card_background.5f4fa511.png"
-                  },
-                  {
-                      "name":  "sheet_product_desc_back.1791d6f4.png",
-                      "category":  "background",
-                      "relativePath":  "assets/images/sheet_product_desc_back.1791d6f4.png",
-                      "urlPath":  "/assets/images/sheet_product_desc_back.1791d6f4.png"
-                  },
-                  {
-                      "name":  "slide_card_background.922d5755.png",
-                      "category":  "background",
-                      "relativePath":  "assets/images/slide_card_background.922d5755.png",
-                      "urlPath":  "/assets/images/slide_card_background.922d5755.png"
-                  },
-                  {
-                      "name":  "slide_product_desc_back.78851b71.png",
-                      "category":  "background",
-                      "relativePath":  "assets/images/slide_product_desc_back.78851b71.png",
-                      "urlPath":  "/assets/images/slide_product_desc_back.78851b71.png"
-                  },
-                  {
-                      "name":  "suixinyu_logo.15a5a54b.png",
-                      "category":  "logo",
-                      "relativePath":  "assets/images/suixinyu_logo.15a5a54b.png",
-                      "urlPath":  "/assets/images/suixinyu_logo.15a5a54b.png"
-                  },
-                  {
-                      "name":  "support-default-light.371a39fd.png",
-                      "category":  "illustration",
-                      "relativePath":  "assets/images/support-default-light.371a39fd.png",
-                      "urlPath":  "/assets/images/support-default-light.371a39fd.png"
-                  },
-                  {
-                      "name":  "table_back.4655d070.png",
-                      "category":  "background",
-                      "relativePath":  "assets/images/table_back.4655d070.png",
-                      "urlPath":  "/assets/images/table_back.4655d070.png"
-                  },
-                  {
-                      "name":  "table_new_icon.daefbbf7.png",
-                      "category":  "icon",
-                      "relativePath":  "assets/images/table_new_icon.daefbbf7.png",
-                      "urlPath":  "/assets/images/table_new_icon.daefbbf7.png"
-                  },
-                  {
-                      "name":  "team_back.0c3db52b.png",
-                      "category":  "background",
-                      "relativePath":  "assets/images/team_back.0c3db52b.png",
-                      "urlPath":  "/assets/images/team_back.0c3db52b.png"
-                  },
-                  {
-                      "name":  "team_icon.a5c9d773.png",
-                      "category":  "icon",
-                      "relativePath":  "assets/images/team_icon.a5c9d773.png",
-                      "urlPath":  "/assets/images/team_icon.a5c9d773.png"
-                  },
-                  {
-                      "name":  "traditional_back.ccfcc942.png",
-                      "category":  "background",
-                      "relativePath":  "assets/images/traditional_back.ccfcc942.png",
-                      "urlPath":  "/assets/images/traditional_back.ccfcc942.png"
-                  },
-                  {
-                      "name":  "violence_report.3557d62c.png",
-                      "category":  "report",
-                      "relativePath":  "assets/images/violence_report.3557d62c.png",
-                      "urlPath":  "/assets/images/violence_report.3557d62c.png"
-                  },
-                  {
-                      "name":  "web_bg@2x.a8d79c78.png",
-                      "category":  "background",
-                      "relativePath":  "assets/images/web_bg@2x.a8d79c78.png",
-                      "urlPath":  "/assets/images/web_bg@2x.a8d79c78.png"
-                  },
-                  {
-                      "name":  "web_phone@2x.90738d27.png",
-                      "category":  "illustration",
-                      "relativePath":  "assets/images/web_phone@2x.90738d27.png",
-                      "urlPath":  "/assets/images/web_phone@2x.90738d27.png"
-                  },
-                  {
-                      "name":  "web_text@2x.1ce4d89c.png",
-                      "category":  "illustration",
-                      "relativePath":  "assets/images/web_text@2x.1ce4d89c.png",
-                      "urlPath":  "/assets/images/web_text@2x.1ce4d89c.png"
-                  },
-                  {
-                      "name":  "whitebord_back.d5289644.png",
-                      "category":  "background",
-                      "relativePath":  "assets/images/whitebord_back.d5289644.png",
-                      "urlPath":  "/assets/images/whitebord_back.d5289644.png"
-                  },
-                  {
-                      "name":  "whitebord_icon.f7aaf0f4.png",
-                      "category":  "icon",
-                      "relativePath":  "assets/images/whitebord_icon.f7aaf0f4.png",
-                      "urlPath":  "/assets/images/whitebord_icon.f7aaf0f4.png"
-                  }
-              ]
+    "generatedAt": "2026-03-12T16:31:28+08:00",
+    "sourcePage": "https://shimo.im/welcome",
+    "imageBasePath": "assets/images",
+    "total": 35,
+    "categories": {
+        "report": [
+            "enterprise_report.b1bd728b.png",
+            "report.e602387f.png"
+        ],
+        "icon": [
+            "docx_icon.2b3372a8.png",
+            "form_icon.684f8f7b.png",
+            "national_emblem_icon.0d3d31f3.png",
+            "table_new_icon.daefbbf7.png",
+            "team_icon.a5c9d773.png",
+            "whitebord_icon.f7aaf0f4.png"
+        ],
+        "background": [
+            "doc_product_desc_back.4f15795f.png",
+            "enterprise_cloud_1_back.71a5e2b0.png",
+            "enterprise_cloud_2_back.a3075718.png",
+            "enterprise_cloud_3_back.1b6c4273.png",
+            "mindmap_back.07b2aeb3.png",
+            "sheet_card_background.5f4fa511.png",
+            "sheet_product_desc_back.1791d6f4.png",
+            "slide_card_background.922d5755.png",
+            "slide_product_desc_back.78851b71.png",
+            "table_back.4655d070.png",
+            "team_back.0c3db52b.png",
+            "traditional_back.ccfcc942.png",
+            "whitebord_back.d5289644.png"
+        ],
+        "banner": [
+            "homepage_title_banner_background.43282104.png",
+            "private_deploy_title_banner_mobile_background.c46733bb.png",
+            "product_customize_banner_background.6ed8b3c9.png"
+        ],
+        "product": [
+            "doc.d12d293d.png",
+            "form.d91584ab.png",
+            "presentation.fbeeebed.png",
+            "sheet.c78ad43b.png"
+        ],
+        "illustration": [
+            "footer_safety.92ab8557.png",
+            "home_help.cfc7ec13.png",
+            "support-default-light.371a39fd.png",
+            "web_phone@2x.90738d27.png",
+            "web_text@2x.1ce4d89c.png"
+        ],
+        "logo": [
+            "service_solutions_logos.d931f545.png",
+            "service_solutions_mobile_logos.e2d1faf8.png"
+        ]
+    },
+    "items": [
+        {
+            "name": "doc.d12d293d.png",
+            "category": "product",
+            "relativePath": "assets/images/doc.d12d293d.png",
+            "urlPath": "/assets/images/doc.d12d293d.png"
+        },
+        {
+            "name": "doc_product_desc_back.4f15795f.png",
+            "category": "background",
+            "relativePath": "assets/images/doc_product_desc_back.4f15795f.png",
+            "urlPath": "/assets/images/doc_product_desc_back.4f15795f.png"
+        },
+        {
+            "name": "docx_icon.2b3372a8.png",
+            "category": "icon",
+            "relativePath": "assets/images/docx_icon.2b3372a8.png",
+            "urlPath": "/assets/images/docx_icon.2b3372a8.png"
+        },
+        {
+            "name": "enterprise_cloud_1_back.71a5e2b0.png",
+            "category": "background",
+            "relativePath": "assets/images/enterprise_cloud_1_back.71a5e2b0.png",
+            "urlPath": "/assets/images/enterprise_cloud_1_back.71a5e2b0.png"
+        },
+        {
+            "name": "enterprise_cloud_2_back.a3075718.png",
+            "category": "background",
+            "relativePath": "assets/images/enterprise_cloud_2_back.a3075718.png",
+            "urlPath": "/assets/images/enterprise_cloud_2_back.a3075718.png"
+        },
+        {
+            "name": "enterprise_cloud_3_back.1b6c4273.png",
+            "category": "background",
+            "relativePath": "assets/images/enterprise_cloud_3_back.1b6c4273.png",
+            "urlPath": "/assets/images/enterprise_cloud_3_back.1b6c4273.png"
+        },
+        {
+            "name": "enterprise_report.b1bd728b.png",
+            "category": "report",
+            "relativePath": "assets/images/enterprise_report.b1bd728b.png",
+            "urlPath": "/assets/images/enterprise_report.b1bd728b.png"
+        },
+        {
+            "name": "footer_safety.92ab8557.png",
+            "category": "illustration",
+            "relativePath": "assets/images/footer_safety.92ab8557.png",
+            "urlPath": "/assets/images/footer_safety.92ab8557.png"
+        },
+        {
+            "name": "form.d91584ab.png",
+            "category": "product",
+            "relativePath": "assets/images/form.d91584ab.png",
+            "urlPath": "/assets/images/form.d91584ab.png"
+        },
+        {
+            "name": "form_icon.684f8f7b.png",
+            "category": "icon",
+            "relativePath": "assets/images/form_icon.684f8f7b.png",
+            "urlPath": "/assets/images/form_icon.684f8f7b.png"
+        },
+        {
+            "name": "home_help.cfc7ec13.png",
+            "category": "illustration",
+            "relativePath": "assets/images/home_help.cfc7ec13.png",
+            "urlPath": "/assets/images/home_help.cfc7ec13.png"
+        },
+        {
+            "name": "homepage_title_banner_background.43282104.png",
+            "category": "banner",
+            "relativePath": "assets/images/homepage_title_banner_background.43282104.png",
+            "urlPath": "/assets/images/homepage_title_banner_background.43282104.png"
+        },
+        {
+            "name": "mindmap_back.07b2aeb3.png",
+            "category": "background",
+            "relativePath": "assets/images/mindmap_back.07b2aeb3.png",
+            "urlPath": "/assets/images/mindmap_back.07b2aeb3.png"
+        },
+        {
+            "name": "national_emblem_icon.0d3d31f3.png",
+            "category": "icon",
+            "relativePath": "assets/images/national_emblem_icon.0d3d31f3.png",
+            "urlPath": "/assets/images/national_emblem_icon.0d3d31f3.png"
+        },
+        {
+            "name": "presentation.fbeeebed.png",
+            "category": "product",
+            "relativePath": "assets/images/presentation.fbeeebed.png",
+            "urlPath": "/assets/images/presentation.fbeeebed.png"
+        },
+        {
+            "name": "private_deploy_title_banner_mobile_background.c46733bb.png",
+            "category": "banner",
+            "relativePath": "assets/images/private_deploy_title_banner_mobile_background.c46733bb.png",
+            "urlPath": "/assets/images/private_deploy_title_banner_mobile_background.c46733bb.png"
+        },
+        {
+            "name": "product_customize_banner_background.6ed8b3c9.png",
+            "category": "banner",
+            "relativePath": "assets/images/product_customize_banner_background.6ed8b3c9.png",
+            "urlPath": "/assets/images/product_customize_banner_background.6ed8b3c9.png"
+        },
+        {
+            "name": "report.e602387f.png",
+            "category": "report",
+            "relativePath": "assets/images/report.e602387f.png",
+            "urlPath": "/assets/images/report.e602387f.png"
+        },
+        {
+            "name": "service_solutions_logos.d931f545.png",
+            "category": "logo",
+            "relativePath": "assets/images/service_solutions_logos.d931f545.png",
+            "urlPath": "/assets/images/service_solutions_logos.d931f545.png"
+        },
+        {
+            "name": "service_solutions_mobile_logos.e2d1faf8.png",
+            "category": "logo",
+            "relativePath": "assets/images/service_solutions_mobile_logos.e2d1faf8.png",
+            "urlPath": "/assets/images/service_solutions_mobile_logos.e2d1faf8.png"
+        },
+        {
+            "name": "sheet.c78ad43b.png",
+            "category": "product",
+            "relativePath": "assets/images/sheet.c78ad43b.png",
+            "urlPath": "/assets/images/sheet.c78ad43b.png"
+        },
+        {
+            "name": "sheet_card_background.5f4fa511.png",
+            "category": "background",
+            "relativePath": "assets/images/sheet_card_background.5f4fa511.png",
+            "urlPath": "/assets/images/sheet_card_background.5f4fa511.png"
+        },
+        {
+            "name": "sheet_product_desc_back.1791d6f4.png",
+            "category": "background",
+            "relativePath": "assets/images/sheet_product_desc_back.1791d6f4.png",
+            "urlPath": "/assets/images/sheet_product_desc_back.1791d6f4.png"
+        },
+        {
+            "name": "slide_card_background.922d5755.png",
+            "category": "background",
+            "relativePath": "assets/images/slide_card_background.922d5755.png",
+            "urlPath": "/assets/images/slide_card_background.922d5755.png"
+        },
+        {
+            "name": "slide_product_desc_back.78851b71.png",
+            "category": "background",
+            "relativePath": "assets/images/slide_product_desc_back.78851b71.png",
+            "urlPath": "/assets/images/slide_product_desc_back.78851b71.png"
+        },
+        {
+            "name": "support-default-light.371a39fd.png",
+            "category": "illustration",
+            "relativePath": "assets/images/support-default-light.371a39fd.png",
+            "urlPath": "/assets/images/support-default-light.371a39fd.png"
+        },
+        {
+            "name": "table_back.4655d070.png",
+            "category": "background",
+            "relativePath": "assets/images/table_back.4655d070.png",
+            "urlPath": "/assets/images/table_back.4655d070.png"
+        },
+        {
+            "name": "table_new_icon.daefbbf7.png",
+            "category": "icon",
+            "relativePath": "assets/images/table_new_icon.daefbbf7.png",
+            "urlPath": "/assets/images/table_new_icon.daefbbf7.png"
+        },
+        {
+            "name": "team_back.0c3db52b.png",
+            "category": "background",
+            "relativePath": "assets/images/team_back.0c3db52b.png",
+            "urlPath": "/assets/images/team_back.0c3db52b.png"
+        },
+        {
+            "name": "team_icon.a5c9d773.png",
+            "category": "icon",
+            "relativePath": "assets/images/team_icon.a5c9d773.png",
+            "urlPath": "/assets/images/team_icon.a5c9d773.png"
+        },
+        {
+            "name": "traditional_back.ccfcc942.png",
+            "category": "background",
+            "relativePath": "assets/images/traditional_back.ccfcc942.png",
+            "urlPath": "/assets/images/traditional_back.ccfcc942.png"
+        },
+        {
+            "name": "web_phone@2x.90738d27.png",
+            "category": "illustration",
+            "relativePath": "assets/images/web_phone@2x.90738d27.png",
+            "urlPath": "/assets/images/web_phone@2x.90738d27.png"
+        },
+        {
+            "name": "web_text@2x.1ce4d89c.png",
+            "category": "illustration",
+            "relativePath": "assets/images/web_text@2x.1ce4d89c.png",
+            "urlPath": "/assets/images/web_text@2x.1ce4d89c.png"
+        },
+        {
+            "name": "whitebord_back.d5289644.png",
+            "category": "background",
+            "relativePath": "assets/images/whitebord_back.d5289644.png",
+            "urlPath": "/assets/images/whitebord_back.d5289644.png"
+        },
+        {
+            "name": "whitebord_icon.f7aaf0f4.png",
+            "category": "icon",
+            "relativePath": "assets/images/whitebord_icon.f7aaf0f4.png",
+            "urlPath": "/assets/images/whitebord_icon.f7aaf0f4.png"
+        }
+    ]
 }

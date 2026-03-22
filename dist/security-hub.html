@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>安全保障 - 石墨文档企业服务</title>
+    <meta name="description" content="石墨文档为企业提供数据安全、私有部署与信创合规能力，构建覆盖传输、应用与存储的全链路安全体系。">
+  <link rel="canonical" href="https://shimooffice.net/security-hub.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="石墨文档企业服务">
+  <meta property="og:title" content="安全保障 - 石墨文档企业服务">
+  <meta property="og:description" content="石墨文档为企业提供数据安全、私有部署与信创合规能力，构建覆盖传输、应用与存储的全链路安全体系。">
+  <meta property="og:url" content="https://shimooffice.net/security-hub.html">
+  <meta property="og:image" content="https://shimooffice.net/assets/images/homepage_title_banner_background.43282104.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="安全保障 - 石墨文档企业服务">
+  <meta name="twitter:description" content="石墨文档为企业提供数据安全、私有部署与信创合规能力，构建覆盖传输、应用与存储的全链路安全体系。">
+  <meta name="twitter:image" content="https://shimooffice.net/assets/images/homepage_title_banner_background.43282104.png">
+<title>安全保障 - 石墨文档企业服务</title>
   <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/landing.css">
-  <link rel="stylesheet" href="./css/office-suite-saas.css">
-  <link rel="stylesheet" href="./css/collaboration.css">
-  <link rel="stylesheet" href="./css/knowledge.css">
-  <link rel="stylesheet" href="./css/integration.css">
-  <link rel="stylesheet" href="./css/ai.css">
-  <link rel="stylesheet" href="./css/weboffice-sdk.css">
-  <link rel="stylesheet" href="./css/enterprise.css">
   <link rel="stylesheet" href="./css/security.css">
   <link rel="stylesheet" href="./css/private-deploy.css">
   <link rel="stylesheet" href="./css/xinchuang.css">
   <link rel="stylesheet" href="./css/security-hub.css">
-  <link rel="stylesheet" href="./css/customer-wall.css">
-  <link rel="stylesheet" href="./css/about.css">
-  <link rel="stylesheet" href="./css/privacy.css">
-  <link rel="stylesheet" href="./css/behavior.css">
-  <style>
+<style>
     @media (min-width: 981px) {
       .top-nav .has-dropdown > .dropdown.dropdown-panel-wide:not(.dropdown-align-viewport) {
         left: 50%;
@@ -31,12 +32,34 @@
         max-width: 100vw;
         border-radius: 0;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        transform: translate(-50%, 4px);
+        transform: translateX(-50%) translateY(4px);
         transition: opacity 0.14s ease, transform 0.16s ease, visibility 0s linear 0.16s;
       }
 
       .top-nav .has-dropdown.open > .dropdown.dropdown-panel-wide:not(.dropdown-align-viewport) {
-        transform: translate(-50%, 0);
+        transform: translateX(-50%) translateY(0);
+        transition-delay: 0s;
+      }
+
+      .top-nav .has-dropdown > .dropdown.dropdown-panel-wide.dropdown-align-right,
+      .top-nav .has-dropdown > .dropdown.dropdown-panel-wide.dropdown-align-viewport,
+      .top-nav .has-dropdown > .support-panel:not(.dropdown-align-viewport) {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        min-width: 0;
+        max-width: 100vw;
+        border-radius: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        transform: translateY(4px);
+      }
+
+      .top-nav .has-dropdown.open > .dropdown.dropdown-panel-wide.dropdown-align-right,
+      .top-nav .has-dropdown.open > .dropdown.dropdown-panel-wide.dropdown-align-viewport,
+      .top-nav .has-dropdown.open > .support-panel:not(.dropdown-align-viewport) {
+        transform: translateY(0);
         transition-delay: 0s;
       }
 
@@ -46,6 +69,8 @@
       }
 
       .top-nav .has-dropdown > .support-panel .support-link-grid-5 {
+        width: min(1200px, calc(100vw - 24px));
+        margin: 0 auto;
         grid-template-columns: repeat(5, minmax(0, 1fr));
       }
 
@@ -53,13 +78,27 @@
         grid-column: span 1;
       }
     }
+
+    .product-new-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1px 6px;
+      border-radius: 999px;
+      color: #ff4d4f;
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.04em;
+      background: rgba(255, 77, 79, 0.08);
+    }
   </style>
 </head>
 <body class="site-shell">
   <header class="top-nav">
     <div class="container top-nav-inner">
       <div class="nav-left">
-        <a class="logo" href="./welcome.html">
+        <a class="logo" href="./">
           <span class="logo-main">石墨文档</span>
           <span class="logo-sub">企业服务</span>
         </a>
@@ -69,86 +108,83 @@
         <div class="has-dropdown">
           <a class="nav-item nav-trigger" href="#">产品</a>
           <div class="dropdown dropdown-panel dropdown-panel-wide product-panel" role="menu" aria-label="产品二级导航">
-            <div class="dropdown-grid dropdown-grid-2 product-dropdown-layout">
+            <div class="dropdown-grid dropdown-grid-2 mega-dropdown-layout">
               <section class="dropdown-col" aria-label="产品矩阵">
-                <p class="dropdown-eyebrow">产品矩阵</p>
-                <div class="dropdown-card">
-                  <div class="dropdown-card-head">
-                    <strong>石墨办公套件</strong>
-                    <p>面向团队协作与企业办公，提供开箱即用的文档协作服务。</p>
+                <div class="mega-highlight-stack">
+                  <div class="dropdown-card">
+                    <div class="dropdown-card-head">
+                      <strong>石墨办公套件</strong>
+                      <p>面向团队协作与企业办公，提供开箱即用的文档协作服务。</p>
+                    </div>
+                    <div class="dropdown-tags-row">
+                      <span class="dropdown-inline-badge">面向团队（公有云服务）</span>
+                      <a href="#">免费试用</a>
+                      <a href="./officesuite-business.html">了解更多</a>
+                    </div>
+                    <div class="dropdown-tags-row">
+                      <span class="dropdown-inline-badge">面向企业（私有化服务）</span>
+                      <a href="#">预约演示</a>
+                      <a href="./officesuite-enterprise.html">了解更多</a>
+                    </div>
                   </div>
-                  <div class="dropdown-tags-row">
-                    <span class="dropdown-inline-badge">面向团队（公有云）</span>
-                    <a href="#">免费试用</a>
-                    <a href="/office-suite-saas.html">了解更多</a>
-                  </div>
-                  <div class="dropdown-tags-row">
-                    <span class="dropdown-inline-badge">面向企业（私有化）</span>
-                    <a href="#">预约演示</a>
-                    <a href="/office-suite-private.html">了解更多</a>
-                  </div>
-                </div>
-                <div class="dropdown-card">
-                  <div class="dropdown-card-head">
-                    <strong>石墨文档中台</strong>
-                    <p>面向企业集成与系统建设，提供灵活可控的文档能力开放服务。</p>
-                  </div>
-                  <div class="dropdown-tags-row">
-                    <span class="dropdown-inline-badge">面向集成（私有化）</span>
-                    <a href="#">预约演示</a>
-                    <a href="/weboffice-sdk.html">了解更多</a>
+                  <div class="dropdown-card">
+                    <div class="dropdown-card-head">
+                      <strong>石墨文档中台</strong>
+                      <p>面向企业集成与系统建设，提供灵活可控的文档能力开放服务。</p>
+                    </div>
+                    <div class="dropdown-tags-row">
+                      <span class="dropdown-inline-badge">面向集成（私有化服务）</span>
+                      <a href="#">预约演示</a>
+                      <a href="./webofficesdk-integration.html">了解更多</a>
+                    </div>
                   </div>
                 </div>
               </section>
               <section class="dropdown-col" aria-label="核心能力">
-                <p class="dropdown-eyebrow">核心能力</p>
-                <div class="dropdown-grid dropdown-grid-3 product-capability-grid">
+                <div class="dropdown-grid dropdown-grid-4 mega-info-grid">
                   <div class="dropdown-list-item">
                     <strong>文档协作</strong>
-                    <div class="product-suite-group">
-                      <span class="dropdown-inline-badge">基础套件</span>
-                      <div class="product-suite-links product-suite-links-1">
-                        <a href="/collaboration.html?tab=doc" role="menuitem">文档</a>
-                      </div>
+                    <div style="font-size: 12px; color: #999; margin: 6px 0 2px;">基础套件</div>
+                    <div class="dropdown-tags-row">
+                      <a href="./document.html" role="menuitem">文档</a>
                     </div>
-                    <div class="product-suite-group">
-                      <span class="dropdown-inline-badge">Office套件</span>
-                      <div class="product-suite-links product-suite-links-3">
-                        <a href="/collaboration.html?tab=docx" role="menuitem">文稿</a>
-                        <a href="/collaboration.html?tab=sheet" role="menuitem">表格</a>
-                        <a href="/collaboration.html?tab=slide" role="menuitem">幻灯片</a>
-                      </div>
+                    <div style="font-size: 12px; color: #999; margin: 6px 0 2px;">数据应用</div>
+                    <div class="dropdown-tags-row">
+                      <a href="./form.html" role="menuitem">表单</a>
+                      <a href="./table.html" role="menuitem">应用表格</a>
                     </div>
-                    <div class="product-suite-group">
-                      <span class="dropdown-inline-badge">数据应用</span>
-                      <div class="product-suite-links product-suite-links-2">
-                        <a href="/collaboration.html?tab=form" role="menuitem">表单</a>
-                        <a href="/collaboration.html?tab=table" role="menuitem">应用表格</a>
-                      </div>
+                    <div style="font-size: 12px; color: #999; margin: 6px 0 2px;">Office套件</div>
+                    <div class="dropdown-tags-row">
+                      <a href="./writer.html" role="menuitem">文稿</a>
+                      <a href="./sheet.html" role="menuitem">表格</a>
+                      <a href="./slide.html" role="menuitem">幻灯片</a>
                     </div>
-
                   </div>
                   <div class="dropdown-list-item">
                     <strong>知识沉淀</strong>
                     <div class="dropdown-tags-row">
-                      <a href="/knowledge.html?tab=workbench" role="menuitem">工作台</a>
-                      <a href="/knowledge.html?tab=space" role="menuitem">协作空间</a>
-                      <a href="/knowledge.html?tab=wiki" role="menuitem">知识库</a>
+                      <a href="./portal.html" role="menuitem">工作台</a>
+                      <a href="./space.html" role="menuitem">协作空间</a>
+                      <a href="./knowledge-base.html" role="menuitem">知识库</a>
+                      <a href="./management-panel.html" role="menuitem">企业管理</a>
+                    </div>
+                  </div>
+                  <div class="dropdown-list-item">
+                    <strong style="display: flex; align-items: center; gap: 6px;">
+                      石墨 AI
+                      <span class="product-new-badge" aria-label="新品">NEW</span>
+                    </strong>
+                    <div class="dropdown-tags-row">
+                      <a href="./ai.html#ai-assistant" role="menuitem">AI助手「石小墨」</a>
+                      <a href="./ai.html#ai-base" role="menuitem">AI 文档基座</a>
                     </div>
                   </div>
                   <div class="dropdown-list-item">
                     <strong>安全保障</strong>
                     <div class="dropdown-tags-row">
-                      <a href="/security-hub.html?tab=security" role="menuitem">数据安全</a>
-                      <a href="/security-hub.html?tab=deploy" role="menuitem">私有部署</a>
-                      <a href="/security-hub.html?tab=xinchuang" role="menuitem">信创合规</a>
-                    </div>
-                  </div>
-                  <div class="dropdown-list-item product-ai-access-item">
-                    <strong>AI 接入</strong>
-                    <div class="dropdown-tags-row product-ai-access-links">
-                      <a href="/ai.html#ai-assistant" role="menuitem">AI 助手「石小墨」</a>
-                      <a href="/ai.html#ai-base" role="menuitem">AI 文档基座</a>
+                      <a href="./security-hub.html?tab=security" role="menuitem">数据安全</a>
+                      <a href="./security-hub.html?tab=deploy" role="menuitem">私有部署</a>
+                      <a href="./security-hub.html?tab=xinchuang" role="menuitem">信创合规</a>
                     </div>
                   </div>
                 </div>
@@ -168,13 +204,13 @@
                 <div class="mega-highlight-stack">
                   <div class="dropdown-card">
                     <div class="dropdown-card-head"> 
-                      <strong>石墨文档中台<span class="dropdown-inline-badge">私有化服务</span></strong>
+                      <strong>石墨文档中台</strong>
                       <p>面向企业集成与系统建设，提供灵活可控的文档能力开放服务。</p>
                     </div>
                     <div class="dropdown-tags-row">
-                     
+                      <span class="dropdown-inline-badge">面向集成（私有化服务）</span>
                       <a href="#">预约演示</a>
-                      <a href="/weboffice-sdk.html">了解更多</a>
+                      <a href="./webofficesdk-integration.html">了解更多</a>
                     </div>
                   </div>
   
@@ -186,30 +222,30 @@
                   <div class="dropdown-list-item">
                     <strong>核心能力</strong>
                     <div class="dropdown-tags-row">
-                      <a href="/weboffice-sdk.html#dp-capability-preview" role="menuitem">文件预览</a>
-                      <a href="/weboffice-sdk.html#dp-capability-edit" role="menuitem">协作编辑</a>
-                      <a href="/weboffice-sdk.html#dp-capability-format" role="menuitem">格式处理</a>
-                      <a href="/weboffice-sdk.html#dp-capability-storage" role="menuitem">文档存储</a>
-                      <a href="/weboffice-sdk.html#dp-capability-security" role="menuitem">文档安全</a>
+                      <a href="./webofficesdk-integration.html#dp-capability-preview" role="menuitem">文件预览</a>
+                      <a href="./webofficesdk-integration.html#dp-capability-edit" role="menuitem">协作编辑</a>
+                      <a href="./webofficesdk-integration.html#dp-capability-format" role="menuitem">格式处理</a>
+                      <a href="./webofficesdk-integration.html#dp-capability-storage" role="menuitem">文档存储</a>
+                      <a href="./webofficesdk-integration.html#dp-capability-security" role="menuitem">文档安全</a>
                     </div>
                   </div>
                   <div class="dropdown-list-item">
                     <strong>集成案例</strong>
                     <div class="dropdown-tags-row">
-                      <a href="/weboffice-sdk.html#dp-scene-im" role="menuitem">IM 即时聊天</a>
-                      <a href="/weboffice-sdk.html#dp-scene-drive" role="menuitem">云盘文件管理</a>
-                      <a href="/weboffice-sdk.html#dp-scene-oa" role="menuitem">OA 协同办公</a>
-                      <a href="/weboffice-sdk.html#dp-scene-contract" role="menuitem">合同管理</a>
-                      <a href="/weboffice-sdk.html#dp-scene-meeting" role="menuitem">在线会议</a>
+                      <a href="./webofficesdk-integration.html#dp-scene-im" role="menuitem">IM 即时聊天</a>
+                      <a href="./webofficesdk-integration.html#dp-scene-drive" role="menuitem">云盘文件管理</a>
+                      <a href="./webofficesdk-integration.html#dp-scene-oa" role="menuitem">OA 协同办公</a>
+                      <a href="./webofficesdk-integration.html#dp-scene-contract" role="menuitem">合同管理</a>
+                      <a href="./webofficesdk-integration.html#dp-scene-meeting" role="menuitem">在线会议</a>
                     </div>
                   </div>
                   <div class="dropdown-list-item">
                     <strong>开发资源</strong>
                     <div class="dropdown-tags-row">
-                      <a href="/weboffice-sdk.html#dp-resources" role="menuitem">开发文档</a>
-                      <a href="/weboffice-sdk.html#dp-resources" role="menuitem">快速入门</a>
-                       <a href="/pages/features/format-support.html" role="menuitem">格式支持</a>
-                       <a href="/weboffice-sdk.html#dp-resources" role="menuitem">示例代码</a>
+                      <a href="./webofficesdk-integration.html#dp-resources" role="menuitem">开发文档</a>
+                      <a href="./webofficesdk-integration.html#dp-resources" role="menuitem">快速入门</a>
+                       <a href="./webofficesdk-integration.html#dp-resources" role="menuitem">格式支持</a>
+                       <a href="./webofficesdk-integration.html#dp-resources" role="menuitem">示例代码</a>
                     </div>
                   </div>
                 </div>
@@ -219,32 +255,32 @@
           </div>
         </div>
 
-        <a class="nav-item" href="#">解决方案</a>
+        <a class="nav-item" href="./solution.html">解决方案</a>
 
         <div class="has-dropdown">
           <a class="nav-item nav-trigger" href="#">支持中心</a>
           <div class="dropdown dropdown-panel dropdown-panel-wide support-panel" role="menu" aria-label="支持中心二级导航">
            
             <div class="dropdown-grid dropdown-grid-4 support-link-grid support-link-grid-5">
-              <a class="dropdown-list-item support-link-card" href="#" role="menuitem">
-                <strong>使用帮助</strong>
-                <p>查看产品使用说明、常见问题与操作指引，快速完成上手与问题排查。</p>
+              <a class="dropdown-list-item support-link-card" href="https://shimo.im/help" target="_blank" rel="noopener noreferrer" role="menuitem">
+                <strong>帮助中心</strong>
+                <p>提供产品文档、操作指引与常见问题，帮助企业团队快速上手与自助排查。</p>
               </a>
               <a class="dropdown-list-item support-link-card" href="#" role="menuitem">
                 <strong>售后咨询</strong>
-                <p>针对交付、服务与使用过程中的问题提供支持，帮助企业稳定落地。</p>
+                <p>面向交付后使用问题与服务诉求，提供持续响应与专业支持。</p>
               </a>
-              <a class="dropdown-list-item support-link-card" href="#" role="menuitem">
+              <a class="dropdown-list-item support-link-card" href="./about.html#contact" role="menuitem">
                 <strong>联系我们</strong>
-                <p>获取销售、方案与服务团队的沟通入口，便于进一步咨询和对接。</p>
+                <p>获取销售、方案与服务团队的对接入口，便于进一步沟通需求。</p>
               </a>
-              <a class="dropdown-list-item support-link-card " href="/about.html" role="menuitem">
+              <a class="dropdown-list-item support-link-card" href="./about.html" role="menuitem">
                 <strong>关于我们</strong>
-                <p>了解石墨团队、发展历程与服务理念，帮助您快速建立整体品牌认知。</p>
+                <p>了解石墨的产品能力、服务经验与发展情况，辅助合作评估。</p>
               </a>
-              <a class="dropdown-list-item support-link-card" href="#" role="menuitem">
+              <a class="dropdown-list-item support-link-card" href="./partner.html" role="menuitem">
                 <strong>渠道合作</strong>
-                <p>了解合作模式、伙伴政策与联合拓展方式，建立持续协作关系。</p>
+                <p>查看合作政策与伙伴模式，探索联合拓展与长期合作机会。</p>
               </a>
             </div>
          
@@ -552,37 +588,37 @@
           <a href="#">文档协作</a>
           <a href="#">知识沉淀</a>
           <a href="#">AI 能力</a>
-          <a href="#">解决方案</a>
+          <a href="./solution.html">解决方案</a>
           <a href="#">定价</a>
         </div>
 
         <div class="footer-col">
           <h4>开发者</h4>
-          <a href="/weboffice-sdk.html">石墨文档中台</a>
-          <a href="/weboffice-sdk.html#dp-capability-preview">核心能力</a>
-          <a href="/weboffice-sdk.html#dp-scene-im">集成案例</a>
-          <a href="/weboffice-sdk.html#dp-resources">开发文档</a>
-          <a href="/weboffice-sdk.html#dp-resources">快速入门</a>
-          <a href="/weboffice-sdk.html#dp-resources">示例代码</a>
+          <a href="./webofficesdk-integration.html">石墨文档中台</a>
+          <a href="./webofficesdk-integration.html#dp-capability-preview">核心能力</a>
+          <a href="./webofficesdk-integration.html#dp-scene-im">集成案例</a>
+          <a href="./webofficesdk-integration.html#dp-resources">开发文档</a>
+          <a href="./webofficesdk-integration.html#dp-resources">快速入门</a>
+          <a href="./webofficesdk-integration.html#dp-resources">示例代码</a>
         </div>
 
         <div class="footer-col">
           <h4>支持与公司</h4>
           <a href="#">支持中心</a>
-          <a href="#">使用帮助</a>
+          <a href="https://shimo.im/help" target="_blank" rel="noopener noreferrer">帮助中心</a>
           <a href="#">售后咨询</a>
-          <a href="#">联系我们</a>
-          <a href="#">渠道合作</a>
-          <a href="/about.html">关于我们</a>
+          <a href="./about.html#contact">联系我们</a>
+          <a href="./partner.html">渠道合作</a>
+          <a href="./about.html">关于我们</a>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div>© 2014-2026 武汉初心科技有限公司 版权所有</div>
         <div class="footer-links">
-          <a href="/privacy.html">隐私政策</a>
-          <a href="/service.html">服务条款</a>
-          <a href="/behavior.html">行为规范</a>
+          <a href="./privacy.html">隐私政策</a>
+          <a href="./service.html">服务条款</a>
+          <a href="./behavior.html">行为规范</a>
         </div>
       </div>
     </div>
@@ -649,17 +685,11 @@
       </span>
     </button>
   </div>
-
   <script src="./js/utils.js"></script>
-  <script src="./js/api.js"></script>
-  <script src="./js/components/doc-tabs.js"></script>
-  <script src="./js/components/knowledge-tabs.js"></script>
   <script src="./js/components/floating-contact.js"></script>
   <script src="./js/components/nav-dropdown.js"></script>
-  <script src="./js/components/nav-scroll.js"></script>
   <script src="./js/main.js"></script>
-  <script src="./js/components/office-suite-saas-carousel.js"></script>
-  <script src="./js/components/enterprise-tabs.js"></script>
   <script src="./js/components/security-hub-tabs.js"></script>
 </body>
 </html>
+

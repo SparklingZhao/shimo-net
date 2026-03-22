@@ -1,204 +1,273 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>企业管理 - 石墨文档企业服务</title>
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/enterprise.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/knowledge-detail.css">
 </head>
 <body>
-  <main>
-    <section class="ent-hero">
+  <main class="kd-page">
+    <section class="kd-hero kd-hero--enterprise">
       <div class="container">
-        <h1 class="ent-title">企业管理</h1>
-        <p class="ent-desc">覆盖组织架构、操作审计与全局安全策略，集中管控协作环境，保障企业安全有序运营。</p>
+        <div class="kd-hero-inner">
+          <div class="kd-hero-content">
+            <span class="kd-eyebrow">知识沉淀体系</span>
+            <h1 class="kd-title">企业管理</h1>
+            <p class="kd-desc">统一管理组织、权限、日志和安全策略，为企业协作建立清晰边界和稳定秩序。</p>
+            <div class="kd-actions">
+              <a class="btn btn-primary" href="/welcome.html#demo">免费试用</a>
+              <a class="btn" href="/welcome.html#demo">预约演示</a>
+            </div>
+            <ul class="kd-meta">
+              <li>组织成员统一管理</li>
+              <li>关键行为可追溯</li>
+              <li>策略配置可落地</li>
+            </ul>
+          </div>
+          <div class="kd-hero-visual">
+            <div class="kd-mockup">
+              <div class="kd-mockup-window">
+                <div class="kd-mockup-topbar">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="kd-mockup-shell">
+                  <div class="kd-mockup-sidebar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="kd-mockup-main">
+                    <div class="kd-mockup-chips">
+                      <span class="kd-chip">组织管理</span>
+                      <span class="kd-chip">审计日志</span>
+                      <span class="kd-chip">安全策略</span>
+                    </div>
+                    <div class="kd-mockup-lines">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <div class="kd-mockup-grid">
+                      <div class="kd-mockup-panel">
+                        <strong>成员与部门</strong>
+                        <span>组织架构、角色和成员状态统一维护。</span>
+                      </div>
+                      <div class="kd-mockup-panel">
+                        <strong>审计与风险</strong>
+                        <span>关键协作行为可查询、可导出。</span>
+                      </div>
+                      <div class="kd-mockup-panel">
+                        <strong>文件策略</strong>
+                        <span>分享、下载等权限可统一配置。</span>
+                      </div>
+                      <div class="kd-mockup-panel">
+                        <strong>资产归属</strong>
+                        <span>人员流动与内容交接可纳入统一管理。</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="kd-mockup-caption">统一管理入口，让协作管理更清晰。</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="ent-tabs-section">
+    <section class="kd-section kd-section--soft">
       <div class="container">
-
-        <!-- 内容面板区 -->
-        <div class="ent-panels">
-
-          <!-- 通讯录 -->
-          <div class="ent-panel is-active" id="ent-panel-contacts" role="tabpanel" aria-labelledby="ent-tab-contacts">
-            <div class="ent-panel-inner">
-              <div class="ent-panel-content">
-                <h2 class="ent-panel-title">通讯录</h2>
-                <p class="ent-panel-subtitle">精细化管理企业组织架构与成员权限，构建清晰有序的协作体系。</p>
-                <ul class="ent-point-list">
-                  <li>支持批量导入或对接第三方系统，快速同步生成企业组织架构</li>
-                  <li>可视化部门树管理，支持成员增删改查与跨部门调整</li>
-                  <li>灵活配置账号绑定与角色权限，实现成员与部门的精细化管控</li>
-                  <li>离职员工内容管理与交接，保障文档归属企业</li>
-                </ul>
-                <a class="btn btn-primary ent-panel-cta" href="/welcome.html#demo">立即体验</a>
-              </div>
-              <div class="ent-panel-visual">
-                <!-- TODO: 替换为通讯录界面截图 -->
-                <div class="ent-img-placeholder">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="3" width="18" height="18" rx="2"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <polyline points="21 15 16 10 5 21"/>
-                  </svg>
-                  <span>通讯录界面截图</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 操作日志 -->
-          <div class="ent-panel" id="ent-panel-audit" role="tabpanel" aria-labelledby="ent-tab-audit" hidden>
-            <div class="ent-panel-inner">
-              <div class="ent-panel-content">
-                <h2 class="ent-panel-title">操作日志</h2>
-                <p class="ent-panel-subtitle">为管理员提供全维度审计视角，让每一条操作记录清晰可查、合规可溯。</p>
-                <ul class="ent-point-list">
-                  <li>支持按时间、操作人、操作类型、文件等多维条件组合查询</li>
-                  <li>覆盖全部用户行为，包含创建、编辑、分享、下载等关键操作</li>
-                  <li>日志数据支持导出，满足企业安全审计与合规备查要求</li>
-                </ul>
-                <a class="btn btn-primary ent-panel-cta" href="/welcome.html#demo">立即体验</a>
-              </div>
-              <div class="ent-panel-visual">
-                <!-- TODO: 替换为操作日志界面截图 -->
-                <div class="ent-img-placeholder">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="3" width="18" height="18" rx="2"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <polyline points="21 15 16 10 5 21"/>
-                  </svg>
-                  <span>操作日志界面截图</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 企业设置 -->
-          <div class="ent-panel" id="ent-panel-settings" role="tabpanel" aria-labelledby="ent-tab-settings" hidden>
-            <div class="ent-panel-inner">
-              <div class="ent-panel-content">
-                <h2 class="ent-panel-title">企业设置</h2>
-                <p class="ent-panel-subtitle">分层级的全局安全策略配置中心，统一管控企业运营的每一个关键环节。</p>
-                <div class="ent-settings-grid">
-                  <div class="ent-setting-card">
-                    <span class="ent-setting-icon">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="3" width="20" height="14" rx="2"/>
-                        <line x1="8" y1="21" x2="16" y2="21"/>
-                        <line x1="12" y1="17" x2="12" y2="21"/>
-                      </svg>
-                    </span>
-                    <div>
-                      <p class="ent-setting-name">企业信息</p>
-                      <p class="ent-setting-text">统一管理企业名称、LOGO 等基础配置</p>
-                    </div>
-                  </div>
-                  <div class="ent-setting-card">
-                    <span class="ent-setting-icon">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                        <polyline points="14 2 14 8 20 8"/>
-                        <line x1="12" y1="18" x2="12" y2="12"/>
-                        <line x1="9" y1="15" x2="15" y2="15"/>
-                      </svg>
-                    </span>
-                    <div>
-                      <p class="ent-setting-name">文件设置</p>
-                      <p class="ent-setting-text">全局管控文件的分享、下载、打印与复制操作权限</p>
-                    </div>
-                  </div>
-                  <div class="ent-setting-card">
-                    <span class="ent-setting-icon">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <ellipse cx="12" cy="5" rx="9" ry="3"/>
-                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
-                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
-                      </svg>
-                    </span>
-                    <div>
-                      <p class="ent-setting-name">容量管理</p>
-                      <p class="ent-setting-text">定制化管理团队空间及成员存储容量配额</p>
-                    </div>
-                  </div>
-                  <div class="ent-setting-card">
-                    <span class="ent-setting-icon">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                      </svg>
-                    </span>
-                    <div>
-                      <p class="ent-setting-name">安全设置</p>
-                      <p class="ent-setting-text">角色权限、协作者水印、链接密码、文件安全预警</p>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn-primary ent-panel-cta" href="/welcome.html#demo">立即体验</a>
-              </div>
-              <div class="ent-panel-visual">
-                <!-- TODO: 替换为企业设置界面截图 -->
-                <div class="ent-img-placeholder">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="3" width="18" height="18" rx="2"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <polyline points="21 15 16 10 5 21"/>
-                  </svg>
-                  <span>企业设置界面截图</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div class="kd-section-head">
+          <h2 class="kd-section-title">统一管理能力，支撑企业规模化协作</h2>
+          <p class="kd-section-desc">企业管理页承接组织、权限、日志和安全配置，帮助企业在效率与管控之间建立平衡。</p>
         </div>
 
-        <!-- Tab 导航栏，水平居中，置于内容面板下方 -->
-        <nav class="ent-tabs" role="tablist" aria-label="企业管理功能切换">
-          <button class="ent-tab is-active" id="ent-tab-contacts" role="tab"
-            aria-selected="true" aria-controls="ent-panel-contacts" data-tab="contacts">
-            <span class="ent-tab-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-              </svg>
-            </span>
-            <span class="ent-tab-label">通讯录</span>
-          </button>
+        <div class="kd-feature-list">
+          <article class="kd-feature-row">
+            <div class="kd-feature-copy">
+              <span class="kd-feature-label">组织管理</span>
+              <h3 class="kd-feature-title">通讯录与成员权限统一管理</h3>
+              <p class="kd-feature-desc">通过统一通讯录维护组织架构、部门关系和成员状态，减少账号管理分散带来的成本。</p>
+              <ul class="kd-point-list">
+                <li>支持批量导入成员或同步组织架构</li>
+                <li>可视化维护部门树和成员关系</li>
+                <li>角色权限与访问范围统一管理</li>
+              </ul>
+            </div>
+            <div class="kd-feature-visual">
+              <div class="kd-mockup">
+                <div class="kd-mockup-window">
+                  <div class="kd-mockup-topbar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="kd-mockup-main">
+                    <div class="kd-mockup-chips">
+                      <span class="kd-chip">部门树</span>
+                      <span class="kd-chip">成员角色</span>
+                    </div>
+                    <div class="kd-mockup-grid">
+                      <div class="kd-mockup-panel">
+                        <strong>组织架构</strong>
+                        <span>总部、区域和部门层级关系清晰可见。</span>
+                      </div>
+                      <div class="kd-mockup-panel">
+                        <strong>成员权限</strong>
+                        <span>按岗位职责分配可见范围和操作权限。</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="kd-mockup-caption">组织关系清晰，协作边界更明确。</p>
+              </div>
+            </div>
+          </article>
 
-          <button class="ent-tab" id="ent-tab-audit" role="tab"
-            aria-selected="false" aria-controls="ent-panel-audit" data-tab="audit">
-            <span class="ent-tab-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                <polyline points="14 2 14 8 20 8"/>
-                <line x1="16" y1="13" x2="8" y2="13"/>
-                <line x1="16" y1="17" x2="8" y2="17"/>
-                <polyline points="10 9 9 9 8 9"/>
-              </svg>
-            </span>
-            <span class="ent-tab-label">操作日志</span>
-          </button>
+          <article class="kd-feature-row kd-feature-row--reverse">
+            <div class="kd-feature-copy">
+              <span class="kd-feature-label">审计管理</span>
+              <h3 class="kd-feature-title">关键操作留痕，满足审计与排查需要</h3>
+              <p class="kd-feature-desc">操作日志帮助管理员快速回看关键协作行为，支持风险排查、问题定位和审计留存。</p>
+              <ul class="kd-point-list">
+                <li>支持按时间、人员和操作类型组合检索</li>
+                <li>覆盖创建、编辑、分享、下载等关键动作</li>
+                <li>日志支持导出留存</li>
+              </ul>
+            </div>
+            <div class="kd-feature-visual">
+              <div class="kd-mockup">
+                <div class="kd-mockup-window">
+                  <div class="kd-mockup-topbar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="kd-mockup-main">
+                    <div class="kd-mockup-chips">
+                      <span class="kd-chip">时间筛选</span>
+                      <span class="kd-chip">操作类型</span>
+                      <span class="kd-chip">责任人</span>
+                    </div>
+                    <div class="kd-mockup-lines">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <div class="kd-mockup-grid">
+                      <div class="kd-mockup-panel">
+                        <strong>风险定位</strong>
+                        <span>异常分享和误操作可快速追踪来源。</span>
+                      </div>
+                      <div class="kd-mockup-panel">
+                        <strong>审计导出</strong>
+                        <span>形成可复核记录，便于后续留存与检查。</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="kd-mockup-caption">关键行为可回看，管理更有依据。</p>
+              </div>
+            </div>
+          </article>
 
-          <button class="ent-tab" id="ent-tab-settings" role="tab"
-            aria-selected="false" aria-controls="ent-panel-settings" data-tab="settings">
-            <span class="ent-tab-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="3"/>
-                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-              </svg>
-            </span>
-            <span class="ent-tab-label">企业设置</span>
-          </button>
-        </nav>
+          <article class="kd-feature-row">
+            <div class="kd-feature-copy">
+              <span class="kd-feature-label">安全策略</span>
+              <h3 class="kd-feature-title">分享、下载与安全设置统一配置</h3>
+              <p class="kd-feature-desc">通过全局设置统一管理文件权限和安全策略，让不同团队在一致规则下协作。</p>
+              <ul class="kd-point-list">
+                <li>统一控制分享、下载、打印和复制权限</li>
+                <li>支持企业信息、容量和安全策略集中配置</li>
+                <li>减少不同团队策略执行不一致</li>
+              </ul>
+            </div>
+            <div class="kd-feature-visual">
+              <div class="kd-mockup">
+                <div class="kd-mockup-window">
+                  <div class="kd-mockup-topbar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="kd-mockup-main">
+                    <div class="kd-mockup-grid">
+                      <div class="kd-mockup-panel">
+                        <strong>文件设置</strong>
+                        <span>分享口径和访问限制可统一下发。</span>
+                      </div>
+                      <div class="kd-mockup-panel">
+                        <strong>容量配额</strong>
+                        <span>按团队或成员分配资源，容量使用更可控。</span>
+                      </div>
+                      <div class="kd-mockup-panel">
+                        <strong>安全预警</strong>
+                        <span>围绕安全要求持续管理高风险动作。</span>
+                      </div>
+                      <div class="kd-mockup-panel">
+                        <strong>品牌配置</strong>
+                        <span>企业名称和基础信息可统一维护。</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="kd-mockup-caption">统一规则配置，让协作与管控同时落地。</p>
+              </div>
+            </div>
+          </article>
 
+          <article class="kd-feature-row kd-feature-row--reverse">
+            <div class="kd-feature-copy">
+              <span class="kd-feature-label">资产连续</span>
+              <h3 class="kd-feature-title">离职交接与内容归属保障资产连续</h3>
+              <p class="kd-feature-desc">在人员流动场景下，企业可以统一回收权限、保留内容并完成交接，保障资料持续可用。</p>
+              <ul class="kd-point-list">
+                <li>处理离职成员文件归属和权限回收</li>
+                <li>把个人文件和共享资料平稳转交到企业体系</li>
+                <li>保障协作空间和知识内容持续可用</li>
+              </ul>
+            </div>
+            <div class="kd-feature-visual">
+              <div class="kd-mockup">
+                <div class="kd-mockup-window">
+                  <div class="kd-mockup-topbar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="kd-mockup-main">
+                    <div class="kd-mockup-chips">
+                      <span class="kd-chip">权限回收</span>
+                      <span class="kd-chip">内容交接</span>
+                    </div>
+                    <div class="kd-mockup-grid">
+                      <div class="kd-mockup-panel">
+                        <strong>离职处理</strong>
+                        <span>回收权限并完成内容交接，不影响后续协作。</span>
+                      </div>
+                      <div class="kd-mockup-panel">
+                        <strong>知识保全</strong>
+                        <span>项目资料和历史结论继续留在企业体系中。</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="kd-mockup-caption">人员流动后，内容资产仍能持续保留和复用。</p>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
-  </main>
 
-  <script src="/js/components/enterprise-tabs.js"></script>
+    <section class="pc-flow-slot" data-merge-source="/pages/partials/service-selector.html"></section>
+    <section class="pc-flow-slot" data-merge-source="/pages/partials/service-contact-cta.html"></section>
+  </main>
 </body>
 </html>

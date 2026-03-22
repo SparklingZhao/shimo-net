@@ -12,40 +12,22 @@
       title: DEFAULT_TITLE,
       mainClass: DEFAULT_MAIN_CLASS
     },
-    "suite-business": {
-      source: "/pages/suite/business.html",
+    "officesuite-business": {
+      source: "/pages/officesuite/business.html",
       mode: "page",
       title: "石墨办公套件 面向团队 - 石墨文档企业服务",
       mainClass: DEFAULT_MAIN_CLASS + " pc-page"
     },
-    "suite-enterprise": {
-      source: "/pages/suite/enterprise.html",
+    "officesuite-enterprise": {
+      source: "/pages/officesuite/enterprise.html",
       mode: "page",
       title: "石墨办公套件 面向企业 - 石墨文档企业服务",
       mainClass: DEFAULT_MAIN_CLASS + " pc-page"
     },
-    "sdk-integration": {
-      source: "/pages/sdk/integration.html",
+    "webofficesdk-integration": {
+      source: "/pages/webofficesdk/integration.html",
       mode: "page",
       title: "石墨文档中台 面向集成 - 石墨文档企业服务",
-      mainClass: DEFAULT_MAIN_CLASS + " dp-page"
-    },
-    "office-suite-saas": {
-      source: "/pages/suite/business.html",
-      mode: "page",
-      title: "石墨办公套件公有云服务 - 石墨文档企业服务",
-      mainClass: DEFAULT_MAIN_CLASS + " pc-page"
-    },
-    "office-suite-private": {
-      source: "/pages/suite/enterprise.html",
-      mode: "page",
-      title: "石墨办公套件私有化服务 - 石墨文档企业服务",
-      mainClass: DEFAULT_MAIN_CLASS + " pc-page"
-    },
-    "weboffice-sdk": {
-      source: "/pages/sdk/integration.html",
-      mode: "page",
-      title: "石墨文档中台 - 石墨文档企业服务",
       mainClass: DEFAULT_MAIN_CLASS + " dp-page"
     },
     collaboration: {
@@ -289,8 +271,8 @@
       window.initSecurityHubTabs();
     }
 
-    if (typeof window.initOfficeSuiteSaasCarousel === "function") {
-      window.initOfficeSuiteSaasCarousel(main);
+    if (typeof window.initOfficeSuiteCarousel === "function") {
+      window.initOfficeSuiteCarousel(main);
     }
   }
 

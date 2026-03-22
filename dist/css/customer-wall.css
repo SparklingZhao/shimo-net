@@ -2,7 +2,7 @@
 
 /* 标题区 */
 .cw-hero {
-  padding: 80px 0 48px;
+  padding: 80px 0 24px;
   text-align: center;
   background: linear-gradient(180deg, #f0f4ff 0%, var(--white) 100%);
 }
@@ -33,7 +33,7 @@
 
 /* 数据统计 */
 .cw-stats {
-  padding: 56px 0;
+  padding: 24px 0;
   background: var(--white);
 }
 
@@ -127,9 +127,9 @@
   opacity: 0.9;
 }
 
-/* Logo 墙 */
+/* ===== 客户品牌墙：错位滚动 ===== */
 .cw-logos {
-  padding: 72px 0 96px;
+  padding: 24px 0 96px;
   background: var(--white);
 }
 
@@ -141,6 +141,125 @@
   margin-bottom: 48px;
 }
 
+/* 滚动容器：左右渐变遮罩，让 Logo 进出视口时渐隐/渐现 */
+.cw-marquee-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cw-marquee-mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cw-marquee-mask--left {
+  left: 0;
+  background: linear-gradient(90deg, var(--white) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.cw-marquee-mask--right {
+  right: 0;
+  left: auto;
+  background: linear-gradient(270deg, var(--white) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.cw-marquee-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* 单行：悬停时整行动画暂停 */
+.cw-marquee-row {
+  overflow: hidden;
+  padding: 8px 0;
+}
+
+.cw-marquee-row:hover .cw-marquee-track {
+  animation-play-state: paused;
+}
+
+/* 轨道：使用 transform: translateX 保证 60fps */
+.cw-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.cw-marquee-row--1 .cw-marquee-track {
+  animation: cw-marquee-ltr 40s linear infinite;
+}
+
+.cw-marquee-row--2 .cw-marquee-track {
+  animation: cw-marquee-rtl 55s linear infinite;
+}
+
+.cw-marquee-row--3 .cw-marquee-track {
+  animation: cw-marquee-ltr 45s linear infinite;
+}
+
+.cw-marquee-row--4 .cw-marquee-track {
+  animation: cw-marquee-rtl 60s linear infinite;
+}
+
+@keyframes cw-marquee-ltr {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes cw-marquee-rtl {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cw-marquee-row--1 .cw-marquee-track,
+  .cw-marquee-row--2 .cw-marquee-track,
+  .cw-marquee-row--3 .cw-marquee-track,
+  .cw-marquee-row--4 .cw-marquee-track {
+    animation-duration: 120s;
+  }
+}
+
+.cw-marquee-track-inner {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0;
+}
+
+/* Logo 格子：固定宽高，居中不拉伸 */
+.cw-logo-cell {
+  flex-shrink: 0;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+}
+
+.cw-logo-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
+.cw-logo-cell:hover img {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* 旧版静态网格（保留兼容） */
 .cw-logo-wall {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -212,7 +331,7 @@
 /* ===== 响应式 ===== */
 @media (max-width: 768px) {
   .cw-hero {
-    padding: 56px 0 32px;
+    padding: 56px 0 16px;
   }
 
   .cw-title {
@@ -236,7 +355,23 @@
   }
 
   .cw-logos {
-    padding: 48px 0 64px;
+    padding: 16px 0 64px;
+  }
+
+  /* 移动端：4 行降级为 2 行，缩小 Logo 容器 */
+  .cw-marquee-row--3,
+  .cw-marquee-row--4 {
+    display: none;
+  }
+
+  .cw-logo-cell {
+    width: 140px;
+    height: 70px;
+    padding: 8px 12px;
+  }
+
+  .cw-marquee-mask {
+    width: 64px;
   }
 }
 

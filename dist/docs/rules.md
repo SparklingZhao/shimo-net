@@ -1,9 +1,8 @@
-# shimo.net/dev 目录规范
+# shimooffice.net 项目目录规范
 
-shimo.net/dev
+dev
 ├── index.html             # 根入口（跳转到 welcome.html）
 ├── welcome.html           # 项目入口文件（核心结构）
-├── welcom.html            # 兼容历史链接（跳转到 welcome.html）
 ├── assets/                # 静态资源目录（不可执行文件）
 │   ├── images/            # 图片、图标、favicon
 │   ├── fonts/             # 自定义字体文件

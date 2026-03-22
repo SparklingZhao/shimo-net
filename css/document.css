@@ -87,6 +87,7 @@
 
 .doc-hero-img {
   width: min(100%, 640px);
+  height: auto;
   max-height: 390px;
   object-fit: contain;
   border-radius: 10px;
