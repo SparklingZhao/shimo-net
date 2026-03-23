@@ -491,6 +491,35 @@
   white-space: nowrap;
 }
 
+.dropdown-link-with-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-link-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #f3f5f8;
+  color: #556070;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.dropdown-link-status svg {
+  width: 12px;
+  height: 12px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .dropdown-tags-row a:hover {
   color: var(--primary);
 }

@@ -65,7 +65,8 @@ const ROUTES = [
     scripts: [
       "/js/components/doc-tabs.js",
       "/js/components/knowledge-tabs.js",
-      "/js/components/security-hub-tabs.js"
+      "/js/components/security-hub-tabs.js",
+      "/js/components/dp-scene-tabs.js"
     ]
   },
   {
@@ -96,7 +97,8 @@ const ROUTES = [
     scripts: [
       "/js/components/doc-tabs.js",
       "/js/components/knowledge-tabs.js",
-      "/js/components/security-hub-tabs.js"
+      "/js/components/security-hub-tabs.js",
+      "/js/components/dp-scene-tabs.js"
     ]
   },
   {
@@ -621,6 +623,40 @@ function extractScriptSources(htmlText) {
   return matches;
 }
 
+/**
+ * 将页面源码中的相对资源路径（如 ../../js/foo.js）规范为仓库根下的 /js/foo.js，
+ * 便于 getRouteAssets 与 COMMON_SCRIPTS 去重，且构建产物脚本路径正确。
+ */
+function normalizeExtractedPublicPath(rawUrl, ownerFilePath) {
+  if (!rawUrl || typeof rawUrl !== "string") {
+    return rawUrl;
+  }
+
+  var trimmed = rawUrl.trim();
+
+  if (/^(?:[a-z]+:|\/\/|#|mailto:|tel:|javascript:)/i.test(trimmed)) {
+    return trimmed;
+  }
+
+  if (trimmed.startsWith("/")) {
+    return trimmed;
+  }
+
+  if (trimmed.startsWith("./") || trimmed.startsWith("../")) {
+    var absDir = path.dirname(ownerFilePath);
+    var resolved = path.resolve(absDir, trimmed);
+    var rel = path.relative(ROOT_DIR, resolved).replace(/\\/g, "/");
+
+    if (!rel || rel.startsWith("..")) {
+      return rawUrl;
+    }
+
+    return "/" + rel;
+  }
+
+  return trimmed;
+}
+
 function isExtractedStyleAsset(href) {
   return href !== "/css/main.css" && href !== "./css/main.css";
 }
@@ -681,8 +717,16 @@ function getRouteAssets(route, sourcePath, rawSourceOverride) {
   var rawSource = typeof rawSourceOverride === "string"
     ? rawSourceOverride
     : (pathExists(sourcePath) ? readText(sourcePath) : "");
-  var extractedStyles = extractStylesheetLinks(rawSource).filter(isExtractedStyleAsset);
-  var extractedScripts = extractScriptSources(rawSource).filter(isExtractedScriptAsset);
+  var extractedStyles = extractStylesheetLinks(rawSource)
+    .filter(isExtractedStyleAsset)
+    .map(function (href) {
+      return normalizeExtractedPublicPath(href, sourcePath);
+    });
+  var extractedScripts = extractScriptSources(rawSource)
+    .filter(isExtractedScriptAsset)
+    .map(function (src) {
+      return normalizeExtractedPublicPath(src, sourcePath);
+    });
   var mergeSourceAssets = collectMergeSourceAssets(rawSource, sourcePath);
 
   return {

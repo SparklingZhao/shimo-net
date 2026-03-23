@@ -274,6 +274,10 @@
     if (typeof window.initOfficeSuiteCarousel === "function") {
       window.initOfficeSuiteCarousel(main);
     }
+
+    if (typeof window.initDpSceneTabs === "function") {
+      window.initDpSceneTabs(main);
+    }
   }
 
   function loadMergeSlot(slot) {
