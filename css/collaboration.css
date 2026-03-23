@@ -54,6 +54,9 @@
 /* ===== Tab 导航 ===== */
 
 .collab-tabs-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   padding: 0 0 80px;
   background: var(--white);
 }
