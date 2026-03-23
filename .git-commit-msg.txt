@@ -1,5 +1,0 @@
-﻿feat(webofficesdk): refine integration page sections and styles
-
-- Flow steps, resource block, section titles and descriptions
-- Adjust eyebrow and h2 section title sizes in webofficesdk.css
-- Update collaboration, officesuite, home; sync dist build
