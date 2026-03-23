@@ -1,4 +1,5 @@
 const SHARED_DEMO_LINK = "/welcome.html#demo";
+const APPOINTMENT_PREVIEW_LINK = "https://shimo.im/preview";
 
 const SOLUTION_MENU_GROUPS = [
   {
@@ -64,7 +65,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -79,7 +80,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -93,7 +94,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -108,7 +109,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       }
     ]
@@ -153,7 +154,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -168,7 +169,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -182,7 +183,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -197,7 +198,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       }
     ]
@@ -243,7 +244,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -258,7 +259,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -272,7 +273,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -287,7 +288,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       }
     ]
@@ -333,7 +334,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -348,7 +349,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -362,7 +363,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -377,7 +378,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       }
     ]
@@ -423,7 +424,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -438,7 +439,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -452,7 +453,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -467,7 +468,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       }
     ]
@@ -512,7 +513,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -527,7 +528,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -541,7 +542,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -556,7 +557,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       }
     ]
@@ -602,7 +603,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -617,7 +618,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -631,7 +632,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -646,7 +647,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       }
     ]
@@ -692,7 +693,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -707,7 +708,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -721,7 +722,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -736,7 +737,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       }
     ]
@@ -782,7 +783,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -797,7 +798,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -811,7 +812,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -826,7 +827,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       }
     ]
@@ -872,7 +873,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -887,7 +888,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -901,7 +902,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       },
       {
@@ -916,7 +917,7 @@ const SOLUTION_PAGES = [
         ],
         actions: [
           { label: "免费试用", href: SHARED_DEMO_LINK, primary: true },
-          { label: "预约演示", href: SHARED_DEMO_LINK }
+          { label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true }
         ]
       }
     ]
@@ -926,5 +927,6 @@ const SOLUTION_PAGES = [
 module.exports = {
   SOLUTION_MENU_GROUPS,
   SOLUTION_PAGES,
-  SHARED_DEMO_LINK
+  SHARED_DEMO_LINK,
+  APPOINTMENT_PREVIEW_LINK
 };

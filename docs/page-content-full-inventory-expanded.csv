@@ -1,0 +1,38 @@
+页面分组,页面名称,页面,来源文件,名称,描述,是否需要设计,优先级,现在用的,备注
+首页与入口,首页,welcome.html,pages/home/home-content.html,homepage_title_banner_background.43282104.png,首页聚合页，包含办公套件、知识沉淀、AI 接入、安全保障、客户案例与转化入口,需要,P0 面子工程,当前首页主视觉已在用；知识沉淀与 AI 模块仍有 TODO 占位,主入口页
+首页与入口,首页（根路由别名）,index.html,pages/home/home-content.html,homepage_title_banner_background.43282104.png,与 welcome.html 内容一致，仅作为根路由与 SEO 别名入口,不需要,P3 复用页,复用 welcome.html 内容,无需重复设计
+办公套件落地页,石墨办公套件面向团队,officesuite-business.html,pages/officesuite/business.html,suite-banner1.png,面向团队的办公套件落地页，强调快速启用、协作能力、知识沉淀与客户案例,需要,P0 面子工程,当前使用 suite-banner1.png；内嵌 knowledge 模块仍有占位,适合优先补品牌统一视觉
+办公套件落地页,石墨办公套件面向企业,officesuite-enterprise.html,pages/officesuite/enterprise.html,suite-banner2.png,面向企业的私有化落地页，强调安全、部署、知识沉淀与 AI 接入,需要,P0 面子工程,当前使用 suite-banner2.png；knowledge 与 AI 模块仍有占位,适合优先补品牌统一视觉
+办公套件落地页,石墨文档中台面向集成,webofficesdk-integration.html,pages/webofficesdk/integration.html,sdk-banner.png,面向企业集成的中台落地页，展示能力、场景与接入资源,需要,P0 面子工程,当前使用 sdk-banner.png；AI 接入能力卡仍为敬请期待,开发者主入口页
+一级能力页,文档协作,collaboration.html,pages/features/collaboration.html,collaboration-tabs,六类协作产品总览页，聚合文档、文稿、表格、幻灯片、应用表格与表单,部分需要,P1 一级能力页,当前主图为各产品截图切换；结构完整但还可统一升级,建议补统一视觉规范
+一级能力页,知识沉淀,knowledge.html,pages/features/knowledge.html,knowledge-placeholders,工作台、协作空间、知识库、企业管理四段式能力页,需要,P1 一级能力页,当前大量 TODO 与界面占位；缺少真实产品图,设计与素材需求明显
+一级能力页,AI 接入,ai.html,pages/features/ai.html,ai-placeholders,AI 助手与 AI 文档基座介绍页,需要,P1 一级能力页,当前 2 个主视觉区与多枚图标仍为 TODO 占位,设计与素材需求明显
+一级能力页,安全保障,security-hub.html,pages/features/security-hub.html,无独立主视觉,汇总数据安全、私有部署与信创合规的能力入口页,部分需要,P1 一级能力页,当前以结构化文案为主；可补统一安全视觉,可与企业页风格统一
+一级能力页,格式支持,format-support.html,pages/features/format-support.html,无独立主视觉,文件预览、导入、导出格式兼容清单页,不需要,P2 信息页,当前以信息表格展示为主,偏信息型页面
+产品功能页,文档,document.html,pages/features/document.html,doc_product_desc_back.4f15795f.png,在线文档能力详情页，含协作、评论、历史、OCR 与翻译能力说明,部分需要,P2 细分功能页,当前有主视觉与功能图；仍有 2 个缺失资源,适合补齐缺失图而非整体重设计
+产品功能页,文稿,writer.html,pages/features/writer.html,traditional_back.webp,在线文稿能力详情页，突出格式兼容、专业排版与审阅协作,部分需要,P2 细分功能页,当前有主视觉；仍有 4 个缺失功能图,适合补齐缺失图而非整体重设计
+产品功能页,表格,sheet.html,pages/features/sheet.html,sheet_feature1.webp,在线表格能力详情页，突出函数计算、协作与权限控制,部分需要,P2 细分功能页,当前有主视觉；仍有 1 个缺失功能图,适合补齐缺失图而非整体重设计
+产品功能页,幻灯片,slide.html,pages/features/slide.html,slide_product_desc_back.78851b71.png,在线幻灯片能力详情页，突出模板、协作演示与历史追溯,可沿用,P2 细分功能页,当前已有主视觉与内容图,成熟度较高
+产品功能页,应用表格,table.html,pages/features/table.html,table_back.4655d070.png,数据协同与项目管理页，突出字段、视图、流程协作与看板甘特,可沿用,P2 细分功能页,当前已有主视觉；功能区多为复用图,成熟度较高
+产品功能页,表单,form.html,pages/features/form.html,form.d91584ab.png,信息收集能力页，强调搭建、分发、逻辑与数据汇总,可沿用,P2 细分功能页,当前多处复用同一张表单截图,可后续再做精细优化
+知识沉淀子页,工作台,portal.html,pages/features/portal.html,无独立主视觉,工作入口页，强调待办、审批、消息与最近文件聚合,需要,P1 需要产品实际界面,当前以文案结构为主；缺少独立产品截图,适合补真实界面图
+知识沉淀子页,协作空间,space.html,pages/features/space.html,无独立主视觉,围绕项目与团队集中协作的空间页，强调资料沉淀与过程留痕,需要,P1 需要产品实际界面,当前以文案结构为主；缺少独立产品截图,适合补真实界面图
+知识沉淀子页,知识库,knowledge-base.html,pages/features/knowledge-base.html,无独立主视觉,知识管理页，强调沉淀、检索、权限治理与复用,需要,P1 需要产品实际界面,当前以文案结构为主；缺少独立产品截图,适合补真实界面图
+知识沉淀子页,企业管理,management-panel.html,pages/features/management-panel.html,无独立主视觉,企业管理能力页，聚焦通讯录、日志与企业设置,需要,P1 需要产品实际界面,当前以文案结构为主；缺少独立产品截图,适合补真实界面图
+品牌与商务,关于我们,about.html,pages/about/about.html,about_page_title_banner.3f4547c5.jpg,品牌与公司介绍页，含历程、媒体与联系信息,部分需要,P2 品牌页,当前首屏与内容图均为外链资源,存在资源可控性风险
+品牌与商务,渠道合作,partner.html,pages/partner/partner.html,hero-bg.jpg,渠道合作说明页，面向合作伙伴介绍模式、政策与申请方式,可沿用,P2 商务页,当前使用背景图 hero-bg.jpg,商务说明页
+解决方案,解决方案总览,solutions.html,data/solutions.js,无独立主视觉,行业与职能方案入口总览页,需要,P0 方案总入口,当前以卡片索引为主；可补更强统一主视觉,总入口建议强化品牌感
+解决方案,新零售解决方案,solution-retail.html,data/solutions.js,solution-pic-1-1.png,新零售行业方案详情页,需要,P1 方案详情模板,当前使用方案总览图与统一详情模板,模板页
+解决方案,新零售解决方案（导航别名）,solution.html,data/solutions.js,solution-pic-1-1.png,与 solution-retail.html 内容一致，作为导航入口别名,不需要,P3 复用页,复用 solution-retail.html 内容,无需重复设计
+解决方案,制造业解决方案,solution-manufacturing.html,data/solutions.js,solution-pic-2-1.png,智能制造协同文档平台方案详情页,需要,P1 方案详情模板,当前使用方案总览图与统一详情模板,模板页
+解决方案,电商解决方案,solution-ecommerce.html,data/solutions.js,solution-pic-3-1.png,电商数据协同流转方案详情页,需要,P1 方案详情模板,当前使用方案总览图与统一详情模板,模板页
+解决方案,教育解决方案,solution-education.html,data/solutions.js,solution-pic-4-1.png,智慧教育协同文档平台方案详情页,需要,P1 方案详情模板,当前使用方案总览图与统一详情模板,模板页
+解决方案,公司管理解决方案,solution-management.html,data/solutions.js,solution-pic-5-1.png,公司全员协同管理方案详情页,需要,P1 方案详情模板,当前使用方案总览图与统一详情模板,模板页
+解决方案,产研协同解决方案,solution-product-rd.html,data/solutions.js,solution-pic-6-1.png,产研协同一体化方案详情页,需要,P1 方案详情模板,当前使用方案总览图与统一详情模板,模板页
+解决方案,市场营销解决方案,solution-marketing.html,data/solutions.js,solution-pic-7-1.png,多方协同市场活动管理方案详情页,需要,P1 方案详情模板,当前使用方案总览图与统一详情模板,模板页
+解决方案,人力资源解决方案,solution-hr.html,data/solutions.js,solution-pic-8-1.png,人力资源协同方案详情页,需要,P1 方案详情模板,当前使用方案总览图与统一详情模板,模板页
+解决方案,财务管理解决方案,solution-finance.html,data/solutions.js,solution-pic-9-1.png,财务协同管理方案详情页,需要,P1 方案详情模板,当前使用方案总览图与统一详情模板,模板页
+解决方案,销售管理解决方案,solution-sales.html,data/solutions.js,solution-pic-10-1.png,销售全流程协同管理方案详情页,需要,P1 方案详情模板,当前使用方案总览图与统一详情模板,模板页
+法务与协议,隐私政策,privacy.html,pages/legal/privacy.html,无独立主视觉,法务合规页，说明隐私与数据处理规则,不需要,P3 合规页,当前以正文信息为主,无需单独设计投入
+法务与协议,服务条款,service.html,pages/legal/service.html,无独立主视觉,法务合规页，说明服务范围与权责约定,不需要,P3 合规页,当前以正文信息为主,无需单独设计投入
+法务与协议,行为规范,behavior.html,pages/legal/behavior.html,无独立主视觉,法务合规页，说明平台内容和使用行为边界,不需要,P3 合规页,当前以正文信息为主,无需单独设计投入

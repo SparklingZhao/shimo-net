@@ -3,7 +3,8 @@ const path = require("path");
 const {
   SOLUTION_MENU_GROUPS,
   SOLUTION_PAGES,
-  SHARED_DEMO_LINK
+  SHARED_DEMO_LINK,
+  APPOINTMENT_PREVIEW_LINK
 } = require("./data/solutions");
 
 if (hasFlag("--help") || hasFlag("-h")) {
@@ -971,6 +972,7 @@ function renderGeneratedPageSource(mainContent) {
 
 function renderButtonLink(action, extraClassName) {
   var classes = ["btn"];
+  var attrs = [];
 
   if (action.primary) {
     classes.push("btn-primary");
@@ -980,7 +982,11 @@ function renderButtonLink(action, extraClassName) {
     classes.push(extraClassName);
   }
 
-  return `<a class="${classes.join(" ")}" href="${escapeHtml(action.href)}">${escapeHtml(action.label)}</a>`;
+  if (action.targetBlank) {
+    attrs.push(' target="_blank"', ' rel="noopener noreferrer"');
+  }
+
+  return `<a class="${classes.join(" ")}" href="${escapeHtml(action.href)}"${attrs.join("")}>${escapeHtml(action.label)}</a>`;
 }
 
 function renderActionButtons(actions, wrapperClassName) {
@@ -1199,7 +1205,7 @@ function renderSolutionHero() {
     "      <p class=\"mf-desc\">直击行业、职能痛点，打造基于文件协同的企业云办公解决方案，助力企业提升整体运转效率、规范管控文件资产，实现降本增效。</p>",
     '      <div class="mf-actions">',
     `        ${renderButtonLink({ label: "免费试用", href: SHARED_DEMO_LINK, primary: true })}`,
-    `        ${renderButtonLink({ label: "预约演示", href: SHARED_DEMO_LINK })}`,
+    `        ${renderButtonLink({ label: "预约演示", href: APPOINTMENT_PREVIEW_LINK, targetBlank: true })}`,
     "      </div>",
     "    </div>",
     "  </div>",
@@ -1558,4 +1564,3 @@ function main() {
 }
 
 main();
-
