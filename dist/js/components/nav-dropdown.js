@@ -3,6 +3,7 @@
     var wrappers = Array.prototype.slice.call(document.querySelectorAll(".has-dropdown"));
     var currentOpen = null;
     var hoverMedia = window.matchMedia("(hover: hover) and (pointer: fine)");
+    var mobileBreakpoint = 980;
     var viewportModeBreakpoint = 720;
     var gutter = 12;
 
@@ -12,6 +13,10 @@
 
     function isDesktopHoverMode() {
       return hoverMedia.matches && window.innerWidth > 980;
+    }
+
+    function isMobileMode() {
+      return window.innerWidth <= mobileBreakpoint;
     }
 
     function getTrigger(wrapper) {
@@ -42,6 +47,10 @@
       }
 
       clearPlacement(dropdown);
+
+      if (isMobileMode()) {
+        return;
+      }
 
       triggerRect = trigger.getBoundingClientRect();
       dropdownWidth = Math.ceil(dropdown.offsetWidth);
@@ -144,6 +153,10 @@
       trigger.addEventListener("click", function (event) {
         event.preventDefault();
 
+        if (isMobileMode()) {
+          event.stopPropagation();
+        }
+
         if (wrapper.classList.contains("open")) {
           closeDropdown(wrapper);
           return;
@@ -153,10 +166,18 @@
       });
 
       wrapper.addEventListener("focusin", function () {
+        if (isMobileMode()) {
+          return;
+        }
+
         openDropdown(wrapper);
       });
 
       wrapper.addEventListener("focusout", function () {
+        if (isMobileMode()) {
+          return;
+        }
+
         window.setTimeout(function () {
           if (!wrapper.contains(document.activeElement)) {
             closeDropdown(wrapper);
@@ -178,8 +199,17 @@
     });
 
     window.addEventListener("resize", function () {
-      if (currentOpen) {
+      if (currentOpen && isMobileMode()) {
+        clearPlacement(getDropdown(currentOpen));
+      }
+
+      if (currentOpen && !isMobileMode()) {
         placeDropdown(currentOpen);
+        return;
+      }
+
+      if (currentOpen) {
+        closeDropdown(currentOpen);
       }
     });
 

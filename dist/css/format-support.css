@@ -326,11 +326,16 @@
   }
 
   .fmt-tabs {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: stretch;
     gap: 4px;
     padding: 4px;
   }
 
   .fmt-tab {
+    flex: 1 1 calc(50% - 4px);
+    justify-content: center;
     padding: 10px 16px;
     font-size: 14px;
     gap: 6px;

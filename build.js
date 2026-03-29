@@ -258,7 +258,7 @@ const ROUTES = [
     output: "ai.html",
     title: "AI 接入 - 石墨文档企业服务",
     description:
-      "石墨文档提供 AI 助手与 AI 文档基座能力，帮助企业提升内容创作、知识问答与智能处理效率。",
+      "石墨文档提供 AI 助手与 AI 文档基座能力，帮助企业更快完成内容处理、知识问答与业务集成。",
     mainClass: "site-main",
     source: "/pages/features/ai.html",
     mode: "page"

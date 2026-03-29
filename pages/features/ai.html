@@ -11,137 +11,236 @@
   <main>
     <section class="ai-hero">
       <div class="container">
+        <span class="ai-eyebrow">企业级 AI 能力</span>
         <h1 class="ai-title">AI 接入</h1>
-        <p class="ai-desc">石墨团队加速融合 AI 能力，与您携手打造 AI 时代的文档知识底座。</p>
+        <p class="ai-desc">面向内容生产与知识服务，提供 AI 助手与 AI 文档基座。</p>
+        <div class="ai-hero-tags" aria-label="AI 接入能力概览">
+          <span class="ai-hero-tag">内容生成</span>
+          <span class="ai-hero-tag">知识问答</span>
+          <span class="ai-hero-tag">业务集成</span>
+          <span class="ai-hero-tag">企业定制</span>
+        </div>
       </div>
     </section>
 
     <section class="ai-showcase-section">
       <div class="container">
         <div class="ai-panels">
-          <!-- AI 助手「石小墨」 -->
-          <article class="ai-panel" id="ai-assistant">
+          <article class="ai-panel ai-panel-assistant" id="ai-assistant">
             <div class="ai-panel-inner">
               <div class="ai-panel-visual">
-                <!-- TODO: 替换为石小墨产品界面截图 -->
-                <div class="ai-img-placeholder">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="3" width="18" height="18" rx="2"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <polyline points="21 15 16 10 5 21"/>
-                  </svg>
-                  <span>AI 助手「石小墨」界面图</span>
+                <div class="ai-visual-card ai-assistant-visual" aria-hidden="true">
+                  <div class="ai-assistant-shell">
+                    <div class="ai-assistant-toolbar">
+                      <div class="ai-window-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div class="ai-assistant-tabs">
+                        <span>文档</span>
+                        <span>表格</span>
+                        <span>幻灯片</span>
+                        <span>表单</span>
+                      </div>
+                    </div>
+                    <div class="ai-assistant-body">
+                      <aside class="ai-assistant-sidebar">
+                        <span class="ai-mini-chip">总结</span>
+                        <span class="ai-mini-chip">改写</span>
+                        <span class="ai-mini-chip">扩写</span>
+                        <span class="ai-mini-chip">问答</span>
+                      </aside>
+                      <div class="ai-assistant-main">
+                        <div class="ai-assistant-bubble ai-assistant-bubble-user">请整理客户沟通纪要，并提炼下一步动作</div>
+                        <div class="ai-assistant-bubble ai-assistant-bubble-answer">
+                          <strong>已生成执行摘要</strong>
+                          <ul class="ai-assistant-points">
+                            <li>项目目标与时间节点已归纳</li>
+                            <li>待办按负责人拆分完成</li>
+                            <li>支持一键插入原文或生成新文档</li>
+                          </ul>
+                        </div>
+                        <div class="ai-assistant-actions">
+                          <span>插入原文</span>
+                          <span>生成新文档</span>
+                          <span>继续追问</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ai-assistant-float">
+                    <span>统一入口</span>
+                    <strong>写、改、问、落地</strong>
+                  </div>
                 </div>
               </div>
-              <div class="ai-panel-content">
-                <h2 class="ai-panel-title">AI 助手「石小墨」</h2>
-                <p class="ai-panel-subtitle">石墨办公套件的统一 AI 入口，面向日常办公场景提供智能创作与知识问答能力。</p>
 
-                <div class="ai-feature-list">
-                  <div class="ai-feature-item">
+              <div class="ai-panel-content">
+                <span class="ai-panel-kicker">统一入口</span>
+                <h2 class="ai-panel-title">AI 助手「石小墨」</h2>
+                <p class="ai-panel-subtitle">嵌入文档协作流程，帮助团队更快处理内容与使用知识。</p>
+
+                <div class="ai-feature-grid">
+                  <div class="ai-feature-card">
                     <span class="ai-feature-icon">
-                      <!-- TODO: 替换为内容创作图标 -->
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 20h9"/>
-                        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/>
+                        <path d="M4 5h16"></path>
+                        <path d="M4 12h16"></path>
+                        <path d="M4 19h10"></path>
                       </svg>
                     </span>
                     <div>
-                      <h3 class="ai-feature-name">内容创作</h3>
-                      <p class="ai-feature-text">围绕选中内容或自由唤起，完成生成、改写与表达优化，结合上下文理解意图，提升内容生产效率。</p>
+                      <h3 class="ai-feature-name">多载体支持</h3>
+                      <p class="ai-feature-text">文档、表格、幻灯片、表单统一调用。</p>
                     </div>
                   </div>
-                  <div class="ai-feature-item">
+
+                  <div class="ai-feature-card">
                     <span class="ai-feature-icon">
-                      <!-- TODO: 替换为知识问答图标 -->
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8"/>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <path d="M9 11l3 3L22 4"></path>
+                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                      </svg>
+                    </span>
+                    <div>
+                      <h3 class="ai-feature-name">任务处理</h3>
+                      <p class="ai-feature-text">支持总结、改写、扩写和内容生成。</p>
+                    </div>
+                  </div>
+
+                  <div class="ai-feature-card">
+                    <span class="ai-feature-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                       </svg>
                     </span>
                     <div>
                       <h3 class="ai-feature-name">知识问答</h3>
-                      <p class="ai-feature-text">石墨办公套件支持基于知识库、附件或联网信息进行检索与综合分析，输出带来源标注的可信回答，让知识随问即得。</p>
+                      <p class="ai-feature-text">结合知识库和附件资料输出可信回答。</p>
                     </div>
                   </div>
-                  <div class="ai-feature-item">
+
+                  <div class="ai-feature-card">
                     <span class="ai-feature-icon">
-                      <!-- TODO: 替换为企业定制图标 -->
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="3"/>
-                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
                       </svg>
                     </span>
                     <div>
                       <h3 class="ai-feature-name">企业定制</h3>
-                      <p class="ai-feature-text">按需对接主流大模型，自定义助手名称与 Logo，满足品牌统一与智能能力差异化需求。</p>
+                      <p class="ai-feature-text">支持模型接入、助手命名与品牌定制。</p>
                     </div>
                   </div>
+                </div>
+
+                <div class="ai-flow-strip" aria-label="AI 助手处理流程">
+                  <span>提问</span>
+                  <span>生成</span>
+                  <span>写回文档</span>
+                  <span>继续协作</span>
                 </div>
               </div>
             </div>
           </article>
 
-          <!-- AI 知识底座 -->
-          <article class="ai-panel" id="ai-base">
+          <article class="ai-panel ai-panel-base" id="ai-base">
             <div class="ai-panel-inner">
               <div class="ai-panel-content">
+                <span class="ai-panel-kicker">知识底层能力</span>
                 <h2 class="ai-panel-title">AI 文档基座</h2>
-                <p class="ai-panel-subtitle">依托石墨办公套件与文档中台，为企业提供文档承载与 AI 集成基础，构建智能知识服务体系。</p>
+                <p class="ai-panel-subtitle">沉淀企业文档资产，为问答、助手和内容生成提供统一知识来源。</p>
 
-                <div class="ai-feature-list">
-                  <div class="ai-feature-item">
+                <div class="ai-feature-grid">
+                  <div class="ai-feature-card">
                     <span class="ai-feature-icon">
-                      <!-- TODO: 替换为内容沉淀图标 -->
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 16V8a2 2 0 0 0-1-1.73L13 2.27a2 2 0 0 0-2 0L4 6.27A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                        <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73L13 2.27a2 2 0 0 0-2 0L4 6.27A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
                       </svg>
                     </span>
                     <div>
-                      <h3 class="ai-feature-name">内容沉淀</h3>
-                      <p class="ai-feature-text">持续沉淀体系化的文档知识，为 AI 应用提供高质量知识来源。</p>
+                      <h3 class="ai-feature-name">统一沉淀</h3>
+                      <p class="ai-feature-text">把制度、流程、经验统一纳入知识体系。</p>
                     </div>
                   </div>
-                  <div class="ai-feature-item">
+
+                  <div class="ai-feature-card">
                     <span class="ai-feature-icon">
-                      <!-- TODO: 替换为检索调用图标 -->
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="16 18 22 12 16 6"/>
-                        <polyline points="8 6 2 12 8 18"/>
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <path d="M9 12l2 2 4-4"></path>
                       </svg>
                     </span>
                     <div>
-                      <h3 class="ai-feature-name">开放集成</h3>
-                      <p class="ai-feature-text">开放能力与 AI 应用集成，支撑知识问答、业务助手与内容生产等场景。</p>
+                      <h3 class="ai-feature-name">可信调用</h3>
+                      <p class="ai-feature-text">结合范围控制与来源引用，结果更可靠。</p>
                     </div>
                   </div>
-                  <div class="ai-feature-item">
+
+                  <div class="ai-feature-card">
                     <span class="ai-feature-icon">
-                      <!-- TODO: 替换为定制化图标 -->
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                      </svg>
+                    </span>
+                    <div>
+                      <h3 class="ai-feature-name">能力承载</h3>
+                      <p class="ai-feature-text">支撑知识问答、业务助手与内容生成应用。</p>
+                    </div>
+                  </div>
+
+                  <div class="ai-feature-card">
+                    <span class="ai-feature-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
                       </svg>
                     </span>
                     <div>
                       <h3 class="ai-feature-name">方案共建</h3>
-                      <p class="ai-feature-text">针对定制化需求，石墨技术团队提供能力对接与方案设计支持，共建企业专属 AI 知识底座。</p>
+                      <p class="ai-feature-text">支持能力对接与方案设计，适配企业场景。</p>
                     </div>
                   </div>
                 </div>
 
-                <a class="ai-cta-btn btn btn-primary" href="/welcome.html#demo">联系我们</a>
+                <div class="ai-panel-actions">
+                  <a class="ai-cta-btn btn btn-primary" href="/welcome.html#demo">联系我们</a>
+                  <div class="ai-flow-strip" aria-label="AI 文档基座能力链路">
+                    <span>沉淀</span>
+                    <span>检索</span>
+                    <span>问答</span>
+                    <span>集成</span>
+                  </div>
+                </div>
               </div>
+
               <div class="ai-panel-visual">
-                <!-- TODO: 替换为AI知识底座架构/界面图 -->
-                <div class="ai-img-placeholder">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="3" width="18" height="18" rx="2"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <polyline points="21 15 16 10 5 21"/>
+                <div class="ai-visual-card ai-base-visual" aria-hidden="true">
+                  <svg class="ai-base-lines" viewBox="0 0 520 360" preserveAspectRatio="none">
+                    <line x1="260" y1="180" x2="138" y2="96"></line>
+                    <line x1="260" y1="180" x2="382" y2="96"></line>
+                    <line x1="260" y1="180" x2="138" y2="264"></line>
+                    <line x1="260" y1="180" x2="382" y2="264"></line>
                   </svg>
-                  <span>AI 知识底座架构图</span>
+                  <div class="ai-base-node ai-base-node-center">
+                    <span>AI 文档基座</span>
+                    <strong>统一知识来源</strong>
+                  </div>
+                  <div class="ai-base-node ai-base-node-top-left">知识库</div>
+                  <div class="ai-base-node ai-base-node-top-right">权限治理</div>
+                  <div class="ai-base-node ai-base-node-bottom-left">检索问答</div>
+                  <div class="ai-base-node ai-base-node-bottom-right">业务助手</div>
+                  <div class="ai-base-rail">
+                    <span>制度流程</span>
+                    <span>项目经验</span>
+                    <span>内容生成</span>
+                  </div>
                 </div>
               </div>
             </div>

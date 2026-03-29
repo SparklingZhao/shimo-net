@@ -22,6 +22,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  min-height: 44px;
   font-size: 14px;
   color: var(--text);
   text-decoration: none;
@@ -29,6 +30,7 @@
   padding: 6px 0;
   background: transparent;
   border: none;
+  white-space: nowrap;
 }
 
 .nav-item:hover {
@@ -41,12 +43,14 @@
 
 .nav-trigger::after {
   content: "";
+  display: inline-block;
   width: 0;
   height: 0;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 5px solid currentColor;
   margin-top: 2px;
+  transition: transform 0.2s ease;
 }
 
 .has-dropdown {
@@ -214,6 +218,7 @@
   background: #fbfcff;
   min-width: 0;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  white-space: normal;
 }
 
 .support-link-card:hover {
@@ -492,6 +497,12 @@
   white-space: nowrap;
 }
 
+.dropdown-link-list a,
+.dropdown-meta a,
+.dropdown-actions a {
+  white-space: nowrap;
+}
+
 .dropdown-link-with-badge {
   display: inline-flex;
   align-items: center;
@@ -546,6 +557,10 @@
 }
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 8px 14px;
@@ -575,11 +590,13 @@
 }
 
 .lang-switch button {
+  min-height: 44px;
   border: none;
   background: var(--white);
   padding: 8px 10px;
   font-size: 12px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .lang-switch button.active {
@@ -695,6 +712,11 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 12px;
+}
+
+body.nav-open .float-contact {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .float-main {
@@ -818,14 +840,110 @@
 }
 
 @media (max-width: 980px) {
+  .nav-item {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0;
+    font-size: 16px;
+  }
+
+  .nav-trigger {
+    justify-content: space-between;
+  }
+
+  .nav-panel .nav-item,
+  .nav-panel .dropdown a {
+    white-space: normal;
+  }
+
+  .nav-panel .has-dropdown {
+    width: 100%;
+    padding: 0;
+    border-bottom: 1px solid #edf1f7;
+  }
+
+  .nav-panel .has-dropdown:last-child {
+    border-bottom: none;
+  }
+
+  .nav-panel .dropdown {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    margin-top: 8px;
+    padding: 14px;
+    border-radius: 16px;
+    box-shadow: none;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    display: none;
+    transform: none;
+    transition: none;
+  }
+
+  .nav-panel .has-dropdown.open .dropdown {
+    display: block;
+  }
+
+  .nav-panel .has-dropdown.open .nav-trigger::after {
+    transform: rotate(180deg);
+  }
+
+  .nav-panel .dropdown::before,
+  .nav-panel .has-dropdown.open .dropdown::before {
+    display: none;
+  }
+
   .dropdown-panel-wide {
     min-width: min(560px, calc(100vw - 48px));
+  }
+
+  .nav-panel .dropdown-panel-wide {
+    min-width: 0;
   }
 
   .dropdown-grid-2,
   .dropdown-grid-3,
   .dropdown-grid-4 {
     grid-template-columns: 1fr;
+  }
+
+  .mega-dropdown-layout,
+  .product-dropdown-layout,
+  .support-link-grid-5,
+  .product-capability-grid,
+  .product-suite-links-2,
+  .product-suite-links-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .product-capability-grid > .dropdown-list-item:first-child .dropdown-tags-row,
+  .product-suite-links a,
+  .dropdown-tags-row a,
+  .dropdown-inline-badge,
+  .dropdown-link-status {
+    white-space: normal;
+  }
+
+  .dropdown-tags-row {
+    gap: 8px;
+  }
+
+  .dropdown a {
+    padding: 12px 14px;
+  }
+
+  .nav-right .btn {
+    width: 100%;
+  }
+
+  .nav-right .lang-switch button {
+    flex: 1 1 0;
   }
 
   .product-capability-grid > .dropdown-list-item:first-child {
@@ -867,8 +985,49 @@
 }
 
 @media (max-width: 640px) {
+  .nav-panel {
+    width: min(400px, calc(100vw - 20px));
+    padding: 84px 16px 20px;
+  }
+
+  .nav-item {
+    font-size: 15px;
+  }
+
+  .nav-panel .dropdown {
+    padding: 12px;
+  }
+
   .support-link-grid-5 {
     grid-template-columns: 1fr;
+  }
+
+  .wechat-box {
+    align-items: flex-start;
+  }
+
+  .float-contact {
+    right: 12px;
+    bottom: 16px;
+  }
+
+  .float-main {
+    width: 60px;
+    height: 60px;
+  }
+
+  .float-main-symbol {
+    width: 28px;
+    height: 28px;
+  }
+
+  .float-main-symbol svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .float-menu {
+    width: min(220px, calc(100vw - 24px));
   }
 }
 

@@ -249,11 +249,20 @@
   }
 
   .sh-tab-btn {
+    flex: 1 1 calc(50% - 6px);
     font-size: 12px;
     padding: 11px 16px;
+    min-height: 44px;
   }
 
   .sh-tab-icon {
     display: none;
+  }
+
+  .sh-tab-nav {
+    flex-wrap: wrap;
+    justify-content: stretch;
+    gap: 6px;
+    border-bottom: none;
   }
 }
