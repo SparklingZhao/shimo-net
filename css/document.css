@@ -197,6 +197,15 @@
   box-shadow: none;
 }
 
+.doc-collab-image--compact,
+.doc-feature-image--compact {
+  width: auto;
+  max-width: 100%;
+  max-height: 420px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
 .doc-collab-visual-placeholder {
   position: relative;
   min-height: 252px;
@@ -444,6 +453,11 @@
 
   .doc-collab-item-desc {
     font-size: 14px;
+  }
+
+  .doc-collab-image--compact,
+  .doc-feature-image--compact {
+    max-height: 300px;
   }
 
   .doc-collab-visual-placeholder {

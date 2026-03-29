@@ -114,6 +114,16 @@
   opacity: 0.5;
   transition: opacity 0.2s;
   flex-shrink: 0;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.sh-tab-icon svg,
+.sec-pillar-icon svg,
+.pd-pillar-icon svg,
+.xc-pillar-icon svg {
+  width: 1em;
+  height: 1em;
 }
 
 .sh-tab-btn:hover .sh-tab-icon,
@@ -165,14 +175,22 @@
 
 .xc-grid-2x2 .xc-pillar .xc-pillar-head {
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
 .xc-grid-2x2 .xc-pillar .xc-pillar-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 11px;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
   flex-shrink: 0;
+  font-size: 18px;
+}
+
+.sec-pillar-icon,
+.pd-pillar-icon,
+.xc-pillar-icon {
+  font-size: 22px;
+  line-height: 1;
 }
 
 .xc-grid-2x2 .xc-pillar .xc-pillar-title {
@@ -257,6 +275,12 @@
 
   .sh-tab-icon {
     display: none;
+  }
+
+  .sec-pillar-icon,
+  .pd-pillar-icon,
+  .xc-pillar-icon {
+    font-size: 20px;
   }
 
   .sh-tab-nav {

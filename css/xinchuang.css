@@ -107,7 +107,7 @@
 .xc-pillar-head {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 12px;
 }
 
 .xc-left-col .xc-pillar {
@@ -120,9 +120,9 @@
 }
 
 .xc-pillar-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
   display: grid;
   place-items: center;
   flex-shrink: 0;

@@ -134,7 +134,7 @@ const ROUTES = [
     output: "management-panel.html",
     title: "企业管理 - 石墨文档企业服务",
     description:
-      "石墨文档企业管理能力覆盖组织架构、审计日志与全局安全策略配置，帮助企业实现统一管控与风险治理。",
+      "统一管理通讯录、操作日志和企业设置。",
     mainClass: "site-main",
     source: "/pages/features/management-panel.html",
     mode: "page"
@@ -213,7 +213,7 @@ const ROUTES = [
     output: "portal.html",
     title: "工作台 - 石墨文档企业服务",
     description:
-      "石墨工作台聚合待办、消息、审批和最近文件，帮助企业成员快速进入工作状态。",
+      "集中展示消息、文件和常用入口。",
     mainClass: "site-main",
     source: "/pages/features/portal.html",
     mode: "page"
@@ -222,7 +222,7 @@ const ROUTES = [
     output: "space.html",
     title: "协作空间 - 石墨文档企业服务",
     description:
-      "石墨协作空间帮助团队围绕项目或业务主题统一组织文件与过程记录，让协作持续在同一上下文中推进。",
+      "按团队、项目集中管理资料、成员和权限。",
     mainClass: "site-main",
     source: "/pages/features/space.html",
     mode: "page"
@@ -231,7 +231,7 @@ const ROUTES = [
     output: "knowledge-base.html",
     title: "知识库 - 石墨文档企业服务",
     description:
-      "石墨知识库帮助企业沉淀制度规范、业务手册与项目经验，支持统一检索、权限治理与知识复用。",
+      "沉淀制度、流程和项目经验，支持目录、权限和检索。",
     mainClass: "site-main",
     source: "/pages/features/knowledge-base.html",
     mode: "page"
@@ -251,7 +251,7 @@ const ROUTES = [
     description:
       "石墨文档为企业提供数据安全、私有部署与信创合规能力，构建覆盖传输、应用与存储的全链路安全体系。",
     mainClass: "site-main",
-    source: "/pages/features/security-hub.html",
+    source: "/pages/features/security-hub-entry.html",
     mode: "page"
   },
   {
@@ -260,7 +260,7 @@ const ROUTES = [
     description:
       "石墨文档提供 AI 助手与 AI 文档基座能力，帮助企业更快完成内容处理、知识问答与业务集成。",
     mainClass: "site-main",
-    source: "/pages/features/ai.html",
+    source: "/pages/features/ai-entry.html",
     mode: "page"
   },
   {
