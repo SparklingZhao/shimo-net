@@ -1,3 +1,186 @@
 @import "./reset.css";
 @import "./layout.css";
 @import "./components.css";
+
+/* ===== Shared Hero Atmosphere ===== */
+
+.doc-hero,
+.collab-hero,
+.know-hero,
+.ent-hero,
+.pd-hero,
+.xc-hero,
+.sh-hero,
+.sec-hero,
+.fmt-hero,
+.cw-hero,
+.integ-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  --hero-glow-left: rgba(47, 94, 245, 0.1);
+  --hero-glow-right: rgba(120, 154, 255, 0.08);
+}
+
+.doc-hero > .container,
+.collab-hero > .container,
+.know-hero > .container,
+.ent-hero > .container,
+.pd-hero > .container,
+.xc-hero > .container,
+.sh-hero > .container,
+.sec-hero > .container,
+.fmt-hero > .container,
+.cw-hero > .container,
+.integ-hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.doc-hero::before,
+.doc-hero::after,
+.collab-hero::before,
+.collab-hero::after,
+.know-hero::before,
+.know-hero::after,
+.ent-hero::before,
+.ent-hero::after,
+.pd-hero::before,
+.pd-hero::after,
+.xc-hero::before,
+.xc-hero::after,
+.sh-hero::before,
+.sh-hero::after,
+.sec-hero::before,
+.sec-hero::after,
+.fmt-hero::before,
+.fmt-hero::after,
+.cw-hero::before,
+.cw-hero::after,
+.integ-hero::before,
+.integ-hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(14px);
+  z-index: 0;
+}
+
+.doc-hero::before,
+.collab-hero::before,
+.know-hero::before,
+.ent-hero::before,
+.pd-hero::before,
+.xc-hero::before,
+.sh-hero::before,
+.sec-hero::before,
+.fmt-hero::before,
+.cw-hero::before,
+.integ-hero::before {
+  top: -170px;
+  left: max(3vw, 16px);
+  width: min(32vw, 360px);
+  height: min(32vw, 360px);
+  background: var(--hero-glow-left);
+}
+
+.doc-hero::after,
+.collab-hero::after,
+.know-hero::after,
+.ent-hero::after,
+.pd-hero::after,
+.xc-hero::after,
+.sh-hero::after,
+.sec-hero::after,
+.fmt-hero::after,
+.cw-hero::after,
+.integ-hero::after {
+  right: max(3vw, 20px);
+  bottom: -190px;
+  width: min(34vw, 400px);
+  height: min(34vw, 400px);
+  background: var(--hero-glow-right);
+}
+
+.collab-hero,
+.know-hero,
+.doc-hero,
+.ent-hero,
+.pd-hero,
+.sh-hero,
+.sec-hero,
+.fmt-hero,
+.cw-hero {
+  --hero-glow-left: rgba(76, 106, 255, 0.1);
+  --hero-glow-right: rgba(105, 186, 255, 0.08);
+}
+
+.xc-hero {
+  --hero-glow-left: rgba(47, 94, 245, 0.08);
+  --hero-glow-right: rgba(250, 196, 80, 0.08);
+}
+
+.integ-hero {
+  --hero-glow-left: rgba(47, 94, 245, 0.1);
+  --hero-glow-right: rgba(124, 58, 237, 0.08);
+}
+
+@media (max-width: 768px) {
+  .doc-hero::before,
+  .collab-hero::before,
+  .know-hero::before,
+  .ent-hero::before,
+  .pd-hero::before,
+  .xc-hero::before,
+  .sh-hero::before,
+  .sec-hero::before,
+  .fmt-hero::before,
+  .cw-hero::before,
+  .integ-hero::before,
+  .doc-hero::after,
+  .collab-hero::after,
+  .know-hero::after,
+  .ent-hero::after,
+  .pd-hero::after,
+  .xc-hero::after,
+  .sh-hero::after,
+  .sec-hero::after,
+  .fmt-hero::after,
+  .cw-hero::after,
+  .integ-hero::after {
+    filter: blur(10px);
+  }
+
+  .doc-hero::before,
+  .collab-hero::before,
+  .know-hero::before,
+  .ent-hero::before,
+  .pd-hero::before,
+  .xc-hero::before,
+  .sh-hero::before,
+  .sec-hero::before,
+  .fmt-hero::before,
+  .cw-hero::before,
+  .integ-hero::before {
+    width: 220px;
+    height: 220px;
+    top: -120px;
+  }
+
+  .doc-hero::after,
+  .collab-hero::after,
+  .know-hero::after,
+  .ent-hero::after,
+  .pd-hero::after,
+  .xc-hero::after,
+  .sh-hero::after,
+  .sec-hero::after,
+  .fmt-hero::after,
+  .cw-hero::after,
+  .integ-hero::after {
+    width: 240px;
+    height: 240px;
+    bottom: -140px;
+  }
+}

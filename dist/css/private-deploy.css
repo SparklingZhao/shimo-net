@@ -65,14 +65,14 @@
 .pd-pillar-head {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   width: 100%;
 }
 
 .pd-pillar-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
   display: grid;
   place-items: center;
   flex-shrink: 0;
@@ -142,8 +142,8 @@
   }
 
   .pd-pillar-icon {
-    width: 50px;
-    height: 50px;
+    width: 36px;
+    height: 36px;
   }
 
   .pd-pillar-title {
