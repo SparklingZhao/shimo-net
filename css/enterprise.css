@@ -154,22 +154,22 @@
   overflow: hidden;
 }
 
-.ent-img-placeholder {
+.ent-img-card {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
   min-height: 420px;
-  background: linear-gradient(135deg, #f5f5ff 0%, #edf2ff 100%);
-  border: 2px dashed #c5ccdb;
+  padding: 28px;
+  background: transparent;
+  border: 0;
   border-radius: var(--radius);
-  color: #9da7bb;
-  font-size: 14px;
+  box-shadow: none;
 }
 
-.ent-img-placeholder svg {
-  opacity: 0.45;
+.ent-panel-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 
@@ -274,8 +274,9 @@
     height: 17px;
   }
 
-  .ent-img-placeholder {
+  .ent-img-card {
     min-height: 260px;
+    padding: 16px;
   }
 }
 

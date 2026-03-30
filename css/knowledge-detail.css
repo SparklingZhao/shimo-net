@@ -442,6 +442,12 @@
   box-shadow: 0 14px 30px rgba(47, 72, 156, 0.08);
 }
 
+.kd-hero-visual .kd-shot-surface {
+  overflow: visible;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 .kd-shot img {
   display: block;
   width: 100%;

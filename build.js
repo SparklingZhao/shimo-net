@@ -20,6 +20,10 @@ const USE_RELATIVE_URLS = isRelativeBasePath(RAW_BASE_PATH);
 const BASE_PATH = USE_RELATIVE_URLS ? "/" : normalizeBasePath(RAW_BASE_PATH);
 const SITE_ORIGIN = getSiteOrigin();
 const DEFAULT_OG_IMAGE = "/assets/images/homepage_title_banner_background.43282104.png";
+const DEFAULT_KEYWORDS =
+  "协同办公,在线文档,在线办公,协同办公系统,云文档,云表格,在线表格,协同办公平台,在线编辑文档,协作文档,远程办公,石墨文档";
+const HOMEPAGE_DESCRIPTION =
+  "石墨文档,全新一代云Office办公软件,支持多人在线协同办公,独有内容级安全，全程留痕可追溯.PC/移动双端覆盖,随时随地在线协同办公,在线文档即写即存统一管理,高效共享文档、表格,是企业云协同办公系统和在线办公平台的更好选择";
 const COMMON_STYLES = ["/css/main.css"];
 const COMMON_SCRIPTS = [
   "/js/utils.js",
@@ -40,8 +44,8 @@ const ROUTES = [
   {
     output: "welcome.html",
     title: "石墨文档企业服务 - 首页",
-    description:
-      "石墨文档企业服务为企业提供文档协作、知识沉淀、开放集成与 AI 接入能力，支持公有云、私有化与中台集成等多种服务形态。",
+    description: HOMEPAGE_DESCRIPTION,
+    keywords: DEFAULT_KEYWORDS,
     canonical: "/",
     noindex: true,
     mainClass: "site-main",
@@ -73,8 +77,8 @@ const ROUTES = [
   {
     output: "index.html",
     title: "石墨文档企业服务 - 首页",
-    description:
-      "石墨文档企业服务为企业提供文档协作、知识沉淀、开放集成与 AI 接入能力，支持公有云、私有化与中台集成等多种服务形态。",
+    description: HOMEPAGE_DESCRIPTION,
+    keywords: DEFAULT_KEYWORDS,
     canonical: "/",
     mainClass: "site-main",
     source: "/pages/home/home-content.html",
@@ -818,7 +822,9 @@ function setSeoMeta(htmlText, route) {
   var canonicalPath = getCanonicalPath(route);
   var canonicalUrl = toAbsoluteUrl(canonicalPath);
   var ogImageUrl = toAbsoluteUrl(route.ogImage || DEFAULT_OG_IMAGE);
+  var keywords = route.keywords || DEFAULT_KEYWORDS;
   var metaBlock = [
+    `  <meta name="keywords" content="${escapeHtml(keywords)}">`,
     `  <meta name="description" content="${escapeHtml(route.description || route.title)}">`,
     route.noindex ? '  <meta name="robots" content="noindex,follow">' : "",
     `  <link rel="canonical" href="${escapeHtml(canonicalUrl)}">`,
@@ -835,6 +841,7 @@ function setSeoMeta(htmlText, route) {
     `  <meta name="twitter:image" content="${escapeHtml(ogImageUrl)}">`
   ].filter(Boolean).join("\n");
 
+  htmlText = htmlText.replace(/\s*<meta name="keywords"[^>]*>/gi, "");
   htmlText = htmlText.replace(/\s*<meta name="description"[^>]*>/gi, "");
   htmlText = htmlText.replace(/\s*<meta name="robots"[^>]*>/gi, "");
   htmlText = htmlText.replace(/\s*<link rel="canonical"[^>]*>/gi, "");
