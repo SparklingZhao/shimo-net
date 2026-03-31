@@ -135,6 +135,16 @@ const ROUTES = [
     mode: "page"
   },
   {
+    output: "webofficesdk-cases.html",
+    title: "石墨文档中台 集成案例 - 石墨文档企业服务",
+    description:
+      "查看石墨文档中台在 IM、云盘、OA、合同和会议系统中的典型集成案例，了解文件预览、在线编辑、多人协同和格式转换等能力的落地方式。",
+    preloadImages: ["/assets/images/document/doc.png"],
+    mainClass: "site-main",
+    source: "/pages/webofficesdk/cases.html",
+    mode: "page"
+  },
+  {
     output: "management-panel.html",
     title: "企业管理 - 石墨文档企业服务",
     description:
@@ -907,6 +917,7 @@ const SHELL_LINK_RULES = [
   { page: "officesuite-business", output: "/officesuite-business.html" },
   { page: "officesuite-enterprise", output: "/officesuite-enterprise.html" },
   { page: "webofficesdk-integration", output: "/webofficesdk-integration.html" },
+  { page: "webofficesdk-cases", output: "/webofficesdk-cases.html" },
   { page: "collaboration", output: "/collaboration.html" },
   { page: "document", output: "/document.html" },
   { page: "writer", output: "/writer.html" },

@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>石墨文档中台 集成案例 - 石墨文档企业服务</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/integration-cases.css">
+</head>
+<body>
+  <main class="sdk-case-page">
+    <section class="sdk-case-layout" data-case-layout>
+      <aside class="sdk-case-sidebar">
+        <div class="sdk-case-sidebar-inner">
+          <div class="sdk-case-sidebar-meta">
+            <p class="sdk-case-sidebar-eyebrow">石墨文档中台</p>
+            <h1 class="sdk-case-sidebar-title">集成案例</h1>
+            <p class="sdk-case-sidebar-desc">
+              核心能力覆盖业务场景，展示文档中台在 IM、云盘、OA、合同和会议系统中的落地方式。
+            </p>
+          </div>
+
+          <nav class="sdk-case-nav" aria-label="集成案例目录">
+            <div class="sdk-case-nav-group">
+              <p class="sdk-case-nav-group-title">核心能力</p>
+              <div class="sdk-case-nav-links">
+                <a class="sdk-case-nav-link is-active" href="#cap-preview" data-case-link>文件预览</a>
+                <a class="sdk-case-nav-link" href="#cap-edit" data-case-link>协作编辑</a>
+                <a class="sdk-case-nav-link" href="#cap-format" data-case-link>格式处理</a>
+                <a class="sdk-case-nav-link" href="#cap-security" data-case-link>文档安全</a>
+              </div>
+            </div>
+
+            <div class="sdk-case-nav-group">
+              <p class="sdk-case-nav-group-title">场景示例</p>
+              <div class="sdk-case-nav-links">
+                <a class="sdk-case-nav-link" href="#scene-im" data-case-link>IM系统应用</a>
+                <a class="sdk-case-nav-link" href="#scene-drive" data-case-link>云盘系统应用</a>
+                <a class="sdk-case-nav-link" href="#scene-oa" data-case-link>OA系统应用</a>
+                <a class="sdk-case-nav-link" href="#scene-contract" data-case-link>合同管理系统应用</a>
+                <a class="sdk-case-nav-link" href="#scene-meeting" data-case-link>会议系统应用</a>
+              </div>
+            </div>
+          </nav>
+
+          <div class="sdk-case-sidebar-card">
+            <strong>典型接入系统</strong>
+            <p>企业门户、业务审批、知识平台、即时通讯、云盘、合同系统与会议协同平台。</p>
+          </div>
+        </div>
+      </aside>
+      <div class="sdk-case-content">
+        <section class="sdk-panel sdk-panel--preview" id="cap-preview" data-case-section data-case-tabs>
+          <div class="sdk-panel-head">
+            <p class="sdk-panel-eyebrow">核心能力</p>
+            <h2>文件预览</h2>
+            <p class="sdk-panel-desc">支持多种文件格式的在线预览，无需安装本地软件，直接在浏览器或业务系统页面中查看文档内容。</p>
+          </div>
+
+          <div class="sdk-pill-row" role="tablist" aria-label="文件预览类型">
+            <button class="sdk-pill is-active" type="button" role="tab" id="preview-tab-word" aria-selected="true" aria-controls="preview-panel-word" data-tab-target="preview-panel-word">Word</button>
+            <button class="sdk-pill" type="button" role="tab" id="preview-tab-excel" aria-selected="false" aria-controls="preview-panel-excel" data-tab-target="preview-panel-excel" tabindex="-1">Excel</button>
+            <button class="sdk-pill" type="button" role="tab" id="preview-tab-ppt" aria-selected="false" aria-controls="preview-panel-ppt" data-tab-target="preview-panel-ppt" tabindex="-1">PPT</button>
+            <button class="sdk-pill" type="button" role="tab" id="preview-tab-pdf" aria-selected="false" aria-controls="preview-panel-pdf" data-tab-target="preview-panel-pdf" tabindex="-1">PDF</button>
+            <button class="sdk-pill" type="button" role="tab" id="preview-tab-media" aria-selected="false" aria-controls="preview-panel-media" data-tab-target="preview-panel-media" tabindex="-1">音视频文件</button>
+            <button class="sdk-pill" type="button" role="tab" id="preview-tab-image" aria-selected="false" aria-controls="preview-panel-image" data-tab-target="preview-panel-image" tabindex="-1">图片文件</button>
+            <button class="sdk-pill" type="button" role="tab" id="preview-tab-txt" aria-selected="false" aria-controls="preview-panel-txt" data-tab-target="preview-panel-txt" tabindex="-1">TXT 文件</button>
+            <button class="sdk-pill" type="button" role="tab" id="preview-tab-more" aria-selected="false" aria-controls="preview-panel-more" data-tab-target="preview-panel-more" tabindex="-1">等更多类型</button>
+          </div>
+
+          <div class="sdk-tab-panels">
+            <article class="sdk-tab-panel is-active" id="preview-panel-word" role="tabpanel" aria-labelledby="preview-tab-word" data-tab-panel>
+              <div class="sdk-demo-shell">
+                <div class="sdk-demo-header">
+                  <div class="sdk-demo-title">
+                    <span class="sdk-demo-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <rect x="4" y="4" width="6" height="6" rx="1.5"></rect>
+                        <rect x="14" y="4" width="6" height="6" rx="1.5"></rect>
+                        <rect x="4" y="14" width="6" height="6" rx="1.5"></rect>
+                        <rect x="14" y="14" width="6" height="6" rx="1.5"></rect>
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>Word 文档预览</strong>
+                      <p>支持正式文稿和长文档在业务系统中直接在线打开</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sdk-demo-stage">
+                  <img class="sdk-shot" src="/assets/images/document/doc.png" alt="Word 文档预览示意" width="1280" height="821" decoding="async" fetchpriority="high">
+                </div>
+              </div>
+              <ul class="sdk-check-list">
+                <li>支持 DOC、DOCX 快速预览</li>
+                <li>保留标题、段落和注释层次</li>
+                <li>适合合同、方案和通知场景</li>
+              </ul>
+            </article>
+
+            <article class="sdk-tab-panel" id="preview-panel-excel" role="tabpanel" aria-labelledby="preview-tab-excel" data-tab-panel hidden>
+              <div class="sdk-demo-shell">
+                <div class="sdk-demo-header">
+                  <div class="sdk-demo-title">
+                    <span class="sdk-demo-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <rect x="4" y="4" width="6" height="6" rx="1.5"></rect>
+                        <rect x="14" y="4" width="6" height="6" rx="1.5"></rect>
+                        <rect x="4" y="14" width="6" height="6" rx="1.5"></rect>
+                        <rect x="14" y="14" width="6" height="6" rx="1.5"></rect>
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>Excel 表格预览</strong>
+                      <p>适合数据报表、台账和清单类文件直接在线浏览</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sdk-demo-stage">
+                  <img class="sdk-shot" src="/assets/images/sheet_product_desc_back.1791d6f4.png" alt="Excel 表格预览示意" width="1280" height="821" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <ul class="sdk-check-list">
+                <li>支持 XLS、XLSX 和 CSV 文件查看</li>
+                <li>保留表格结构、筛选和冻结区域观感</li>
+                <li>适合运营、财务和项目数据场景</li>
+              </ul>
+            </article>
+
+            <article class="sdk-tab-panel" id="preview-panel-ppt" role="tabpanel" aria-labelledby="preview-tab-ppt" data-tab-panel hidden>
+              <div class="sdk-demo-shell">
+                <div class="sdk-demo-header">
+                  <div class="sdk-demo-title">
+                    <span class="sdk-demo-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <rect x="4" y="4" width="6" height="6" rx="1.5"></rect>
+                        <rect x="14" y="4" width="6" height="6" rx="1.5"></rect>
+                        <rect x="4" y="14" width="6" height="6" rx="1.5"></rect>
+                        <rect x="14" y="14" width="6" height="6" rx="1.5"></rect>
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>PPT 演示预览</strong>
+                      <p>汇报材料和演示文稿可在门户和会话页直接打开查看</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sdk-demo-stage">
+                  <img class="sdk-shot" src="/assets/images/slide_product_desc_back.78851b71.png" alt="PPT 预览示意" width="1280" height="821" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <ul class="sdk-check-list">
+                <li>支持 PPT、PPTX 在线翻页预览</li>
+                <li>适合方案汇报和培训材料查看</li>
+                <li>减少本地下载和演示软件依赖</li>
+              </ul>
+            </article>
+
+            <article class="sdk-tab-panel" id="preview-panel-pdf" role="tabpanel" aria-labelledby="preview-tab-pdf" data-tab-panel hidden>
+              <div class="sdk-demo-shell">
+                <div class="sdk-demo-header">
+                  <div class="sdk-demo-title">
+                    <span class="sdk-demo-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <rect x="4" y="4" width="6" height="6" rx="1.5"></rect>
+                        <rect x="14" y="4" width="6" height="6" rx="1.5"></rect>
+                        <rect x="4" y="14" width="6" height="6" rx="1.5"></rect>
+                        <rect x="14" y="14" width="6" height="6" rx="1.5"></rect>
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>PDF 文件预览</strong>
+                      <p>适用于标准成文资料和归档文件的只读查看场景</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sdk-demo-stage">
+                  <img class="sdk-shot" src="/assets/images/writer/traditional_back.webp" alt="PDF 文件预览示意" width="1280" height="821" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <ul class="sdk-check-list">
+                <li>支持 PDF 页面内容清晰展示</li>
+                <li>保持原始版式和只读阅读体验</li>
+                <li>适合制度文档和合同定稿查看</li>
+              </ul>
+            </article>
+
+            <article class="sdk-tab-panel" id="preview-panel-media" role="tabpanel" aria-labelledby="preview-tab-media" data-tab-panel hidden>
+              <div class="sdk-demo-shell">
+                <div class="sdk-demo-header">
+                  <div class="sdk-demo-title">
+                    <span class="sdk-demo-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <rect x="4" y="4" width="6" height="6" rx="1.5"></rect>
+                        <rect x="14" y="4" width="6" height="6" rx="1.5"></rect>
+                        <rect x="4" y="14" width="6" height="6" rx="1.5"></rect>
+                        <rect x="14" y="14" width="6" height="6" rx="1.5"></rect>
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>音视频文件预览</strong>
+                      <p>在业务系统内快速查看素材内容，减少来回切换应用</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sdk-demo-stage">
+                  <img class="sdk-shot" src="/assets/images/knowledge-detail/portal-recent-files.png" alt="音视频文件列表预览示意" width="1434" height="666" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <ul class="sdk-check-list">
+                <li>支持常见媒体文件统一入口查看</li>
+                <li>适合素材审核和内容中心场景</li>
+                <li>帮助云盘、IM 和门户快速整合资料</li>
+              </ul>
+            </article>
+
+            <article class="sdk-tab-panel" id="preview-panel-image" role="tabpanel" aria-labelledby="preview-tab-image" data-tab-panel hidden>
+              <div class="sdk-demo-shell">
+                <div class="sdk-demo-header">
+                  <div class="sdk-demo-title">
+                    <span class="sdk-demo-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <rect x="4" y="4" width="6" height="6" rx="1.5"></rect>
+                        <rect x="14" y="4" width="6" height="6" rx="1.5"></rect>
+                        <rect x="4" y="14" width="6" height="6" rx="1.5"></rect>
+                        <rect x="14" y="14" width="6" height="6" rx="1.5"></rect>
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>图片文件预览</strong>
+                      <p>支持设计稿、截图和附件图片在页面内直接查看</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sdk-demo-stage">
+                  <img class="sdk-shot" src="/assets/images/knowledge-detail/space-list.png" alt="图片文件预览示意" width="2560" height="713" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <ul class="sdk-check-list">
+                <li>支持常见图片格式快速打开</li>
+                <li>适合设计评审和工单附件查看</li>
+                <li>可嵌入会话、云盘和审批页面中</li>
+              </ul>
+            </article>
+
+            <article class="sdk-tab-panel" id="preview-panel-txt" role="tabpanel" aria-labelledby="preview-tab-txt" data-tab-panel hidden>
+              <div class="sdk-demo-shell">
+                <div class="sdk-demo-header">
+                  <div class="sdk-demo-title">
+                    <span class="sdk-demo-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <rect x="4" y="4" width="6" height="6" rx="1.5"></rect>
+                        <rect x="14" y="4" width="6" height="6" rx="1.5"></rect>
+                        <rect x="4" y="14" width="6" height="6" rx="1.5"></rect>
+                        <rect x="14" y="14" width="6" height="6" rx="1.5"></rect>
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>TXT 文件预览</strong>
+                      <p>轻量文本可在系统内直接查看和转入在线编辑流程</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sdk-demo-stage">
+                  <img class="sdk-shot" src="/assets/images/document/doc.png" alt="TXT 文本预览示意" width="1280" height="821" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <ul class="sdk-check-list">
+                <li>支持纯文本快速打开和浏览</li>
+                <li>适合日志片段、说明文档和脚本备注</li>
+                <li>便于后续转入正式文档处理流程</li>
+              </ul>
+            </article>
+
+            <article class="sdk-tab-panel" id="preview-panel-more" role="tabpanel" aria-labelledby="preview-tab-more" data-tab-panel hidden>
+              <div class="sdk-demo-shell">
+                <div class="sdk-demo-header">
+                  <div class="sdk-demo-title">
+                    <span class="sdk-demo-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <rect x="4" y="4" width="6" height="6" rx="1.5"></rect>
+                        <rect x="14" y="4" width="6" height="6" rx="1.5"></rect>
+                        <rect x="4" y="14" width="6" height="6" rx="1.5"></rect>
+                        <rect x="14" y="14" width="6" height="6" rx="1.5"></rect>
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>更多文件类型</strong>
+                      <p>支持 .odt、.rtf、.md 等常见格式在线打开</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sdk-demo-stage">
+                  <img class="sdk-shot" src="/assets/images/document/doc.png" alt="更多文件类型预览示意" width="1280" height="821" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <ul class="sdk-check-list">
+                <li>覆盖主流办公格式之外的常见文件</li>
+                <li>减少系统内文件类型断层</li>
+                <li>帮助企业统一预览入口和体验</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="sdk-panel sdk-panel--edit" id="cap-edit" data-case-section data-case-tabs>
+          <div class="sdk-panel-head">
+            <p class="sdk-panel-eyebrow">核心能力</p>
+            <h2>协作编辑</h2>
+            <p class="sdk-panel-desc">在业务系统中登录不同用户时，可围绕同一份文件展示编辑、评论、只读等差异化权限，并保持内容实时同步。</p>
+          </div>
+
+          <div class="sdk-pill-row" role="tablist" aria-label="协作编辑类型">
+            <button class="sdk-pill is-active" type="button" role="tab" id="edit-tab-document" aria-selected="true" aria-controls="edit-panel-document" data-tab-target="edit-panel-document">文档</button>
+            <button class="sdk-pill" type="button" role="tab" id="edit-tab-writer" aria-selected="false" aria-controls="edit-panel-writer" data-tab-target="edit-panel-writer" tabindex="-1">文稿</button>
+            <button class="sdk-pill" type="button" role="tab" id="edit-tab-sheet" aria-selected="false" aria-controls="edit-panel-sheet" data-tab-target="edit-panel-sheet" tabindex="-1">表格</button>
+            <button class="sdk-pill" type="button" role="tab" id="edit-tab-slide" aria-selected="false" aria-controls="edit-panel-slide" data-tab-target="edit-panel-slide" tabindex="-1">幻灯片</button>
+            <button class="sdk-pill" type="button" role="tab" id="edit-tab-table" aria-selected="false" aria-controls="edit-panel-table" data-tab-target="edit-panel-table" tabindex="-1">应用表格</button>
+          </div>
+
+          <div class="sdk-tab-panels">
+            <article class="sdk-tab-panel is-active" id="edit-panel-document" role="tabpanel" aria-labelledby="edit-tab-document" data-tab-panel>
+              <div class="sdk-demo-shell">
+                <div class="sdk-demo-header">
+                  <div class="sdk-demo-title">
+                    <span class="sdk-demo-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>同一文档，多角色协作</strong>
+                      <p>登录不同用户后，可对同一份文档展示编辑、评论和只读等差异化能力</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sdk-demo-stage sdk-demo-stage--split">
+                  <figure class="sdk-shot-stack">
+                    <figcaption class="sdk-shot-caption">用户 A：编辑权限</figcaption>
+                    <img class="sdk-shot" src="/assets/images/doc_product_desc_back.4f15795f.png" alt="用户 A 登录后对同一文档进行编辑的示意图" width="1280" height="821" loading="lazy" decoding="async">
+                  </figure>
+                  <figure class="sdk-shot-stack">
+                    <figcaption class="sdk-shot-caption">用户 B：评论或查看权限</figcaption>
+                    <img class="sdk-shot" src="/assets/images/document/doc_feature_collaboration.webp" alt="用户 B 登录后对同一文档进行协作查看的示意图" width="904" height="582" loading="lazy" decoding="async">
+                  </figure>
+                </div>
+              </div>
+              <ul class="sdk-check-list">
+                <li>同一份文档可按登录身份动态返回编辑、评论或只读权限</li>
+                <li>左右对照更直观展示不同用户对同一内容的协作状态</li>
+                <li>适合审批会签、跨部门评审和纪要共创场景</li>
+              </ul>
+            </article>
+
+            <article class="sdk-tab-panel" id="edit-panel-writer" role="tabpanel" aria-labelledby="edit-tab-writer" data-tab-panel hidden>
+              <div class="sdk-demo-shell">
+                <div class="sdk-demo-header">
+                  <div class="sdk-demo-title">
+                    <span class="sdk-demo-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>正式文稿协同会签</strong>
+                      <p>支持公文、制度和合同等正式文稿在不同角色之间流转与修订</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sdk-demo-stage sdk-demo-stage--split">
+                  <figure class="sdk-shot-stack">
+                    <figcaption class="sdk-shot-caption">起草人：正文编辑</figcaption>
+                    <img class="sdk-shot" src="/assets/images/writer/traditional_back.webp" alt="起草人编辑正式文稿的示意图" width="1280" height="821" loading="lazy" decoding="async">
+                  </figure>
+                  <figure class="sdk-shot-stack">
+                    <figcaption class="sdk-shot-caption">审阅人：修订批注</figcaption>
+                    <img class="sdk-shot" src="/assets/images/writer/traditional_back.webp" alt="审阅人查看同一正式文稿的示意图" width="1280" height="821" loading="lazy" decoding="async">
+                  </figure>
+                </div>
+              </div>
+              <ul class="sdk-check-list">
+                <li>适合法务、行政和管理层围绕同一正式文件协同处理</li>
+                <li>可按角色控制正文修改、批注和导出等操作权限</li>
+                <li>关键修订过程与历史版本可持续留痕</li>
+              </ul>
+            </article>
+
+            <article class="sdk-tab-panel" id="edit-panel-sheet" role="tabpanel" aria-labelledby="edit-tab-sheet" data-tab-panel hidden>
+              <div class="sdk-demo-shell">
+                <div class="sdk-demo-header">
+                  <div class="sdk-demo-title">
+                    <span class="sdk-demo-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>同一表格，分角色处理数据</strong>
+                      <p>业务负责人和协作者可围绕同一份台账表格协同更新</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sdk-demo-stage sdk-demo-stage--split">
+                  <figure class="sdk-shot-stack">
+                    <figcaption class="sdk-shot-caption">维护人：可编辑</figcaption>
+                    <img class="sdk-shot" src="/assets/images/sheet_product_desc_back.1791d6f4.png" alt="维护人编辑同一表格的示意图" width="1280" height="821" loading="lazy" decoding="async">
+                  </figure>
+                  <figure class="sdk-shot-stack">
+                    <figcaption class="sdk-shot-caption">查看人：只读或评论</figcaption>
+                    <img class="sdk-shot" src="/assets/images/sheet_product_desc_back.1791d6f4.png" alt="查看人访问同一表格的示意图" width="1280" height="821" loading="lazy" decoding="async">
+                  </figure>
+                </div>
+              </div>
+              <ul class="sdk-check-list">
+                <li>同一份数据表可按角色分配录入、审核和查看权限</li>
+                <li>多人共同维护时数据实时同步，减少离线回传成本</li>
+                <li>适合预算、台账和统计报表类业务系统</li>
+              </ul>
+            </article>
+
+            <article class="sdk-tab-panel" id="edit-panel-slide" role="tabpanel" aria-labelledby="edit-tab-slide" data-tab-panel hidden>
+              <div class="sdk-demo-shell">
+                <div class="sdk-demo-header">
+                  <div class="sdk-demo-title">
+                    <span class="sdk-demo-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>演示材料多人共创</strong>
+                      <p>销售、产品和实施团队可同步完善同一份汇报材料</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sdk-demo-stage sdk-demo-stage--split">
+                  <figure class="sdk-shot-stack">
+                    <figcaption class="sdk-shot-caption">主讲人：内容编辑</figcaption>
+                    <img class="sdk-shot" src="/assets/images/slide_product_desc_back.78851b71.png" alt="主讲人编辑同一幻灯片的示意图" width="1280" height="821" loading="lazy" decoding="async">
+                  </figure>
+                  <figure class="sdk-shot-stack">
+                    <figcaption class="sdk-shot-caption">协作者：补充评论</figcaption>
+                    <img class="sdk-shot" src="/assets/images/slide_product_desc_back.78851b71.png" alt="协作者查看同一幻灯片的示意图" width="1280" height="821" loading="lazy" decoding="async">
+                  </figure>
+                </div>
+              </div>
+              <ul class="sdk-check-list">
+                <li>同一份演示材料可分角色进行主编、补充和审批确认</li>
+                <li>适合投标汇报、售前演示和培训课件共创</li>
+                <li>会前会中持续使用同一文件，避免版本分散</li>
+              </ul>
+            </article>
+
+            <article class="sdk-tab-panel" id="edit-panel-table" role="tabpanel" aria-labelledby="edit-tab-table" data-tab-panel hidden>
+              <div class="sdk-demo-shell">
+                <div class="sdk-demo-header">
+                  <div class="sdk-demo-title">
+                    <span class="sdk-demo-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>应用表格协作流转</strong>
+                      <p>围绕结构化业务数据，给不同身份分配处理节点和操作权限</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sdk-demo-stage sdk-demo-stage--split">
+                  <figure class="sdk-shot-stack">
+                    <figcaption class="sdk-shot-caption">负责人：编辑与流转</figcaption>
+                    <img class="sdk-shot" src="/assets/images/table_back.4655d070.png" alt="负责人操作同一应用表格的示意图" width="2560" height="1640" loading="lazy" decoding="async">
+                  </figure>
+                  <figure class="sdk-shot-stack">
+                    <figcaption class="sdk-shot-caption">参与人：查看与反馈</figcaption>
+                    <img class="sdk-shot" src="/assets/images/table_back.4655d070.png" alt="参与人查看同一应用表格的示意图" width="2560" height="1640" loading="lazy" decoding="async">
+                  </figure>
+                </div>
+              </div>
+              <ul class="sdk-check-list">
+                <li>适合项目推进、流程跟踪和多角色业务协同</li>
+                <li>字段、视图与记录权限可按人员身份灵活配置</li>
+                <li>便于和审批、工单等系统形成闭环处理链路</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="sdk-panel sdk-panel--format" id="cap-format" data-case-section>
+          <div class="sdk-panel-head">
+            <p class="sdk-panel-eyebrow">核心能力</p>
+            <h2>格式处理</h2>
+            <p class="sdk-panel-desc">提供高保真文档格式处理能力，支持多种本地文件导入和石墨格式导出，便于业务系统与办公文件双向流转。</p>
+          </div>
+
+          <div class="sdk-table-shell">
+            <table class="sdk-format-table">
+              <thead>
+                <tr>
+                  <th scope="col">支持导入的文件类型</th>
+                  <th scope="col">石墨文件类型</th>
+                  <th scope="col">默认导出的文件类型</th>
+                  <th scope="col">支持导出的文件类型</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>.docx, .doc, .md, .txt</td>
+                  <td>文档</td>
+                  <td>.docx</td>
+                  <td>.docx, .md, .jpg, .pdf</td>
+                </tr>
+                <tr>
+                  <td>.docx, .doc, .wps</td>
+                  <td>文稿</td>
+                  <td>.docx</td>
+                  <td>.docx, .pdf, .wps</td>
+                </tr>
+                <tr>
+                  <td>.xlsx, .xls, .csv, .xlsm</td>
+                  <td>表格</td>
+                  <td>.xlsx</td>
+                  <td>.xlsx</td>
+                </tr>
+                <tr>
+                  <td>.pptx, .ppt</td>
+                  <td>幻灯片</td>
+                  <td>.pptx</td>
+                  <td>.pptx, .pdf</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="sdk-panel sdk-panel--security" id="cap-security" data-case-section>
+          <div class="sdk-panel-head">
+            <p class="sdk-panel-eyebrow">核心能力</p>
+            <h2>文档安全</h2>
+            <p class="sdk-panel-desc">支持水印、下载导出、评论复制、附件能力与管理权限等安全控制，可按登录用户对同一文件返回差异化安全策略。</p>
+          </div>
+
+          <div class="sdk-security-shell">
+            <article class="sdk-security-editor">
+              <div class="sdk-security-editor-bar">
+                <div class="sdk-security-dots" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <span class="sdk-security-file-name">项目合作方案-安全版</span>
+                <span class="sdk-security-status">已开启安全策略</span>
+              </div>
+
+              <div class="sdk-security-toolbar" aria-hidden="true">
+                <span>文件</span>
+                <span>编辑</span>
+                <span>插入</span>
+                <span>格式</span>
+                <span>审阅</span>
+                <span>权限</span>
+              </div>
+
+              <div class="sdk-security-canvas">
+                <div class="sdk-security-watermark-layer" aria-hidden="true">
+                  <span>石墨文档中台 安全预览 SPARKLINGZHAO</span>
+                  <span>石墨文档中台 安全预览 SPARKLINGZHAO</span>
+                  <span>石墨文档中台 安全预览 SPARKLINGZHAO</span>
+                  <span>石墨文档中台 安全预览 SPARKLINGZHAO</span>
+                </div>
+
+                <div class="sdk-security-page">
+                  <h3>项目合作方案</h3>
+                  <p>本方案用于展示文档安全模块在业务系统中的落地方式，支持文档水印回调与权限回调联动。</p>
+                  <p>不同登录用户可访问同一份文档，但根据角色差异获得不同的阅读、评论、编辑与导出能力。</p>
+
+                  <div class="sdk-security-note sdk-security-note--primary">
+                    <strong>法务批注</strong>
+                    <span>当前版本仅允许评论，不允许导出。</span>
+                  </div>
+
+                  <div class="sdk-security-note sdk-security-note--secondary">
+                    <strong>销售批注</strong>
+                    <span>对外发送时自动追加动态水印与访问时间。</span>
+                  </div>
+
+                  <ul class="sdk-security-bullets">
+                    <li>支持按组织身份返回不同权限结果</li>
+                    <li>支持水印文字、时间、用户标识动态回调</li>
+                    <li>支持附件预览、下载和复制能力管控</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <div class="sdk-security-config-panel">
+              <section class="sdk-config-card">
+                <div class="sdk-config-card-head">
+                  <h3>水印回调</h3>
+                  <p>接入方返回动态水印策略，控制文档界面的水印展示内容与展示时机。</p>
+                </div>
+
+                <label class="sdk-config-field">
+                  <span>水印文字</span>
+                  <input type="text" value="输入水印文字" readonly>
+                </label>
+
+                <div class="sdk-config-callback sdk-config-callback--light">
+                  <span class="sdk-config-callback-label">回调说明</span>
+                  <code>{ watermarkText: "输入水印文字", expireAt: "2026-03-31 18:00" }</code>
+                </div>
+
+                <div class="sdk-config-actions">
+                  <button class="sdk-config-button sdk-config-button--ghost" type="button">预览回调参数</button>
+                  <button class="sdk-config-button" type="button">保存水印配置</button>
+                </div>
+              </section>
+
+              <section class="sdk-config-card">
+                <div class="sdk-config-card-head">
+                  <h3>权限回调</h3>
+                  <p>接入方可根据用户身份返回阅读、评论、复制、导出等细粒度权限配置。</p>
+                </div>
+
+                <div class="sdk-config-grid sdk-config-grid--dense">
+                  <label class="sdk-config-check sdk-config-check--compact">
+                    <input type="checkbox" checked>
+                    <span>可阅读</span>
+                  </label>
+                  <label class="sdk-config-check sdk-config-check--compact">
+                    <input type="checkbox">
+                    <span>可编辑</span>
+                  </label>
+                  <label class="sdk-config-check sdk-config-check--compact">
+                    <input type="checkbox" checked>
+                    <span>可评论</span>
+                  </label>
+                  <label class="sdk-config-check sdk-config-check--compact">
+                    <input type="checkbox">
+                    <span>可复制</span>
+                  </label>
+                  <label class="sdk-config-check sdk-config-check--compact">
+                    <input type="checkbox">
+                    <span>可导出</span>
+                  </label>
+                  <label class="sdk-config-check sdk-config-check--compact">
+                    <input type="checkbox" checked>
+                    <span>附件预览</span>
+                  </label>
+                  <label class="sdk-config-check sdk-config-check--compact">
+                    <input type="checkbox">
+                    <span>附件下载</span>
+                  </label>
+                  <label class="sdk-config-check sdk-config-check--compact">
+                    <input type="checkbox">
+                    <span>管理权限</span>
+                  </label>
+                </div>
+
+                <div class="sdk-config-callback">
+                  <span class="sdk-config-callback-label">回调结果</span>
+                  <code>{ readable: true, commentable: true, editable: false, exportable: false }</code>
+                </div>
+
+                <div class="sdk-config-actions">
+                  <button class="sdk-config-button sdk-config-button--ghost" type="button">查看完整字段</button>
+                  <button class="sdk-config-button" type="button">提交权限回调</button>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <section class="sdk-panel sdk-panel--scene" id="scene-im" data-case-section>
+          <div class="sdk-panel-head">
+            <p class="sdk-panel-eyebrow">场景示例</p>
+            <h2>IM系统应用</h2>
+            <p class="sdk-panel-desc">将文档中台嵌入聊天窗口和会话详情页，让文件预览、编辑与协作在沟通过程中自然发生。</p>
+          </div>
+
+          <div class="sdk-scene-summary">
+            <article class="sdk-summary-card">
+              <h3>业务背景</h3>
+              <p>即时通讯产品承载团队日常沟通与文档讨论。传统方式需要先下载文件，再用本地软件打开和修改，无法满足实时协作场景。</p>
+            </article>
+            <article class="sdk-summary-card">
+              <h3>解决方案</h3>
+              <p>在聊天窗口内集成石墨文档中台，支持消息文件直接预览、协同编辑、评论和权限控制，让沟通和内容生产在同一界面完成。</p>
+            </article>
+          </div>
+
+          <div class="sdk-scene-visual">
+            <img
+              class="sdk-shot"
+              src="/assets/images/webofficesdk/sdk-im.png"
+              alt="IM 系统集成石墨文档中台的示意图"
+              width="628"
+              height="435"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+
+          <div class="sdk-scene-grid">
+            <article class="sdk-scene-card">
+              <h3>团队协作沟通</h3>
+              <p>群聊内共享项目文档后，成员可直接预览和继续协作。</p>
+              <ul class="sdk-scene-list">
+                <li>发送文档后自动生成预览</li>
+                <li>其他成员无需下载即可查看</li>
+                <li>支持在 IM 内直接编辑文档</li>
+                <li>变更实时同步给参与成员</li>
+              </ul>
+            </article>
+            <article class="sdk-scene-card">
+              <h3>客户沟通</h3>
+              <p>销售与客户沟通时，可直接共享方案、报价和合同草稿。</p>
+              <ul class="sdk-scene-list">
+                <li>聊天中直接发送合同文档</li>
+                <li>客户点击即可在线查看内容</li>
+                <li>支持修改批注和签署前沟通</li>
+                <li>记录重要版本和修改历史</li>
+              </ul>
+            </article>
+            <article class="sdk-scene-card">
+              <h3>远程会议</h3>
+              <p>将会议纪要、议程和资料共享到群组中统一处理。</p>
+              <ul class="sdk-scene-list">
+                <li>会议中分享资料到群聊</li>
+                <li>所有参会者可同时在线查看</li>
+                <li>支持多人实时协作编辑</li>
+                <li>会后可导出归档到本地</li>
+              </ul>
+            </article>
+            <article class="sdk-scene-card">
+              <h3>移动办公</h3>
+              <p>移动端 IM 内嵌文档能力，保证随时随地处理工作内容。</p>
+              <ul class="sdk-scene-list">
+                <li>支持移动端聊天窗口内预览</li>
+                <li>手机端也可进行基础编辑</li>
+                <li>跨平台文档自动同步</li>
+                <li>离线缓存重要文件内容</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="sdk-panel sdk-panel--scene" id="scene-drive" data-case-section>
+          <div class="sdk-panel-head">
+            <p class="sdk-panel-eyebrow">场景示例</p>
+            <h2>云盘系统应用</h2>
+            <p class="sdk-panel-desc">在企业云盘和内容中心中内嵌在线文档能力，让“存、看、改、协同”在同一套文件系统中闭环完成。</p>
+          </div>
+
+          <div class="sdk-scene-summary">
+            <article class="sdk-summary-card">
+              <h3>业务背景</h3>
+              <p>企业云盘具备统一存储、权限分发和版本归档能力，但在在线预览、多人编辑和结构化协作上仍需要补齐能力。</p>
+            </article>
+            <article class="sdk-summary-card">
+              <h3>解决方案</h3>
+              <p>通过集成文档中台，云盘可在文件详情页直接提供预览、评论、协作编辑和导入导出能力，保留原有目录和权限体系。</p>
+            </article>
+          </div>
+
+          <div class="sdk-scene-visual">
+            <img
+              class="sdk-shot"
+              src="/assets/images/knowledge-detail/portal-recent-files.png"
+              alt="云盘系统集成在线文件能力的示意图"
+              width="1434"
+              height="666"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+
+          <div class="sdk-scene-grid sdk-scene-grid--triple">
+            <article class="sdk-scene-card">
+              <h3>统一文件门户</h3>
+              <p>在云盘工作台中直接展示最近访问文件和快速预览入口。</p>
+              <ul class="sdk-scene-list">
+                <li>目录层级与权限体系保持不变</li>
+                <li>最近访问文档可直接预览</li>
+                <li>支持从云盘一键发起编辑</li>
+                <li>文件状态和协作者同步展示</li>
+              </ul>
+            </article>
+            <article class="sdk-scene-card">
+              <h3>知识资料沉淀</h3>
+              <p>项目文档、规范和模板在云盘内统一管理并持续迭代。</p>
+              <ul class="sdk-scene-list">
+                <li>文档无需下载即可阅读</li>
+                <li>版本记录可回溯重要变更</li>
+                <li>支持评论讨论和知识补充</li>
+                <li>导出归档与安全外发并存</li>
+              </ul>
+            </article>
+            <article class="sdk-scene-card">
+              <h3>跨部门资料协作</h3>
+              <p>销售、法务、运营围绕同一份文件进行跨部门协同处理。</p>
+              <ul class="sdk-scene-list">
+                <li>多人同时处理同一份文档</li>
+                <li>细粒度控制查看和编辑权限</li>
+                <li>支持审批前预览和校对</li>
+                <li>内容和文件资产统一留痕</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="sdk-panel sdk-panel--scene" id="scene-oa" data-case-section>
+          <div class="sdk-panel-head">
+            <p class="sdk-panel-eyebrow">场景示例</p>
+            <h2>OA系统应用</h2>
+            <p class="sdk-panel-desc">把通知、公文、会议纪要、审批附件等内容与业务流程联动起来，在 OA 门户内完成编辑、确认和归档。</p>
+          </div>
+
+          <div class="sdk-scene-summary">
+            <article class="sdk-summary-card">
+              <h3>业务背景</h3>
+              <p>OA 系统承载审批流、门户公告和制度管理。文档处理如果依赖本地 Office，协同链路容易中断，资料归档也更难统一。</p>
+            </article>
+            <article class="sdk-summary-card">
+              <h3>解决方案</h3>
+              <p>在 OA 门户、审批单和公文流转页中嵌入石墨文档中台，把内容创作、审批批注、版本留痕和正式归档整合到同一个业务流程中。</p>
+            </article>
+          </div>
+
+          <div class="sdk-scene-visual">
+            <img
+              class="sdk-shot"
+              src="/assets/images/webofficesdk/sdk-oa.png"
+              alt="OA 系统集成石墨文档中台的示意图"
+              width="643"
+              height="365"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+
+          <div class="sdk-scene-grid sdk-scene-grid--triple">
+            <article class="sdk-scene-card">
+              <h3>通知公告</h3>
+              <p>通知、公文、制度文档在 OA 内直接起草、审阅和发布。</p>
+              <ul class="sdk-scene-list">
+                <li>正式排版能力适配企业文稿</li>
+                <li>审批人可直接在线批注</li>
+                <li>版本变更自动保存留痕</li>
+                <li>发布后可导出正式文件</li>
+              </ul>
+            </article>
+            <article class="sdk-scene-card">
+              <h3>流程协同</h3>
+              <p>把文档编辑能力嵌到审批流节点内，减少上下文切换。</p>
+              <ul class="sdk-scene-list">
+                <li>审批表单与正文统一展示</li>
+                <li>支持关联附件在线预览</li>
+                <li>角色权限跟随流程自动变更</li>
+                <li>归档时输出标准格式文件</li>
+              </ul>
+            </article>
+            <article class="sdk-scene-card">
+              <h3>制度与知识管理</h3>
+              <p>管理制度、操作手册和会议纪要在 OA 内沉淀为持续更新的资产。</p>
+              <ul class="sdk-scene-list">
+                <li>统一目录检索与权限控制</li>
+                <li>支持多人协作修订内容</li>
+                <li>自动沉淀历史版本</li>
+                <li>便于对外发布和内部复用</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="sdk-panel sdk-panel--scene" id="scene-contract" data-case-section>
+          <div class="sdk-panel-head">
+            <p class="sdk-panel-eyebrow">场景示例</p>
+            <h2>合同管理系统应用</h2>
+            <p class="sdk-panel-desc">围绕合同起草、法务审阅、版本比对和签署归档等关键节点，构建可追溯的文档协作链路。</p>
+          </div>
+
+          <div class="sdk-scene-summary">
+            <article class="sdk-summary-card">
+              <h3>业务背景</h3>
+              <p>合同管理涉及销售、法务、采购和管理层多方参与。传统的邮件或附件往返方式容易产生版本混乱，也难以保证权限和留痕完整。</p>
+            </article>
+            <article class="sdk-summary-card">
+              <h3>解决方案</h3>
+              <p>在合同系统中集成在线编辑、评论批注、权限回调和版本管理，让合同正文、审批意见和附件资料在一处集中管理，提升风控与协作效率。</p>
+            </article>
+          </div>
+
+          <div class="sdk-scene-visual">
+            <img
+              class="sdk-shot"
+              src="/assets/images/webofficesdk/sdk-contract.png"
+              alt="合同管理系统集成石墨文档中台的示意图"
+              width="640"
+              height="366"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+
+          <div class="sdk-scene-grid sdk-scene-grid--double">
+            <article class="sdk-scene-card">
+              <h3>合同起草</h3>
+              <p>业务人员基于模板快速创建合同正文，并自动带入客户和项目字段。</p>
+              <ul class="sdk-scene-list">
+                <li>模板统一管理和快速套用</li>
+                <li>支持正文、附件和审批表单联动</li>
+                <li>多角色可同时参与修改</li>
+                <li>导出正式版前保留历史快照</li>
+              </ul>
+            </article>
+            <article class="sdk-scene-card">
+              <h3>法务审阅</h3>
+              <p>法务直接在线评论和修订关键条款，减少线下沟通成本。</p>
+              <ul class="sdk-scene-list">
+                <li>评论批注集中展示风险点</li>
+                <li>支持修订模式和版本对比</li>
+                <li>权限可精确到查看和编辑</li>
+                <li>重要操作自动保留审计痕迹</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="sdk-panel sdk-panel--scene" id="scene-meeting" data-case-section>
+          <div class="sdk-panel-head">
+            <p class="sdk-panel-eyebrow">场景示例</p>
+            <h2>会议系统应用</h2>
+            <p class="sdk-panel-desc">把议程、材料、纪要和待办协同放进会议系统中，贯穿会前准备、会中记录和会后沉淀三个阶段。</p>
+          </div>
+
+          <div class="sdk-scene-summary">
+            <article class="sdk-summary-card">
+              <h3>业务背景</h3>
+              <p>会议系统多关注音视频连接和会控能力，但会议纪要、资料共享和任务跟进往往散落在其他工具中，导致会后知识难以沉淀。</p>
+            </article>
+            <article class="sdk-summary-card">
+              <h3>解决方案</h3>
+              <p>在会议系统中集成石墨文档中台，把议程、材料、纪要和待办统一放进会议空间里，参会人可边沟通边协作处理内容。</p>
+            </article>
+          </div>
+
+          <div class="sdk-scene-visual">
+            <img
+              class="sdk-shot"
+              src="/assets/images/webofficesdk/sdk-meeting.png"
+              alt="会议系统集成石墨文档中台的示意图"
+              width="638"
+              height="376"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+
+          <div class="sdk-scene-grid sdk-scene-grid--triple">
+            <article class="sdk-scene-card">
+              <h3>会前准备</h3>
+              <p>提前汇总议程、资料和演示文稿，统一在会议页发起预览。</p>
+              <ul class="sdk-scene-list">
+                <li>议程文档可直接分享给参会人</li>
+                <li>附件无需下载即可查看</li>
+                <li>支持多人提前补充材料</li>
+                <li>会议开始前完成最终版本确认</li>
+              </ul>
+            </article>
+            <article class="sdk-scene-card">
+              <h3>会中协作</h3>
+              <p>会议过程中同步记录纪要和决议，所有人围绕同一文档协同。</p>
+              <ul class="sdk-scene-list">
+                <li>主持人与记录人可同时编辑</li>
+                <li>评论区沉淀待确认事项</li>
+                <li>支持实时查看他人更新内容</li>
+                <li>重要结论即时推送给参会成员</li>
+              </ul>
+            </article>
+            <article class="sdk-scene-card">
+              <h3>会后沉淀</h3>
+              <p>会议纪要和待办自动归档到项目或部门知识空间中。</p>
+              <ul class="sdk-scene-list">
+                <li>纪要导出后可归档到业务系统</li>
+                <li>待办事项可继续在线跟进</li>
+                <li>历史会议资料统一可检索</li>
+                <li>沉淀为可复用的知识资产</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../js/components/integration-case-nav.js" defer></script>
+</body>
+</html>
