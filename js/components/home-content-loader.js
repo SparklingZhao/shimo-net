@@ -30,6 +30,12 @@
       title: "石墨文档中台 面向集成 - 石墨文档企业服务",
       mainClass: DEFAULT_MAIN_CLASS + " dp-page"
     },
+    "webofficesdk-cases": {
+      source: "/pages/webofficesdk/cases.html",
+      mode: "page",
+      title: "石墨文档中台 集成案例 - 石墨文档企业服务",
+      mainClass: DEFAULT_MAIN_CLASS
+    },
     collaboration: {
       source: "/pages/features/collaboration.html",
       mode: "page",
