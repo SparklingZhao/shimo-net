@@ -1,7 +1,7 @@
 # 页面内容全量整理
 
-更新时间：2026-03-23  
-统计范围：`dist/*.html` 顶层构建输出页，共 `37` 个  
+更新时间：2026-04-27  
+统计范围：`dist/*.html` 顶层构建输出页，共 `38` 个  
 配套表格：
 
 - [page-content-full-inventory.csv](/Users/mac/Desktop/workspace/shimooffice.net/dev/docs/page-content-full-inventory.csv)
@@ -83,7 +83,7 @@
 | 文档 | `document.html` | 部分需要，`P2` | 有主视觉和功能图，但仍缺 2 个资源 |
 | 文稿 | `writer.html` | 部分需要，`P2` | 有主视觉，但仍缺 4 个功能图 |
 | 表格 | `sheet.html` | 部分需要，`P2` | 有主视觉，但仍缺 1 个功能图 |
-| 幻灯片 | `slide.html` | 可沿用，`P2` | 现有主视觉与内容图较完整 |
+| 幻灯片 | `presentation.html` | 可沿用，`P2` | 现有主视觉与内容图较完整；路由文件名已切换为 `presentation.html` |
 | 应用表格 | `table.html` | 可沿用，`P2` | 现有主视觉较完整 |
 | 表单 | `form.html` | 可沿用，`P2` | 当前多处复用同一张图，可后续再细化 |
 

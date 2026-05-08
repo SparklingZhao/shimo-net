@@ -15,25 +15,25 @@
     "officesuite-business": {
       source: "/pages/officesuite/business.html",
       mode: "page",
-      title: "石墨办公套件 面向团队 - 石墨文档企业服务",
+      title: "办公套件 SaaS在线服务 - 石墨文档企业服务",
       mainClass: DEFAULT_MAIN_CLASS + " pc-page"
     },
     "officesuite-enterprise": {
       source: "/pages/officesuite/enterprise.html",
       mode: "page",
-      title: "石墨办公套件 面向企业 - 石墨文档企业服务",
+      title: "办公套件 私有化服务 - 石墨文档企业服务",
       mainClass: DEFAULT_MAIN_CLASS + " pc-page"
     },
     "webofficesdk-integration": {
       source: "/pages/webofficesdk/integration.html",
       mode: "page",
-      title: "石墨文档中台 面向集成 - 石墨文档企业服务",
+      title: "文档中台 面向集成 - 石墨文档企业服务",
       mainClass: DEFAULT_MAIN_CLASS + " dp-page"
     },
     "webofficesdk-cases": {
       source: "/pages/webofficesdk/cases.html",
       mode: "page",
-      title: "石墨文档中台 集成案例 - 石墨文档企业服务",
+      title: "文档中台 集成案例 - 石墨文档企业服务",
       mainClass: DEFAULT_MAIN_CLASS
     },
     collaboration: {
@@ -60,7 +60,7 @@
       title: "表格 - 石墨文档企业服务",
       mainClass: DEFAULT_MAIN_CLASS
     },
-    slide: {
+    presentation: {
       source: "/pages/features/slide.html",
       mode: "page",
       title: "幻灯片 - 石墨文档企业服务",

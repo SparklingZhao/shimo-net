@@ -1,7 +1,7 @@
 # 页面主题图片全量清单
 
-更新时间：2026-03-23  
-统计范围：`dist/*.html` 顶层构建输出页，共 `37` 个页面  
+更新时间：2026-04-27  
+统计范围：`dist/*.html` 顶层构建输出页，共 `38` 个页面  
 整理原则：按页面梳理所有主题图片，包含 HTML `<img>` 与通过 `background-image` 引用的首屏/模块视觉；若源页面缺少 `alt` 或 `title`，则按文件名和上下文补充推断标题，并在“状态”列标记为 `推断`。
 
 ## 总览
@@ -27,7 +27,7 @@
 | `security-hub.html` | 安全保障 - 石墨文档企业服务 | 安全保障 | 1 | 1 | 无特殊备注 |
 | `service.html` | 石墨文档服务条款 | 石墨文档服务条款 | 1 | 1 | 无特殊备注 |
 | `sheet.html` | 表格 - 石墨文档企业服务 | 表格 | 10 | 10 | 无特殊备注 |
-| `slide.html` | 幻灯片 - 石墨文档企业服务 | 幻灯片 | 10 | 10 | 同一张主图在多个模块复用 |
+| `presentation.html` | 幻灯片 - 石墨文档企业服务 | 幻灯片 | 10 | 10 | 同一张主图在多个模块复用 |
 | `solution-ecommerce.html` | 电商数据协同流转解决方案 - 石墨文档企业服务 | 一站式企业协作解决方案 | 9 | 9 | 无特殊备注 |
 | `solution-education.html` | 智慧教育协同文档平台解决方案 - 石墨文档企业服务 | 一站式企业协作解决方案 | 9 | 9 | 无特殊备注 |
 | `solution-finance.html` | 财务协同管理解决方案 - 石墨文档企业服务 | 一站式企业协作解决方案 | 9 | 9 | 无特殊备注 |
@@ -498,7 +498,7 @@
 | img | `assets/images/sheet/sheet_feature9.webp` | 编辑历史与水印 | 正常 | 1 |
 | img | `assets/images/wechat-accout.png` | 石墨文档微信公众号二维码 | 正常 | 1 |
 
-## `slide.html`
+## `presentation.html`
 
 - HTML Title：幻灯片 - 石墨文档企业服务
 - 页面主题：幻灯片
@@ -887,4 +887,3 @@
 | img | `assets/images/writer/writer_feature_collaboration.webp` | 多人多端毫秒级同步 | 正常 | 1 |
 | img | `assets/images/writer/writer_feature_comment.webp` | 全局讨论 & 划词评论 | 正常 | 1 |
 | img | `assets/images/writer/writer_feature_history.webp` | 查看编辑历史 | 正常 | 1 |
-

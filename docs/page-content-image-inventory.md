@@ -1,12 +1,12 @@
 # 页面内容与图片整理
 
-生成时间：2026-03-23  
+生成时间：2026-04-27  
 统计范围：`dist/*.html` 顶层构建输出页（已重新执行 `npm run build`）  
 整理原则：按页面归类；模块化重复内容只记录一次；重点标记真实图片、背景图、外链图、占位图和缺失图片。
 
 ## 总结
 
-- 当前顶层输出页共 `37` 个。
+- 当前顶层输出页共 `38` 个。
 - 明确重复输出：
   - `index.html` 与 `welcome.html` 内容一致，均来自 `pages/home/home-content.html`，差异主要在 SEO 配置。
   - `solution.html` 与 `solution-retail.html` 内容一致，前者是零售解决方案的别名入口。
@@ -50,7 +50,7 @@
 - `document.html`
 - `writer.html`
 - `sheet.html`
-- `slide.html`
+- `presentation.html`
 - `table.html`
 - `form.html`
 - `portal.html`
@@ -262,7 +262,7 @@
     - `sheet_feature12.webp`
 - 图片状态：缺 `sheet_feature9.webp`
 
-#### `slide.html`
+#### `presentation.html`
 - 页面定位：幻灯片产品详情页
 - 核心内容：协同演示、PPT 兼容、统一设计、展示播放、评论审阅
 - 图片整理：

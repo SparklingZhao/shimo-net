@@ -12,7 +12,7 @@
 产品功能页,文档,document.html,pages/features/document.html,doc_product_desc_back.4f15795f.png,在线文档能力详情页，含协作、评论、历史、OCR 与翻译能力说明,部分需要,P2 细分功能页,当前有主视觉与功能图；仍有 2 个缺失资源,适合补齐缺失图而非整体重设计
 产品功能页,文稿,writer.html,pages/features/writer.html,traditional_back.webp,在线文稿能力详情页，突出格式兼容、专业排版与审阅协作,部分需要,P2 细分功能页,当前有主视觉；仍有 4 个缺失功能图,适合补齐缺失图而非整体重设计
 产品功能页,表格,sheet.html,pages/features/sheet.html,sheet_feature1.webp,在线表格能力详情页，突出函数计算、协作与权限控制,部分需要,P2 细分功能页,当前有主视觉；仍有 1 个缺失功能图,适合补齐缺失图而非整体重设计
-产品功能页,幻灯片,slide.html,pages/features/slide.html,slide_product_desc_back.78851b71.png,在线幻灯片能力详情页，突出模板、协作演示与历史追溯,可沿用,P2 细分功能页,当前已有主视觉与内容图,成熟度较高
+产品功能页,幻灯片,presentation.html,pages/features/slide.html,slide_product_desc_back.78851b71.png,在线幻灯片能力详情页，突出模板、协作演示与历史追溯,可沿用,P2 细分功能页,当前已有主视觉与内容图,路由文件名已切换为 presentation.html
 产品功能页,应用表格,table.html,pages/features/table.html,table_back.4655d070.png,数据协同与项目管理页，突出字段、视图、流程协作与看板甘特,可沿用,P2 细分功能页,当前已有主视觉；功能区多为复用图,成熟度较高
 产品功能页,表单,form.html,pages/features/form.html,form.d91584ab.png,信息收集能力页，强调搭建、分发、逻辑与数据汇总,可沿用,P2 细分功能页,当前多处复用同一张表单截图,可后续再做精细优化
 知识沉淀子页,工作台,portal.html,pages/features/portal.html,无独立主视觉,工作入口页，强调待办、审批、消息与最近文件聚合,需要,P1 需要产品实际界面,当前以文案结构为主；缺少独立产品截图,适合补真实界面图

@@ -34,6 +34,8 @@ iframe {
 }
 
 .top-nav {
+  --top-nav-main-height: 72px;
+  --top-nav-promo-height: 42px;
   position: sticky;
   top: 0;
   z-index: 20;
@@ -42,9 +44,70 @@ iframe {
   overflow: visible;
 }
 
+.top-nav-promo {
+  background: linear-gradient(90deg, #0f46d8 0%, #1e63ff 52%, #0f46d8 100%);
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.top-nav-promo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: var(--top-nav-promo-height);
+  padding: 8px 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.top-nav-promo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 54px;
+  min-height: 24px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.top-nav-promo-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.top-nav-promo-copy strong {
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.top-nav-promo-copy span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.top-nav-promo-arrow {
+  flex-shrink: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+
 .top-nav-inner {
   position: relative;
-  height: 72px;
+  height: var(--top-nav-main-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -163,8 +226,7 @@ iframe {
 .home-merge-cta-card {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 28px;
+  justify-content: flex-start;
   padding: 34px;
   border-radius: 24px;
   border: 1px solid rgba(47, 94, 245, 0.08);
@@ -173,22 +235,12 @@ iframe {
   color: #ffffff;
 }
 
-.home-merge-cta-card > div:first-child {
+.home-merge-cta-content {
   flex: 1;
   min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.home-merge-cta-eyebrow {
-  margin: 0 0 12px;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.6;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.76);
 }
 
 .home-merge-cta-card h2 {
@@ -217,51 +269,6 @@ iframe {
   line-height: 1;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.18);
-}
-
-.home-merge-cta-card p {
-  margin: 14px 0 0;
-  max-width: 720px;
-  font-size: 15px;
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.84);
-}
-
-.home-merge-cta-actions {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.home-merge-cta-actions .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 148px;
-  min-height: 52px;
-  padding: 0 24px;
-  border-radius: 999px;
-  border-color: rgba(255, 255, 255, 0.28);
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 700;
-  box-shadow: 0 12px 28px rgba(12, 28, 74, 0.22);
-}
-
-.home-merge-cta-actions .btn:hover {
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 16px 32px rgba(12, 28, 74, 0.28);
-}
-
-.home-merge-cta-actions .btn.btn-primary {
-  background: #ffffff;
-  color: #21429b;
-}
-
-.home-merge-cta-actions .btn:not(.btn-primary) {
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
 }
 
 footer {
@@ -304,6 +311,28 @@ footer {
     height: 72px;
     padding: 12px 0;
     flex-wrap: nowrap;
+  }
+
+  .top-nav {
+    --top-nav-promo-height: 48px;
+  }
+
+  .top-nav-promo-link {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .top-nav-promo-copy {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .top-nav-promo-copy strong {
+    font-size: 13px;
+  }
+
+  .top-nav-promo-copy span {
+    white-space: normal;
   }
 
   .nav-toggle {
@@ -463,10 +492,6 @@ footer {
   .home-merge-cta-card {
     display: block;
   }
-
-  .home-merge-cta-actions {
-    margin-top: 24px;
-  }
 }
 
 @media (max-width: 640px) {
@@ -515,16 +540,5 @@ footer {
   .home-merge-cta-card h2 {
     font-size: clamp(24px, 7vw, 32px);
     gap: 10px;
-  }
-
-  .home-merge-cta-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .home-merge-cta-actions .btn {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
   }
 }

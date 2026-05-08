@@ -108,27 +108,27 @@ const ROUTES = [
   },
   {
     output: "officesuite-business.html",
-    title: "石墨办公套件 面向团队 - 石墨文档企业服务",
+    title: "办公套件 SaaS在线服务 - 石墨文档企业服务",
     description:
-      "石墨办公套件面向团队提供开箱即用的公有云文档协作服务，覆盖文档、文稿、表格、幻灯片、表单与应用表格等核心办公场景。",
+      "办公套件提供企业开箱即用的在线文档协作服务，覆盖文档、文稿、表格、幻灯片、表单与应用表格等核心场景。",
     mainClass: "site-main pc-page",
     source: "/pages/officesuite/business.html",
     mode: "page"
   },
   {
     output: "officesuite-enterprise.html",
-    title: "石墨办公套件 面向企业 - 石墨文档企业服务",
+    title: "办公套件 私有化服务 - 石墨文档企业服务",
     description:
-      "石墨办公套件面向企业提供私有化文档协作服务，支持统一办公平台建设、数据安全治理、信创适配与灵活部署。",
+      "办公套件提供企业开箱即用的私有化文档协作平台，支持数据安全治理、信创适配与灵活部署。",
     mainClass: "site-main pc-page",
     source: "/pages/officesuite/enterprise.html",
     mode: "page"
   },
   {
     output: "webofficesdk-integration.html",
-    title: "石墨文档中台 面向集成 - 石墨文档企业服务",
+    title: "文档中台 面向集成 - 石墨文档企业服务",
     description:
-      "石墨文档中台面向企业集成开放文件预览、协作编辑、格式处理、文档存储与文档安全能力，帮助业务系统快速补齐文档协作底座。",
+      "文档中台提供面向企业集成的文档 SDK 服务，覆盖文件预览、协作编辑、格式处理、文档存储与文档安全能力。",
     preloadImages: ["/assets/images/banner/sdk-banner.png"],
     mainClass: "site-main dp-page",
     source: "/pages/webofficesdk/integration.html",
@@ -136,9 +136,9 @@ const ROUTES = [
   },
   {
     output: "webofficesdk-cases.html",
-    title: "石墨文档中台 集成案例 - 石墨文档企业服务",
+    title: "文档中台 集成案例 - 石墨文档企业服务",
     description:
-      "查看石墨文档中台在 IM、云盘、OA、合同和会议系统中的典型集成案例，了解文件预览、在线编辑、多人协同和格式转换等能力的落地方式。",
+      "查看文档中台在 IM、云盘、OA、合同和会议系统中的典型集成案例，了解文件预览、在线编辑、多人协同和格式转换等能力的落地方式。",
     preloadImages: ["/assets/images/document/doc.png"],
     mainClass: "site-main",
     source: "/pages/webofficesdk/cases.html",
@@ -194,12 +194,13 @@ const ROUTES = [
     mode: "page"
   },
   {
-    output: "slide.html",
+    output: "presentation.html",
     title: "幻灯片 - 石墨文档企业服务",
     description:
       "石墨幻灯片为企业提供在线演示与协作制作能力，支持多人共创、主题模板、评论标注与历史追溯。",
     preloadImages: ["/assets/images/slide_product_desc_back.78851b71.png"],
     mainClass: "site-main doc-page-shell",
+    canonical: "/presentation.html",
     source: "/pages/features/slide.html",
     mode: "page"
   },
@@ -234,9 +235,9 @@ const ROUTES = [
   },
   {
     output: "space.html",
-    title: "协作空间 - 石墨文档企业服务",
+    title: "团队空间 - 石墨文档企业服务",
     description:
-      "按团队、项目集中管理资料、成员和权限。",
+      "按组织、项目集中管理资料、成员和权限。",
     mainClass: "site-main",
     source: "/pages/features/space.html",
     mode: "page"
@@ -254,7 +255,7 @@ const ROUTES = [
     output: "knowledge.html",
     title: "知识沉淀 - 石墨文档企业服务",
     description:
-      "石墨文档通过工作台、协作空间与知识库三级体系帮助企业完成知识沉淀、共享复用与长期管理。",
+      "石墨文档通过工作台、团队空间与知识库三级体系帮助企业完成知识沉淀、共享复用与长期管理。",
     mainClass: "site-main",
     source: "/pages/features/knowledge.html",
     mode: "page"
@@ -281,7 +282,7 @@ const ROUTES = [
     output: "format-support.html",
     title: "格式支持 - 石墨文档企业服务",
     description:
-      "查看石墨文档中台支持的主流文件预览、导入与导出格式，帮助企业快速评估兼容性与接入可行性。",
+      "查看文档中台支持的主流文件预览、导入与导出格式，帮助企业快速评估兼容性与接入可行性。",
     mainClass: "site-main",
     source: "/pages/features/format-support.html",
     mode: "page"
@@ -290,7 +291,7 @@ const ROUTES = [
     output: "about.html",
     title: "石墨文档企业服务 - 关于我们",
     description:
-      "了解石墨文档企业服务的品牌定位、团队背景、发展历程与联系渠道，建立对服务能力的整体认知。",
+      "了解石墨文档企业服务的品牌定位、品牌背景、发展历程与联系渠道，建立对服务能力的整体认知。",
     mainClass: "site-main about-page",
     source: "/pages/about/about.html",
     mode: "page"
@@ -922,7 +923,7 @@ const SHELL_LINK_RULES = [
   { page: "document", output: "/document.html" },
   { page: "writer", output: "/writer.html" },
   { page: "sheet", output: "/sheet.html" },
-  { page: "slide", output: "/slide.html" },
+  { page: "presentation", output: "/presentation.html" },
   { page: "table", output: "/table.html" },
   { page: "form", output: "/form.html" },
   { page: "knowledge", output: "/knowledge.html" },
@@ -1545,7 +1546,6 @@ function main() {
   copyDir(path.join(ROOT_DIR, "css"), path.join(DIST_DIR, "css"));
   copyDir(path.join(ROOT_DIR, "js"), path.join(DIST_DIR, "js"));
   copyDir(path.join(ROOT_DIR, "assets"), path.join(DIST_DIR, "assets"));
-  copyDir(path.join(ROOT_DIR, "docs"), path.join(DIST_DIR, "docs"));
   copyDir(path.join(ROOT_DIR, "pages"), path.join(DIST_DIR, "pages"));
   if (pathExists(path.join(ROOT_DIR, "tools"))) {
     copyDir(path.join(ROOT_DIR, "tools"), path.join(DIST_DIR, "tools"));

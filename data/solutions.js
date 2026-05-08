@@ -1,5 +1,5 @@
 const SHARED_DEMO_LINK = "/welcome.html#demo";
-const APPOINTMENT_PREVIEW_LINK = "https://shimo.im/preview";
+const APPOINTMENT_PREVIEW_LINK = "https://shimo.im/preview?from=enterprise";
 
 const SOLUTION_MENU_GROUPS = [
   {
